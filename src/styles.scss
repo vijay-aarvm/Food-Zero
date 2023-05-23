@@ -23,6 +23,8 @@
     font-weight: lighter;
 }
 
+$rufina : 'Rufina';
+
 .header-container {
     position: relative;
 }
@@ -48,8 +50,8 @@
         padding: 20px 0 0 70px;
 
         .Navigation-menu-logo {
-            width: 50%;
-            height: 50%;
+            width: 65%;
+            height: 65%;
         }
 
         .Menu-btn {
@@ -86,7 +88,6 @@
             background: none;
             border: none;
         }
-
 
         .Reservations-menu-reserve-btn {
             border: 1.5px solid white;
@@ -182,6 +183,93 @@
             }
         }
     }
+}
 
+.address-location {
+    background: none;
+    margin-top: 300px;
+    color: #233000;
+    font-family: $rufina;
+    @include flex-column();
+    text-align: center;
+    align-items: center;
 
+    .contact-section {
+        @include flex-row();
+        gap: 200px;
+
+        .lemon-with-orange {
+            position: relative;
+
+            .orange {
+                position: absolute;
+                z-index: -1;
+                left: 420px;
+                top: -90px;
+                width: 300px;
+                height: 300px;
+            }
+
+            .lemons-on-table {
+                z-index: 0;
+                width: 530px;
+                height: 400px;
+            }
+        }
+
+        .email-and-phone {
+            width: 350px;
+            font-size: 20px;
+            text-align: left;
+            align-self: end;
+            padding-bottom: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #9CAA00;
+        }
+    }
+
+    .address-section {
+        @include flex-row();
+        margin-top: 100px;
+        gap: 100px;
+
+        .address-and-map {
+            @include flex-column();
+
+            .address {
+                width: 450px;
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .map-link {
+                font-size: 20px;
+                width: 150px;
+                height: 50px;
+                font-family: $rufina;
+                background: none;
+
+                p {
+                    margin: 0;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &:active {
+                    transition-duration: 0.05s;
+                    box-shadow: 0 0 10px #2d2d2d;
+                }
+            }
+        }
+    }
+}
+
+.restaurant-sv {
+    width: 530px;
+    height: 655px;
 }
