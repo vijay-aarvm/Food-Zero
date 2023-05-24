@@ -23,6 +23,16 @@
     font-weight: lighter;
 }
 
+@mixin namefield-size {
+    width: 530px;
+    height: 50px;
+}
+
+@mixin mail-phone {
+    width: 1127px;
+    height: 50px;
+}
+
 $rufina : 'Rufina';
 
 .header-container {
@@ -193,6 +203,7 @@ $rufina : 'Rufina';
     @include flex-column();
     text-align: center;
     align-items: center;
+    padding-bottom: 150px;
 
     .contact-section {
         @include flex-row();
@@ -266,10 +277,172 @@ $rufina : 'Rufina';
                 }
             }
         }
+
+        .restaurant-sv {
+            width: 530px;
+            height: 655px;
+        }
     }
 }
 
-.restaurant-sv {
-    width: 530px;
-    height: 655px;
+.form {
+    background-color: #EBF0E4;
+    @include flex-column();
+    text-align: center;
+    align-items: center;
+
+    .form-header {
+        padding-top: 80px;
+        display: flex;
+        text-align: left;
+        align-items: center;
+        padding-bottom: 80px;
+
+        .mint {
+            width: 300px;
+            height: 200px;
+        }
+
+        .form-title {
+            @include flex-column();
+            z-index: 0;
+            position: relative;
+            margin-top: 140px;
+            margin-left: -50px;
+
+            .form-header-title {
+                margin: 0;
+                font-size: 70px;
+                font-weight: 500;
+                font-family: $rufina;
+            }
+
+            .form-header-subtitle {
+                margin: 0;
+                font-size: 20px;
+                color: gray;
+                font-family: 'Lato';
+            }
+        }
+
+    }
+
+    .form-input {
+        @include flex-column();
+        text-align: center;
+        align-items: center;
+        gap: 30px;
+        padding-bottom: 100px;
+        font-family: 'Lato';
+
+        .name {
+            @include flex-row();
+            justify-content: space-evenly;
+            gap: 30px;
+
+            .first-name {
+                @include namefield-size();
+                padding-left: 30px;
+                background: none;
+                border: 1.5px solid black;
+
+                &::placeholder {
+                    color: black;
+                }
+            }
+
+            .last-name {
+                @include namefield-size();
+                padding-left: 30px;
+                background: none;
+                border: 1.5px solid black;
+
+                &::placeholder {
+                    color: black;
+                }
+            }
+
+        }
+
+        .mail-and-phone {
+            @include flex-column();
+            text-align: center;
+            align-items: center;
+            gap: 30px;
+
+            .mail {
+                @include mail-phone();
+                padding-left: 30px;
+                background: none;
+                border: 1.5px solid black;
+
+                &::placeholder {
+                    color: black;
+                }
+            }
+
+            .phone {
+                @include mail-phone();
+                padding-left: 30px;
+                background: none;
+                border: 1.5px solid black;
+
+                &::placeholder {
+                    color: black;
+                }
+            }
+        }
+
+        .schedule {
+            @include flex-row();
+            justify-content: space-evenly;
+            gap: 37px;
+
+            .select-date {
+                width: 540px;
+                height: 50px;
+                padding-left: 30px;
+                background: none;
+                border: 1.5px solid black;
+                font-family: 'Lato';
+            }
+
+            .time {
+                width: 551px;
+                height: 54px;
+                padding-left: 30px;
+                background: none;
+                border: 1.5px solid black;
+                font-family: 'Lato';
+            }
+        }
+
+        .no-of-persons {
+            width: 1162px;
+            height: 50px;
+            padding-left: 30px;
+            background: none;
+            border: 1.5px solid black;
+        }
+
+        .book-now {
+            width: 200px;
+            height: 60px;
+            font-size: 20px;
+            background: none;
+            border: 1.5px solid black;
+            font-family: $rufina;
+            color: white;
+            background-color: #5E6600;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                transition-duration: 0.05s;
+                box-shadow: 0 0 5px #323232;
+            }
+        }
+    }
 }
