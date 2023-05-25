@@ -548,7 +548,7 @@ $lato: 'Lato';
 
     .copyright-section {
         padding: 0px 0 30px 0;
-        display: flex;
+        @include flex-row();
         justify-content: space-between;
 
         .copyright {
