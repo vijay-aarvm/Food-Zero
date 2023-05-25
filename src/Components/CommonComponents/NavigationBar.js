@@ -3,7 +3,7 @@ import "../../styles.scss";
 import logo from "../../assests/images/Logo.png";
 import navigaition_menu from "../../assests/images/navimenu.png";
 
-export default function ContactHeaderNavigation() {
+export default function NavigationBar() {
     return (
         <div className="Navigation-bar">
             <div className="Navigation-menu">
