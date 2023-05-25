@@ -163,8 +163,7 @@ $lato: 'Lato';
     position: relative;
     color: white;
     width: auto;
-    display: flex;
-    flex-direction: column;
+    @include flex-column();
     margin-top: 50px;
 
     .opentime-table {
@@ -192,11 +191,9 @@ $lato: 'Lato';
         }
 
         .available-timings {
-            display: flex;
             padding-top: 30px;
 
             .time-table {
-                border-collapse: collapse;
                 width: 100%;
 
                 .brunch {
@@ -244,7 +241,6 @@ $lato: 'Lato';
             }
 
             .lemons-on-table {
-                z-index: 0;
                 width: 530px;
                 height: 400px;
             }
@@ -459,7 +455,6 @@ $lato: 'Lato';
     .footer {
         display: flex;
         justify-content: space-evenly;
-        align-items: flex-start;
         padding: 20px 0 20px 0;
 
         .brand-name {
@@ -489,13 +484,13 @@ $lato: 'Lato';
             padding-bottom: 20px;
             font-family: $lato;
 
-            >a {
+            a {
                 color: #FFFF;
                 text-decoration: none;
             }
         }
 
-        .telephone>a {
+        .telephone a {
             color: #FFFF;
             text-decoration: none;
         }
