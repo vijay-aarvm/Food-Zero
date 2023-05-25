@@ -3,6 +3,7 @@ import "./styles.scss";
 import ContactHeader from "./Components/Contact/ContactHeader";
 import AddressLocation from "Components/Contact/AddressLocation";
 import ReservationForm from "Components/Contact/ReservationForm";
+import Footer from "Components/Contact/Footer";
 
 export default function App() {
     return (
@@ -10,6 +11,7 @@ export default function App() {
             <ContactHeader />
             <AddressLocation />
             <ReservationForm />
+            <Footer />
         </>
     );
 }
