@@ -24,7 +24,7 @@
 }
 
 @mixin namefield-size {
-    width: 530px;
+    width: 450px;
     height: 60px;
 }
 
@@ -35,7 +35,7 @@
 }
 
 @mixin mail-phone {
-    width: 1127px;
+    width: 965px;
     height: 60px;
 }
 
@@ -70,6 +70,11 @@ $lato: 'Lato';
     background-position: center;
     background-size: cover;
     position: absolute;
+
+    @media only screen and (max-width: 420px) {
+        width: 100%;
+        height: 300px;
+    }
 }
 
 .Navigation-bar {
@@ -82,9 +87,20 @@ $lato: 'Lato';
         gap: 20px;
         padding: 20px 0 0 70px;
 
+        @media only screen and (max-width: 420px) {
+            gap: 0px;
+            padding: 10px 0 0 30px;
+        }
+
+
         .Navigation-menu-logo {
             width: 65%;
             height: 65%;
+
+            @media only screen and (max-width: 420px) {
+                width: 70px;
+                height: 40px;
+            }
         }
 
         .Menu-btn {
@@ -92,6 +108,11 @@ $lato: 'Lato';
             height: 50px;
             background: none;
             border: none;
+
+            @media only screen and (max-width: 420px) {
+                width: 50px;
+                height: 30px;
+            }
         }
 
         .Navigation-menu-nav-btn {
@@ -117,9 +138,30 @@ $lato: 'Lato';
         padding: 20px 70px 0 0;
         font-family: 'Inter';
 
+        @media only screen and (max-width: 420px) {
+            font-size: 10px;
+            gap: 10px;
+            padding: 10px 30px 0 0;
+        }
+
+        .Reservations-menu-contact {
+            @media only screen and (max-width: 870px) {
+                font-size: 13px;
+            }
+
+            @media only screen and (max-width: 420px) {
+                font-size: 8px;
+            }
+        }
+
         .Reservation-btn {
             background: none;
             border: none;
+
+            @media only screen and (max-width: 420px) {
+                width: 100px;
+                height: 50px;
+            }
         }
 
         .Reservations-menu-reserve-btn {
@@ -129,6 +171,10 @@ $lato: 'Lato';
             color: white;
             font-family: 'Rufina';
             margin: 0;
+
+            @media only screen and (max-width: 420px) {
+                font-size: 10px;
+            }
 
             &:active {
                 transition-duration: 0.05s;
@@ -149,13 +195,25 @@ $lato: 'Lato';
     padding: 20px 0 0 100px;
     font-family: 'Rufina';
 
+    @media only screen and (max-width: 420px) {
+        padding: 10px 0 0 50px;
+    }
+
     .contact-header-hero-title {
         font-size: 100px;
         margin-bottom: 0px;
+
+        @media only screen and (max-width: 420px) {
+            font-size: 20px;
+        }
     }
 
     .contact-header-hero-title-description {
         font-size: 20px;
+
+        @media only screen and (max-width: 420px) {
+            font-size: 10px;
+        }
     }
 }
 
@@ -166,15 +224,27 @@ $lato: 'Lato';
     @include flex-column();
     margin-top: 50px;
 
+    @media only screen and (max-width: 420px) {
+        margin-top: 30px;
+    }
+
     .opentime-table {
         width: 450px;
         @include flex-column();
         align-self: end;
         padding-right: 80px;
 
+        @media only screen and (max-width: 420px) {
+            padding-right: 30px;
+        }
+
         .opentime-header {
             @include flex-row();
             justify-content: space-between;
+
+            @media only screen and (max-width: 420px) {
+                font-size: 10px;
+            }
 
             .opentime-title {
                 @include rufina-lighter();
@@ -188,13 +258,30 @@ $lato: 'Lato';
         .dotted-line {
             border: none;
             border-top: 2px dotted white;
+
+            @media only screen and (max-width: 420px) {
+                width: 250px;
+                position: relative;
+                right: -200px;
+            }
         }
 
         .available-timings {
             padding-top: 30px;
 
+            @media only screen and (max-width: 420px) {
+                padding-top: 10px;
+                font-size: 10px;
+                display: flex;
+                justify-content: flex-end;
+            }
+
             .time-table {
                 width: 100%;
+
+                @media only screen and (max-width: 420px) {
+                    width: 50%;
+                }
 
                 .brunch {
                     text-align: left;
@@ -224,9 +311,17 @@ $lato: 'Lato';
     @include center-items();
     padding-bottom: 150px;
 
+    @media only screen and (max-width: 420px) {
+        margin-top: 200px;
+    }
+
     .contact-section {
         @include flex-row();
         gap: 200px;
+
+        @media only screen and (max-width: 420px) {
+            gap: 50px;
+        }
 
         .lemon-with-orange {
             position: relative;
@@ -234,15 +329,51 @@ $lato: 'Lato';
             .orange {
                 position: absolute;
                 z-index: -1;
-                left: 420px;
-                top: -90px;
-                width: 300px;
-                height: 300px;
+                left: 325px;
+                top: -60px;
+                width: 200px;
+                height: 200px;
+
+                @media only screen and (max-width: 1000px) {
+                    top: -50px;
+                    left: 245px;
+                    width: 150px;
+                    height: 150px;
+                }
+
+                @media only screen and (max-width: 870px) {
+                    top: -40px;
+                    left: 155px;
+                    width: 130px;
+                    height: 130px;
+                }
+
+                @media only screen and (max-width: 420px) {
+                    top: -30px;
+                    left: 88px;
+                    width: 90px;
+                    height: 90px;
+                }
             }
 
             .lemons-on-table {
-                width: 530px;
-                height: 400px;
+                width: 400px;
+                height: 350px;
+
+                @media only screen and (max-width: 1000px) {
+                    width: 300px;
+                    height: 250px;
+                }
+
+                @media only screen and (max-width: 870px) {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                @media only screen and (max-width: 420px) {
+                    width: 120px;
+                    height: 120px;
+                }
             }
         }
 
@@ -252,6 +383,16 @@ $lato: 'Lato';
             text-align: left;
             align-self: end;
             padding-bottom: 30px;
+
+            @media only screen and (max-width: 870px) {
+                width: 250px;
+                font-size: 15px;
+            }
+
+            @media only screen and (max-width: 420px) {
+                width: 130px;
+                font-size: 8px;
+            }
         }
 
         a {
@@ -265,6 +406,10 @@ $lato: 'Lato';
         margin-top: 100px;
         gap: 100px;
 
+        @media only screen and (max-width: 420px) {
+            gap: 50px;
+        }
+
         .address-and-map {
             @include flex-column();
 
@@ -272,6 +417,16 @@ $lato: 'Lato';
                 width: 450px;
                 text-align: left;
                 font-size: 20px;
+
+                @media only screen and (max-width: 870px) {
+                    width: 250px;
+                    font-size: 15px;
+                }
+
+                @media only screen and (max-width: 420px) {
+                    width: 130px;
+                    font-size: 8px;
+                }
             }
 
             .map-link {
@@ -280,6 +435,16 @@ $lato: 'Lato';
                 height: 50px;
                 font-family: $rufina;
                 background: none;
+
+                @media only screen and (max-width: 870px) {
+                    width: 150px;
+                    font-size: 15px;
+                }
+
+                @media only screen and (max-width: 420px) {
+                    width: 90px;
+                    font-size: 10px;
+                }
 
                 p {
                     margin: 0;
@@ -297,8 +462,18 @@ $lato: 'Lato';
         }
 
         .restaurant-sv {
-            width: 530px;
-            height: 655px;
+            width: 400px;
+            height: 350px;
+
+            @media only screen and (max-width: 1000px) {
+                width: 300px;
+                height: 250px;
+            }
+
+            @media only screen and (max-width: 420px) {
+                width: 120px;
+                height: 120px;
+            }
         }
     }
 }
@@ -318,6 +493,16 @@ $lato: 'Lato';
         .mint {
             width: 300px;
             height: 200px;
+
+            @media only screen and (max-width: 870px) {
+                width: 250px;
+                height: 150px;
+            }
+
+            @media only screen and (max-width: 420px) {
+                width: 130px;
+                height: 80px;
+            }
         }
 
         .form-title {
@@ -327,11 +512,24 @@ $lato: 'Lato';
             margin-top: 140px;
             margin-left: -50px;
 
+            @media only screen and (max-width: 420px) {
+                margin-top: 70px;
+                margin-left: -30px;
+            }
+
             .form-header-title {
                 margin: 0;
                 font-size: 70px;
                 font-weight: 500;
                 font-family: $rufina;
+
+                @media only screen and (max-width: 870px) {
+                    font-size: 40px;
+                }
+
+                @media only screen and (max-width: 420px) {
+                    font-size: 20px;
+                }
             }
 
             .form-header-subtitle {
@@ -339,6 +537,10 @@ $lato: 'Lato';
                 font-size: 20px;
                 color: gray;
                 font-family: 'Lato';
+
+                @media only screen and (max-width: 420px) {
+                    font-size: 10px;
+                }
             }
         }
 
@@ -362,6 +564,21 @@ $lato: 'Lato';
                 &::placeholder {
                     color: black;
                 }
+
+                @media only screen and (max-width: 1020px) {
+                    width: 350px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 870px) {
+                    width: 250px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 420px) {
+                    width: 120px;
+                    height: 30px;
+                }
             }
 
             .last-name {
@@ -370,8 +587,22 @@ $lato: 'Lato';
                 &::placeholder {
                     color: black;
                 }
-            }
 
+                @media only screen and (max-width: 1020px) {
+                    width: 350px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 870px) {
+                    width: 250px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 420px) {
+                    width: 120px;
+                    height: 30px;
+                }
+            }
         }
 
         .mail-and-phone {
@@ -385,6 +616,21 @@ $lato: 'Lato';
                 &::placeholder {
                     color: black;
                 }
+
+                @media only screen and (max-width: 1020px) {
+                    width: 765px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 870px) {
+                    width: 565px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 420px) {
+                    width: 305px;
+                    height: 30px;
+                }
             }
 
             .phone {
@@ -392,6 +638,21 @@ $lato: 'Lato';
 
                 &::placeholder {
                     color: black;
+                }
+
+                @media only screen and (max-width: 1020px) {
+                    width: 765px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 870px) {
+                    width: 565px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 420px) {
+                    width: 305px;
+                    height: 30px;
                 }
             }
         }
@@ -402,27 +663,72 @@ $lato: 'Lato';
             gap: 37px;
 
             .select-date {
-                width: 540px;
+                width: 468px;
                 height: 60px;
                 padding-left: 30px;
                 @include form-field-border();
                 font-family: 'Lato';
+
+                @media only screen and (max-width: 1020px) {
+                    width: 365px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 870px) {
+                    width: 265px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 420px) {
+                    width: 135px;
+                    height: 30px;
+                }
             }
 
             .time {
-                width: 551px;
+                width: 465px;
                 height: 62px;
                 padding-left: 30px;
                 @include form-field-border();
                 font-family: 'Lato';
+
+                @media only screen and (max-width: 1020px) {
+                    width: 365px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 870px) {
+                    width: 265px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 420px) {
+                    width: 135px;
+                    height: 32px;
+                }
             }
         }
 
         .no-of-persons {
-            width: 1162px;
+            width: 1005px;
             height: 60px;
             padding-left: 30px;
             @include form-field-border();
+
+            @media only screen and (max-width: 1020px) {
+                width: 800px;
+                height: 55px;
+            }
+
+            @media only screen and (max-width: 870px) {
+                width: 595px;
+                height: 50px;
+            }
+
+            @media only screen and (max-width: 420px) {
+                width: 340px;
+                height: 40px;
+            }
         }
 
         .book-now {
@@ -433,6 +739,11 @@ $lato: 'Lato';
             font-family: $rufina;
             color: white;
             background-color: #5E6600;
+
+            @media only screen and (max-width: 420px) {
+                width: 150px;
+                height: 50px;
+            }
 
             &:hover {
                 cursor: pointer;
@@ -447,7 +758,6 @@ $lato: 'Lato';
 }
 
 
-
 .footer-container {
     background-color: #233000;
     color: #FFFF;
@@ -457,11 +767,20 @@ $lato: 'Lato';
         justify-content: space-evenly;
         padding: 20px 0 20px 0;
 
+        @media only screen and (max-width: 420px) {
+            font-size: 8px;
+        }
+
         .brand-name {
             font-family: $rufina;
             font-size: 30px;
             word-wrap: break-word;
             width: 120px;
+
+            @media only screen and (max-width: 420px) {
+                font-size: 12px;
+                width: 50px;
+            }
         }
 
         .contact-us,
@@ -469,6 +788,11 @@ $lato: 'Lato';
             font-family: $rufina;
             font-size: 20px;
             padding-bottom: 35px;
+
+            @media only screen and (max-width: 420px) {
+                font-size: 10px;
+                padding-bottom: 20px;
+            }
         }
 
         .telephone {
@@ -478,6 +802,10 @@ $lato: 'Lato';
         .address {
             font-family: $lato;
             width: 170px;
+
+            @media only screen and (max-width: 420px) {
+                width: 100px;
+            }
         }
 
         .mail {
@@ -512,8 +840,17 @@ $lato: 'Lato';
             background-color: #233000;
             color: #FFFF;
 
+            @media only screen and (max-width: 420px) {
+                width: 100px;
+                height: 20px;
+            }
+
             &::placeholder {
                 color: #FFFF;
+
+                @media only screen and (max-width: 420px) {
+                    font-size: 8px;
+                }
             }
         }
 
@@ -527,6 +864,12 @@ $lato: 'Lato';
             background-color: #5E6600;
             color: #FFFF;
 
+            @media only screen and (max-width: 420px) {
+                width: 50px;
+                height: 20px;
+                font-size: 7px;
+            }
+
             &:hover {
                 cursor: pointer;
             }
@@ -539,6 +882,11 @@ $lato: 'Lato';
         .subscription-note {
             font-family: $lato;
             font-size: 10px;
+
+            @media only screen and (max-width: 420px) {
+                font-size: 6px;
+                width: 130px;
+            }
         }
     }
 
@@ -554,6 +902,10 @@ $lato: 'Lato';
         .copyright {
             font-family: $lato;
             padding-left: 100px;
+
+            @media only screen and (max-width: 420px) {
+                padding-left: 10px;
+            }
         }
 
         .social-media-icon {
@@ -562,6 +914,11 @@ $lato: 'Lato';
 
         .social-media-links {
             padding-right: 100px;
+
+            @media only screen and (max-width: 420px) {
+                width: 150px;
+                padding-right: 10px;
+            }
         }
     }
 }
