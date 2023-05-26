@@ -22,15 +22,24 @@ export default function ReservationForm() {
         });
     };
 
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert(JSON.stringify(formData));
+        alert(`you have booked your reservation successfully ${JSON.stringify(formData)}`);
+        setFormData({
+            firstName: "",
+            lastName: "",
+            mail: "",
+            phone: "",
+            date: "",
+            time: "",
+            noOfPersons: 0
+        })
     }
 
 
     return (
-        <div className="form">
+        <form className="form">
             <div className="form-header">
                 <img className="mint" src={mint} alt="mint"></img>
                 <div className="form-title">
@@ -67,8 +76,8 @@ export default function ReservationForm() {
                     <option>10</option>
                     <option>15</option>
                 </select>
-                <button className="book-now" onClick={handleSubmit}>Book Now</button>
+                <button type="submit" className="book-now" onClick={handleSubmit}>Book Now</button>
             </div>
-        </div>
+        </form>
     )
 }
