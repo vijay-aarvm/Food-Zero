@@ -10,7 +10,7 @@ export default function ReservationForm() {
         mail: "",
         phone: "",
         date: "",
-        time: "",
+        time: "00:00",
         noOfPersons: 0
     })
 
@@ -69,6 +69,7 @@ export default function ReservationForm() {
                     </select>
                 </div>
                 <select className="no-of-persons" name="noOfPersons" onChange={handleChange} value={formData.noOfPersons}>
+                    <option>0</option>
                     <option>2</option>
                     <option>4</option>
                     <option>6</option>
