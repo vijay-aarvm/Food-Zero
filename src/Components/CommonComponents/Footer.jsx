@@ -16,7 +16,7 @@ export default function Footer() {
                 <div className="contact-location">
                     <p className="contact-us">Contact</p>
                     <p className="telephone">
-                        <a href="tel:+1+86 852 346 000">+1+86 852 346 000</a>
+                        <a href="/#">+1+86 852 346 000</a>
                     </p>
                     <p className="mail">
                         <a href="mailto:info@foodzero.com">info@foodzero.com</a>
@@ -38,10 +38,10 @@ export default function Footer() {
                     <p>© 2020 Zero Inc. All rights Reserved</p>
                 </div>
                 <div className="social-media-links">
-                    <a href="#"><img className="instagram-icon" class="social-media-icon" src={instagram} /></a>
-                    <a href="#"><img className="twitter-icon" class="social-media-icon" src={twitter} /></a>
-                    <a href="#"><img className="facebook-icon" class="social-media-icon" src={facebook} /></a>
-                    <a href="#"><img className="youtube-icon" class="social-media-icon" src={youtube} /></a>
+                    <a href="/#"><img className="instagram-icon" alt="instagram" class="social-media-icon" src={instagram} /></a>
+                    <a href="/#"><img className="twitter-icon" alt="twitter" class="social-media-icon" src={twitter} /></a>
+                    <a href="/#"><img className="facebook-icon" alt="facebook" class="social-media-icon" src={facebook} /></a>
+                    <a href="/#"><img className="youtube-icon" alt="youtube" class="social-media-icon" src={youtube} /></a>
                 </div>
             </div>
         </div>
