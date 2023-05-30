@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles.scss";
+import { Link } from "react-router-dom";
 import logo from "../../assests/images/Logo.png";
 import navigaition_menu from "../../assests/images/navimenu.png";
 
@@ -12,7 +13,7 @@ export default function NavigationBar() {
             </div>
             <div className="Reservations-menu">
                 <p className="Reservations-menu-contact">+86 852 346 000</p>
-                <button className="Reservation-btn"><p className="Reservations-menu-reserve-btn">Reservations</p></button>
+                <Link to={"/reservation_form"} className="Reservations-menu-reserve-btn">Reservations</Link>
             </div>
         </div>
     )

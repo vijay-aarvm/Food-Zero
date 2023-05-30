@@ -12,7 +12,7 @@ export default function AddressLocation() {
                     <img className="orange" src={orange} alt="orange"></img>
                     <img className="lemons-on-table" src={lemonsOnTable} alt="lemons"></img>
                 </div>
-                <p className="email-and-phone">We can be contacted via email <a href="#">info@foodzero.com</a> or telephone on <a href="#">+86 852 346 000</a></p>
+                <p className="email-and-phone">We can be contacted via email <a href="/#">info@foodzero.com</a> or telephone on <a href="/#">+86 852 346 000</a></p>
             </div>
             <div className="address-section">
                 <div className="address-and-map">
