@@ -923,3 +923,75 @@ $lato: 'Lato';
         }
     }
 }
+
+@mixin form-reservation-input {
+    height: 50px;
+    width: 280px;
+}
+
+.form-reservation {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #EBF0E4;
+
+    .reservation-header {
+        @include flex-column();
+        margin: 40px 0 60px 0;
+
+        .reservation-header-title {
+            font-size: 50px;
+            font-family: $rufina;
+            margin-bottom: 0px;
+        }
+
+        .reservation-header-headline {
+            font-size: 15px;
+            margin-top: 0px;
+            font-family: $lato;
+            color: #4D4D4D;
+        }
+    }
+
+    .schedule-options {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 150px;
+
+        .select-schedule {
+            @include flex-row();
+            margin-bottom: 100px;
+            gap: 30px;
+
+            .date {
+                @include form-reservation-input();
+                background-color: #EBF0E4;
+                @include form-field-border();
+            }
+
+            .time {
+                @include form-reservation-input();
+                background-color: #EBF0E4;
+                @include form-field-border();
+            }
+
+            .no-of-persons {
+                @include form-reservation-input();
+                background-color: #EBF0E4;
+                @include form-field-border();
+            }
+        }
+
+        .book-now {
+            width: 200px;
+            height: 50px;
+            font-family: $rufina;
+            color: white;
+            @include form-field-border();
+            background-color: #233000;
+        }
+    }
+}

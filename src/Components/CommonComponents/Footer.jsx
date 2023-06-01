@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../../styles.scss";
 import instagram from "../../assests/images/instagram.png";
 import twitter from "../../assests/images/twitter.png";
@@ -6,17 +6,17 @@ import facebook from "../../assests/images/facebook.png";
 import youtube from "../../assests/images/youtube.png";
 
 const ContactInfo = () => {
-    const [phoneNum, setPhoneNumber] = useState("");
-    useEffect(() => {
-        setTimeout(() => {
-            setPhoneNumber('+1+86 852 346 000')
-        }, 5000);
-    }, []);
+    // const [phoneNum, setPhoneNumber] = useState("");
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setPhoneNumber('+1+86 852 346 000')
+    //     });
+    // }, []);
     return (
         <div className="contact-location">
             <p className="contact-us">Contact</p>
             <p className="telephone">
-                <a href="/#">{phoneNum}</a>
+                <a href="/#">+1+86 852 346 000</a>
             </p>
             <p className="mail">
                 <a href="mailto:info@foodzero.com">info@foodzero.com</a>
@@ -59,18 +59,18 @@ export default function Footer() {
                         </a>
                     ))
                 }
-                {/* <a href="/#"><img className="instagram-icon" alt="instagram" class="social-media-icon" src={instagram} /></a>
-                <a href="/#"><img className="twitter-icon" alt="twitter" class="social-media-icon" src={twitter} /></a>
-                <a href="/#"><img className="facebook-icon" alt="facebook" class="social-media-icon" src={facebook} /></a>
-                <a href="/#"><img className="youtube-icon" alt="youtube" class="social-media-icon" src={youtube} /></a> */}
+                {/* <a href="/#"><img className="instagram-icon" alt="instagram" src={instagram} /></a>
+                <a href="/#"><img className="twitter-icon" alt="twitter" src={twitter} /></a>
+                <a href="/#"><img className="facebook-icon" alt="facebook" src={facebook} /></a>
+                <a href="/#"><img className="youtube-icon" alt="youtube" src={youtube} /></a> */}
             </div>
         );
     }
-    
+
     return (
         <div className="footer-container">
             <div className="footer">
-                { renderBrandName()}
+                {renderBrandName()}
                 <ContactInfo />
                 <div className="write-to-us">
                     <p className="mail-title">Never Miss a Recipe</p>
@@ -86,7 +86,7 @@ export default function Footer() {
                 <div className="copyright">
                     <p>© 2020 Zero Inc. All rights Reserved</p>
                 </div>
-                { renderSocialMediaIcons() }
+                {renderSocialMediaIcons()}
             </div>
         </div>
     )
