@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles.scss";
-import NavigationBar from "Components/CommonComponents/NavigationBar";
+import NavigationBar from "../CommonComponents/NavigationBar";
 import ContactHeaderHero from "./ContactHeaderHero";
 import ContactHeaderOpenTime from "./ContactHeaderOpenTime";
 

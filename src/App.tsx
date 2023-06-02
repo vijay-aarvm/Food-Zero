@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.scss";
 import { Routes, Route } from "react-router";
-import Contact from "Components/ContactPage/contact";
-import ReservationForm from "Components/ContactPage/ReservationForm";
-import Home from "Components/Home/Home";
+import Contact from "./Components/ContactPage/contact";
+import ReservationForm from "./Components/ContactPage/ReservationForm";
+import Home from "./Components/Home/Home";
 
 
 export default function App() {

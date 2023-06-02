@@ -3,7 +3,7 @@ import "../../styles.scss";
 import ContactHeader from "./ContactHeader";
 import AddressLocation from "./AddressLocation";
 import ReservationForm from "./ReservationForm";
-import Footer from "Components/CommonComponents/Footer";
+import Footer from "../CommonComponents/Footer";
 
 export default function Contact() {
     return (

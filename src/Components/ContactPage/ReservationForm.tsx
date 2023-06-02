@@ -15,7 +15,7 @@ export default function ReservationForm() {
     })
 
 
-    const handleChange = (e) => {
+    const handleChange = (e: any) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
@@ -23,7 +23,7 @@ export default function ReservationForm() {
     };
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
         alert(`you have booked your reservation successfully ${JSON.stringify(formData)}`);
         setFormData({

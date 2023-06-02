@@ -992,6 +992,189 @@ $lato: 'Lato';
             color: white;
             @include form-field-border();
             background-color: #233000;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                transition-duration: 0.05s;
+                box-shadow: 0 0 10px #ff9d72;
+            }
         }
     }
+}
+
+.blog-card {
+    @include flex-column();
+    width: 500px;
+    height: 600px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 60px;
+
+    .blog-cover-image {
+        width: 400px;
+        height: 500px;
+    }
+
+    .author-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+
+        .author-profile-container {
+            @include flex-row();
+            font-family: $lato;
+            color: #5E6600;
+            font-size: 10px;
+            margin: 20px 0 10px 0;
+
+            .author-profile {
+                width: 45px;
+                height: 45px;
+            }
+
+            .author-bio {
+                @include flex-row();
+                gap: 0px;
+
+                .bio-list {
+                    @include flex-row();
+                    gap: 25px;
+                    padding-left: 20px;
+                }
+            }
+        }
+
+        .post-info {
+            @include flex-column();
+            width: 380px;
+            font-weight: 700;
+            align-items: flex-start;
+            text-align: left;
+
+            .post-title {
+                font-family: $rufina;
+                font-size: 30px;
+                width: 380px;
+                margin: 10px 10px 10px 0;
+            }
+
+            .dotted-line {
+                width: 380px;
+                border: none;
+                border-top: 2px dotted black;
+            }
+
+            .post-oneliner {
+                font-family: $lato;
+                font-size: 15px;
+                color: #4D4D4D;
+            }
+
+            .read-article {
+                @include flex-row();
+
+                .read-more {
+                    background: none;
+                    border: none;
+                    font-family: $lato;
+                    font-size: 15px;
+                    padding: 20px 10px 10px 0;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    .arrow {
+                        width: 20px;
+                        height: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.flower-bg {
+    background-image: url("./assests/images/flower.png");
+    width: 100%;
+    height: 570px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+
+    @media only screen and (max-width: 420px) {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+.blog-column-hero {
+    @include flex-column();
+    text-align: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    padding: 75px 0 0 0px;
+
+    @media only screen and (max-width: 420px) {
+        padding: 10px 0 0 50px;
+    }
+
+    .blog-column-hero-title {
+        font-size: 72px;
+        margin-bottom: 0px;
+        font-family: $rufina;
+
+        @media only screen and (max-width: 420px) {
+            font-size: 20px;
+        }
+    }
+
+    .blog-column-hero-title-description {
+        font-size: 15px;
+        font-family: $lato;
+
+        @media only screen and (max-width: 420px) {
+            font-size: 10px;
+        }
+    }
+}
+
+.blog-section {
+    @include flex-column();
+    margin-top: 250px;
+    align-items: center;
+    text-align: center;
+
+    .breadcrumbs {
+        @include flex-row();
+        margin-bottom: 50px;
+        align-self: flex-start;
+
+        .blog-path {
+            color: #B0B0B0;
+        }
+
+        .blog-path-source {
+            color: #4D4D4D;
+        }
+    }
+
+    .blog-content {
+        @include flex-row();
+        flex-wrap: wrap;
+        gap: 100px;
+    }
+}
+
+.blog-column-body {
+    @include flex-column();
+    text-align: center;
+    align-items: center;
 }

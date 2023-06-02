@@ -18,8 +18,7 @@ import "../../styles.scss";
 //     });
 // };
 
-const ReservationHeader = ({ data }) => {
-    console.log("data", data)
+const ReservationHeader = () => {
     return (
         <div className="reservation-header">
             <h1 className="reservation-header-title">Make a Reservation</h1>
@@ -36,10 +35,12 @@ const SelectSchedule = () => {
     const [time, setTime] = useState(Time[0]);
     const [noOfPersons, setNoOfPersons] = useState(persons[0]);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
         alert(`you will be redirected to the reservation form`)
-        setTime()
+        setTime("11:00 am");
+        setNoOfPersons("0");
+
     }
     return (
         <div className="schedule-options">
