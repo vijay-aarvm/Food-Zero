@@ -11,7 +11,18 @@ import cody from "../../assests/images/cody.png";
 import wine from "../../assests/images/wine.png";
 import leslie from "../../assests/images/leslie.png";
 
-export const blogList = [
+type bloginfo = {
+    blogCover: File,
+    authorProfile: File,
+    authorName: string,
+    blogPostedDate: string,
+    blogPostedTime: string,
+    totalComments: string,
+    blogTitle: string,
+    blogOneliner: string
+}
+
+export const blogList: bloginfo[] = [
     {
         "blogCover": mangoCover,
         "authorProfile": julieChristie,
