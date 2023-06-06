@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles.scss";
 import HorizontalBlogCard from "../CommonComponents/HorizontalBlogCard";
-import { blogList } from "./bloglist"
+import { blogList } from "./bloglist";
 
 export default function BlogSectionOneColumn() {
+
+    const [blog, setBlog] = useState(blogList);
+
+    useEffect(() => {
+        setInterval(() => {
+            const fetchBlogs = async () => {
+                const response = await fetch("https://localhost:3000");
+                const updatedBlogs = await response.json();
+                setBlog(updatedBlogs);
+            }
+            fetchBlogs();
+        }, 60000)
+    }, [])
+
     return (
         <div className="blog-section-horizontal">
             <div className="breadcrumbs-horizontal">
@@ -11,7 +25,7 @@ export default function BlogSectionOneColumn() {
                 <p className="blog-path-source-horizontal">Blog List One Column</p>
             </div>
             <div className="blog-content-horizontal">
-                {blogList.map((blog: any, index: number) => (
+                {blog.map((blog: any, index: number) => (
                     <HorizontalBlogCard obj={blog} key={index} />
                 ))}
             </div>
