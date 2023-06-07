@@ -9,10 +9,10 @@ import saltpepper from "../../assests/images/salt-pepper.png";
 
 export default function HomeSection1() {
     return (
-        <div className="home-page-section1">
-            <div className="healthyfood">
-                <NavigationBar />
-                <p className="text-container1">Healthy Eating
+        <div className="homepage-section1">
+            <NavigationBar />
+            <div className="healthy-eating">
+                <p className="healthy-eat-description">Healthy Eating
                     is important
                     part of lifestyle</p>
                 <div className="meat-on-a-plate">
@@ -23,14 +23,12 @@ export default function HomeSection1() {
                     <img className="spice3" src={spice3} alt="spices" />
                 </div>
             </div>
-            <div id="healthy-diet">
+            <div className="healthy-diet">
                 <div className="mussels">
                     <img className="mussel-pasta" src={mussels} alt="mussels" /><br /><br /><br />
                     <p className="diet-desc">Start to plan your diet today</p><br /><br />
-                    <p className="mussel-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu
-                    </p>
+                    <p className="mussel-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu</p>
                 </div>
-
                 <div className="salt-pepper">
                     <p className="salt-pepper-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu</p>
                     <img className="salt-pepper-img" src={saltpepper} alt="salt-pepper" />

@@ -1609,3 +1609,184 @@ $lato: 'Lato';
         gap: 50px;
     }
 }
+
+.homepage-section1 {
+    background-color: #233000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .healthy-eating {
+        padding: 150px 0 100px 0;
+        position: relative;
+
+        .healthy-eat-description {
+            font-family: $rufina;
+            width: 500px;
+            font-size: 70px;
+            // padding: 0 0 0 20px;
+            display: flex;
+            color: #ffff;
+            position: absolute;
+            top: 10px;
+            z-index: 1;
+            left: 160px;
+        }
+
+        .meat-on-a-plate {
+            background: url(./assests/images/meat-plate.png) no-repeat;
+            background-size: contain;
+            z-index: 0;
+            float: right;
+            height: 500px;
+            width: 400px;
+            position: relative;
+            right: 300px;
+        }
+
+        .spices {
+            position: absolute;
+            z-index: 2;
+            right: 500px;
+            top: 550px;
+
+            .spice1 .spice2 .spice3 {
+                padding: 20px;
+                width: 80px;
+                height: 80px;
+            }
+
+        }
+    }
+
+    .healthy-diet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: center;
+        padding-top: 100px;
+        padding-bottom: 190px;
+
+        .mussels {
+            display: flex;
+            flex-direction: column;
+
+            .mussel-pasts {
+                width: 80%;
+                height: auto;
+            }
+
+            .diet-desc {
+                font-family: $rufina;
+                font-weight: 700;
+                font-size: 35px;
+                line-height: 44px;
+                width: 250px;
+                word-spacing: 1px;
+                color: white;
+            }
+
+            .mussel-description {
+                font-family: $rufina;
+                font-weight: 70;
+                font-size: 20px;
+                width: 430px;
+                color: white;
+            }
+        }
+
+        .salt-pepper {
+            display: flex;
+            flex-direction: column;
+
+            .salt-pepper-desc {
+                font-family: $rufina;
+                font-weight: 70;
+                font-size: 20px;
+                width: 360px;
+                color: white;
+                padding-bottom: 100px;
+            }
+
+            .salt-pepper-img {
+                width: 80%;
+                height: auto;
+                color: white;
+            }
+        }
+    }
+}
+
+.homepage-section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+
+    .menu-header {
+        padding-bottom: 130px;
+        display: flex;
+        justify-content: space-between;
+
+        .food-menu {
+            margin: 80px 0 0 80px;
+
+            .our-menu {
+                font-family: $rufina;
+                line-height: 60px;
+                font-size: 54px;
+                padding-bottom: 15px;
+            }
+
+            .our-menu-desc {
+                width: 243.54px;
+                font-family: $lato;
+            }
+        }
+
+        .header-img {
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    .food-items {
+        padding-bottom: 150px;
+        @include flex-row();
+        flex-wrap: wrap;
+        justify-content: space-evenly
+    }
+}
+
+.food-item {
+    @include flex-column();
+    width: 450px;
+    align-content: space-evenly;
+    margin-bottom: 50px;
+
+    .item-price {
+        font-family: $rufina;
+        align-self: flex-end;
+    }
+
+    .dotted-line {
+        border-bottom: 2px dotted #000000;
+        width: 450px;
+    }
+
+    .item-name {
+        font-family: $rufina;
+        width: 400px;
+        font-size: 35px;
+        align-self: flex-start;
+        text-align: start;
+        margin: 0;
+    }
+
+    .item-desc {
+        color: #4D4D4D;
+        font-family: $lato;
+        font-size: 15px;
+        align-self: flex-start;
+    }
+}
