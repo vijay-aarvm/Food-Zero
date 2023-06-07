@@ -1790,3 +1790,104 @@ $lato: 'Lato';
         align-self: flex-start;
     }
 }
+
+.homepage-section3 {
+    background-color: #EBF0E4;
+    width: auto;
+    height: auto;
+    position: relative;
+    z-index: -2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .man-cooks {
+        display: flex;
+        flex-direction: column;
+
+        .leaf-left {
+            z-index: -1;
+            position: absolute;
+            width: 204px;
+            height: 169px;
+            align-self: flex-start;
+            top: 120px;
+        }
+
+        .man-sprinkles {
+            position: relative;
+            z-index: 2;
+            margin: 150px 0 -20px 0px;
+        }
+    }
+
+    .cook-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .excellent-cook {
+            font-size: 30px;
+            width: 200px;
+            padding-bottom: 20px;
+        }
+
+        .cook-desc {
+            width: 230px;
+            padding-bottom: 90px;
+        }
+
+        .leaf-right {
+            width: 200px;
+            height: 200px;
+            align-self: flex-end;
+        }
+    }
+}
+
+.homepage-section4 {
+    width: auto;
+    height: auto;
+    @include flex-column();
+    align-items: center;
+    text-align: center;
+
+    .quality-ingredients {
+        @include flex-row();
+        font-family: $rufina;
+        justify-content: space-evenly;
+        padding: 150px 0;
+
+        .premium-quality,
+        .seasonal-veggies,
+        .fresh-fruit {
+            width: 30%;
+            height: 30%;
+
+            & .ingredients-image {
+                padding-bottom: 30px;
+            }
+
+            & .ingredients {
+                font-size: 24px;
+                padding-bottom: 40px;
+            }
+
+            & .ingredient-desc {
+                font-family: $lato;
+                color: #4D4D4D;
+                font-size: 15px;
+                margin: 0;
+            }
+
+        }
+
+    }
+
+    .blogs {
+        @include flex-row();
+        justify-content: space-evenly;
+    }
+
+
+}
