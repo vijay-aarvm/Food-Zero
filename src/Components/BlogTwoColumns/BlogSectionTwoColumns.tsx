@@ -1,9 +1,13 @@
 import React from "react";
 import "../../styles.scss";
 import BlogCard from "../CommonComponents/BlogCard";
-import { blogList } from "../BlogOneColumn/bloglist";
+// import { blogList } from "../BlogOneColumn/bloglist";
+import store from "../BlogOneColumn/blogStore";
 
 export default function BlogSectionTwoColumns() {
+
+    const state = store.getState();
+
     return (
         <div className="blog-section">
             <div className="breadcrumbs">
@@ -11,7 +15,7 @@ export default function BlogSectionTwoColumns() {
                 <p className="blog-path-source">Blog Two Columns</p>
             </div>
             <div className="blog-content">
-                {blogList.map((blog: any, index: number) => (
+                {state.map((blog: any, index: number) => (
                     <BlogCard obj={blog} key={index} />
                 ))}
             </div>

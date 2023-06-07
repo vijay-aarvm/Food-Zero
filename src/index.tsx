@@ -4,6 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from "./App"
 import reportWebVitals from './reportWebVitals';
+import store from './Components/BlogOneColumn/blogStore';
+import { Provider } from 'react-redux';
 
 const rootElement = document.getElementById('root');
 if (rootElement !== null) {
@@ -11,7 +13,9 @@ if (rootElement !== null) {
   root.render(
     <React.StrictMode>
       <BrowserRouter>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </BrowserRouter>
     </React.StrictMode>
   )

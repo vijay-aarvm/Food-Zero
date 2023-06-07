@@ -1,22 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+// import { useEffect, useState } from "react";
 import "../../styles.scss";
 import HorizontalBlogCard from "../CommonComponents/HorizontalBlogCard";
-import { blogList } from "./bloglist";
+import store from "./blogStore";
+// import { blogList } from "./bloglist";
 
 export default function BlogSectionOneColumn() {
 
-    const [blog, setBlog] = useState(blogList);
+    // const [blog, setBlog] = useState(blogList);
 
-    useEffect(() => {
-        setInterval(() => {
-            const fetchBlogs = async () => {
-                const response = await fetch("https://localhost:3000");
-                const updatedBlogs = await response.json();
-                setBlog(updatedBlogs);
-            }
-            fetchBlogs();
-        }, 60000)
-    }, [])
+    // useEffect(() => {
+    //     setInterval(() => {
+    //         const fetchBlogs = async () => {
+    //             const response = await fetch("https://localhost:3000");
+    //             const updatedBlogs = await response.json();
+    //             setBlog(updatedBlogs);
+    //         }
+    //         fetchBlogs();
+    //     }, 60000)
+    // }, [])
+
+    const state = store.getState();
 
     return (
         <div className="blog-section-horizontal">
@@ -25,7 +29,7 @@ export default function BlogSectionOneColumn() {
                 <p className="blog-path-source-horizontal">Blog List One Column</p>
             </div>
             <div className="blog-content-horizontal">
-                {blog.map((blog: any, index: number) => (
+                {state.map((blog: any, index: number) => (
                     <HorizontalBlogCard obj={blog} key={index} />
                 ))}
             </div>
