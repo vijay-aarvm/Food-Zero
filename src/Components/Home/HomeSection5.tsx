@@ -9,27 +9,27 @@ import paging from "../../assests/images/pagination.png";
 
 export default function HomeSection5() {
     return (
-        <div id="homepage-section5">
-            <div id="category-headline">
-                <h1 id="headline">Calories Energy Balance</h1>
-                <p id="headline-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div className="homepage-section5">
+            <div className="category-headline">
+                <h1 className="headline">Calories Energy Balance</h1>
+                <p className="headline-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <div id="menu-category">
-                <img id="starters" src={starters} alt="starters" />
-                <img id="mains" src={mains} alt="mains" />
-                <img id="soups" src={soups} alt="soups" />
+            <div className="menu-category">
+                <img className="starters" src={starters} alt="starters" />
+                <img className="mains" src={mains} alt="mains" />
+                <img className="soups" src={soups} alt="soups" />
             </div>
-            <div id="testimonals">
-                <div id="testimony-content">
-                    <h3 id="client-testimony">“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id
+            <div className="testimonals">
+                <div className="testimony-content">
+                    <h3 className="client-testimony">“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id
                         penatibus imperdiet. Turpis
                         egestas ultricies purus Lorem ipsum dolor sit amet .
                     </h3>
-                    <img id="quote" src={quotes} alt="quote" />
+                    <img className="quote" src={quotes} alt="quote" />
                 </div>
-                <div id="client">
-                    <img id="client-info" src={clientinfo} alt="client-info" />
-                    <img id="paging" src={paging} alt="paging" />
+                <div className="client">
+                    <img className="client-info" src={clientinfo} alt="client-info" />
+                    <img className="paging" src={paging} alt="paging" />
                 </div>
             </div>
         </div>
