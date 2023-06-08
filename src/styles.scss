@@ -1634,7 +1634,7 @@ $lato: 'Lato';
         }
 
         .meat-on-a-plate {
-            background: url(./assests/images/meat-plate.png) no-repeat;
+            background: url("./assests/images/meat-plate.png") no-repeat;
             background-size: contain;
             z-index: 0;
             float: right;
@@ -2126,4 +2126,211 @@ $lato: 'Lato';
         }
     }
 
+}
+
+.about-header-section {
+    width: auto;
+    height: auto;
+    padding-bottom: 300px;
+
+    .about-header-bg {
+        background-image: url("./assests/images/about-bg.png");
+        width: 100%;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .about-header-title {
+        @include flex-column();
+        color: white;
+        font-family: $rufina;
+        width: 450px;
+        margin: 150px 0 0 700px;
+
+        .about-title {
+            font-size: 70px;
+            z-index: 1;
+            margin: 0;
+        }
+
+        .about-title-desc {
+            margin-top: 20px;
+            font-size: 15px;
+            z-index: 1;
+        }
+    }
+}
+
+.about-us {
+    .our-story {
+        @include flex-row();
+        justify-content: space-evenly;
+
+        .ourstory-title {
+            @include flex-column();
+            text-align: start;
+
+            .title {
+                font-size: 50px;
+                font-family: $rufina;
+            }
+
+            .title-desc {
+                font-size: 20px;
+                font-family: $lato;
+                width: 550px;
+                color: #4D4D4D;
+            }
+        }
+
+        .ourstory-img {
+            width: 500px;
+            height: 350px;
+        }
+    }
+
+    .our-team {
+        @include flex-row();
+        margin: 100px 0 200px 0;
+        justify-content: space-evenly;
+
+        .our-manager {
+            @include flex-column();
+            align-items: center;
+            text-align: center;
+            width: 400px;
+
+            .manager-title {
+                font-size: 30px;
+                font-family: $rufina;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+
+            .manager-name {
+                font-size: 15px;
+                font-family: $lato;
+            }
+
+            .manager {
+                width: 400px;
+                height: 500px;
+                margin-bottom: 200px;
+            }
+
+            .about-manager {
+                font-size: 13px;
+                font-family: $lato;
+                color: #4D4D4D;
+                width: 300px;
+                text-align: end;
+                align-self: flex-end;
+            }
+        }
+
+        .our-chef {
+            @include flex-column();
+            align-items: center;
+            text-align: center;
+            width: 400px;
+            margin-top: 100px;
+
+            .chef-title {
+                font-size: 30px;
+                font-family: $rufina;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+
+            .chef-name {
+                font-size: 15px;
+                font-family: $lato;
+            }
+
+            .chef {
+                width: 400px;
+                height: 500px;
+            }
+
+            .about-chef {
+                font-size: 13px;
+                font-family: $lato;
+                color: #4D4D4D;
+                width: 300px;
+                text-align: start;
+                margin-bottom: 100px;
+                align-self: flex-start;
+            }
+        }
+    }
+
+    .our-food-video {
+        width: auto;
+        height: auto;
+        padding-bottom: 300px;
+        @include flex-column();
+        text-align: center;
+        align-items: center;
+
+        .ourfood {
+            background-image: url("./assests/images/ourfood.png");
+            width: 100%;
+            height: 500px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+        }
+
+        .video-title {
+            font-size: 70px;
+            font-family: $rufina;
+            color: white;
+            z-index: 1;
+            position: relative;
+            margin: 120px 0 0 0;
+        }
+
+        .title-desc {
+            font-size: 20px;
+            font-family: $lato;
+            color: white;
+            z-index: 1;
+            position: relative;
+        }
+
+        .play-btn {
+            background: none;
+            position: relative;
+            border: none;
+
+            .play-pause {
+                width: 70px;
+                height: 70px;
+            }
+
+        }
+    }
+}
+
+.our-process {
+    .process-title {
+        @include flex-row();
+
+
+        .title {
+            font-family: $rufina;
+            font-size: 50px;
+        }
+
+        .rosemary-right {
+            width: 300px;
+            height: 300px;
+            float: right;
+        }
+    }
 }
