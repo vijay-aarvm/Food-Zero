@@ -1,6 +1,5 @@
 import React from "react";
 import "../../styles.scss";
-import blueberry from "../../assests/images/blueberry.png";
 import starters from "../../assests/images/starter-items.png";
 import MenuDisplay from "../CommonComponents/MenuDisplay";
 
@@ -29,7 +28,6 @@ export default function MenuStarters() {
                 <p className="starters-title">Starters</p>
                 <p className="starters-title-desc">This is a section of starters. Choose your starters</p>
             </div>
-            {/* <img className="blueberry" src={blueberry} alt="blueberry" /> */}
             <div className="starter-menu">
                 <img className="starter-items" src={starters} alt="starters"></img>
                 <div className="menu">
