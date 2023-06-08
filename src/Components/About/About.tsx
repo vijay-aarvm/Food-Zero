@@ -3,6 +3,8 @@ import "../../styles.scss";
 import AboutHeader from "./AboutHeader";
 import AboutUs from "./AboutUs";
 import AboutProcess from "./AboutProcess";
+import FormReservation from "../CommonComponents/FormReservation";
+import Footer from "../CommonComponents/Footer";
 
 export default function About() {
     return (
@@ -10,6 +12,8 @@ export default function About() {
             <AboutHeader />
             <AboutUs />
             <AboutProcess />
+            <FormReservation />
+            <Footer />
         </div>
     )
 }

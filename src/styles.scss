@@ -924,11 +924,6 @@ $lato: 'Lato';
     }
 }
 
-@mixin form-reservation-input {
-    height: 50px;
-    width: 280px;
-}
-
 .form-reservation {
     display: flex;
     flex-direction: column;
@@ -967,19 +962,22 @@ $lato: 'Lato';
             gap: 30px;
 
             .date {
-                @include form-reservation-input();
+                height: 50px;
+                width: 280px;
                 background-color: #EBF0E4;
                 @include form-field-border();
             }
 
             .time {
-                @include form-reservation-input();
+                height: 50px;
+                width: 280px;
                 background-color: #EBF0E4;
                 @include form-field-border();
             }
 
             .no-of-persons {
-                @include form-reservation-input();
+                height: 50px;
+                width: 280px;
                 background-color: #EBF0E4;
                 @include form-field-border();
             }
@@ -1005,6 +1003,82 @@ $lato: 'Lato';
     }
 }
 
+
+@media (max-width: 900px) {
+    .form-reservation {
+
+        .schedule-options {
+
+            .select-schedule {
+
+                .date {
+                    height: 40px;
+                    width: 250px;
+                }
+
+                .time {
+                    height: 40px;
+                    width: 250px;
+                }
+
+                .no-of-persons {
+                    height: 40px;
+                    width: 250px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .form-reservation {
+        .schedule-options {
+            .select-schedule {
+
+                .date {
+                    height: 40px;
+                    width: 200px;
+                }
+
+                .time {
+                    height: 40px;
+                    width: 200px;
+                }
+
+                .no-of-persons {
+                    height: 40px;
+                    width: 200px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .form-reservation {
+        .schedule-options {
+            margin-bottom: 100px;
+
+            .select-schedule {
+
+                .date {
+                    height: 30px;
+                    width: 100px;
+                }
+
+                .time {
+                    height: 30px;
+                    width: 100px;
+                }
+
+                .no-of-persons {
+                    height: 30px;
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
 
 .blog-card {
     @include flex-column();
@@ -2165,6 +2239,66 @@ $lato: 'Lato';
     }
 }
 
+@media (max-width: 1030px) {
+    .about-header-section {
+
+        .about-header-title {
+            width: 450px;
+            margin: 150px 0 0 500px;
+
+            .about-title {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+@media(max-width: 920px) {
+    .about-header-section {
+
+        .about-header-title {
+            width: 350px;
+            margin: 150px 0 0 380px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .about-header-section {
+
+        .about-header-title {
+            width: 350px;
+            margin: 150px 0 0 300px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .about-header-section {
+
+        .about-header-bg {
+            height: 400px;
+        }
+
+        .about-header-title {
+            margin: 150px 0 0 80px;
+
+            .about-title {
+                font-size: 20px;
+                z-index: 1;
+                margin: 0;
+            }
+
+            .about-title-desc {
+                margin-top: 20px;
+                font-size: 10px;
+                z-index: 1;
+                width: 300px
+            }
+        }
+    }
+}
+
 .about-us {
     .our-story {
         @include flex-row();
@@ -2318,9 +2452,14 @@ $lato: 'Lato';
 }
 
 .our-process {
+    @include flex-column();
+    margin-bottom: 150px;
+
     .process-title {
         @include flex-row();
-
+        text-align: center;
+        align-items: center;
+        margin-left: 350px;
 
         .title {
             font-family: $rufina;
@@ -2328,9 +2467,111 @@ $lato: 'Lato';
         }
 
         .rosemary-right {
-            width: 300px;
-            height: 300px;
-            float: right;
+            width: 250px;
+            height: 250px;
+            margin-left: 170px
+        }
+    }
+
+    .slice {
+        @include flex-row();
+        justify-content: space-evenly;
+        margin-top: 50px;
+
+        .meat-sliced {
+            width: 450px;
+            height: 350px;
+            margin: 10px;
+        }
+
+        .about-slice {
+            @include flex-column();
+            width: 500px;
+            text-align: left;
+
+            .slice-title {
+                font-size: 50px;
+                font-family: $rufina;
+                margin: 0;
+            }
+
+            .about-slice {
+                font-size: 15px;
+                font-family: $lato;
+                color: #4D4D4D;
+            }
+        }
+    }
+
+    .pickle-and-bake {
+        @include flex-row();
+        margin-top: 100px;
+        justify-content: space-evenly;
+
+        .pickle {
+            @include flex-column();
+            align-items: center;
+            text-align: center;
+            width: 450px;
+
+            .meat-pickled {
+                width: 450px;
+                height: 350px;
+                margin: 10px;
+            }
+
+            .about-pickle {
+                @include flex-column();
+                align-items: center;
+                text-align: center;
+                width: 500px;
+
+                .pickle-title {
+                    font-size: 50px;
+                    font-family: $rufina;
+                    margin: 20px 0 0 0;
+                }
+
+                .about-pickle {
+                    font-size: 15px;
+                    font-family: $lato;
+                    color: #4D4D4D;
+                }
+            }
+        }
+
+        .bake {
+            @include flex-column();
+            align-items: center;
+            text-align: center;
+            margin-top: 100px;
+            width: 450px;
+
+            .meat-baked {
+                width: 450px;
+                height: 350px;
+                margin: 10px;
+            }
+
+            .about-bake {
+                @include flex-column();
+                align-items: center;
+                text-align: center;
+                width: 400px;
+                text-align: left;
+
+                .bake-title {
+                    font-size: 50px;
+                    font-family: $rufina;
+                    margin: 0 0 20px 0;
+                }
+
+                .about-bake {
+                    font-size: 15px;
+                    font-family: $lato;
+                    color: #4D4D4D;
+                }
+            }
         }
     }
 }
