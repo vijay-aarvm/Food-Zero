@@ -841,15 +841,15 @@ $lato: 'Lato';
             background-color: #233000;
             color: #FFFF;
 
-            @media only screen and (max-width: 420px) {
-                width: 100px;
+            @media only screen and (max-width: 725px) {
+                width: 130px;
                 height: 20px;
             }
 
             &::placeholder {
                 color: #FFFF;
 
-                @media only screen and (max-width: 420px) {
+                @media only screen and (max-width: 725x) {
                     font-size: 8px;
                 }
             }
@@ -865,7 +865,7 @@ $lato: 'Lato';
             background-color: #5E6600;
             color: #FFFF;
 
-            @media only screen and (max-width: 420px) {
+            @media only screen and (max-width: 725px) {
                 width: 50px;
                 height: 20px;
                 font-size: 7px;
@@ -1834,7 +1834,7 @@ $lato: 'Lato';
 
 .food-item {
     @include flex-column();
-    width: 400px;
+    width: 450px;
     align-content: space-evenly;
     margin-bottom: 40px;
 
@@ -1845,12 +1845,12 @@ $lato: 'Lato';
 
     .dotted-line {
         border-bottom: 2px dotted #000000;
-        width: 400px;
+        width: 450px;
     }
 
     .item-name {
         font-family: $rufina;
-        width: 400px;
+        width: 450px;
         font-size: 35px;
         align-self: flex-start;
         text-align: start;
@@ -1862,6 +1862,84 @@ $lato: 'Lato';
         font-family: $lato;
         font-size: 15px;
         align-self: flex-start;
+    }
+}
+
+@media (max-width: 920px) {
+    .food-item {
+        width: 400px;
+        margin-bottom: 20px;
+
+        .dotted-line {
+            width: 400px;
+        }
+
+        .item-name {
+            width: 400px;
+            font-size: 30px;
+        }
+    }
+}
+
+@media (max-width:845px) {
+    .food-item {
+        width: 360px;
+        margin-bottom: 10px;
+
+        .item-price {
+            font-size: 8px;
+            margin: 0;
+        }
+
+        .dotted-line {
+            width: 360px;
+        }
+
+        .item-name {
+            width: 360px;
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .food-item {
+        width: 300px;
+        margin-bottom: 20px;
+
+        .dotted-line {
+            width: 300px;
+        }
+
+        .item-name {
+            width: 300px;
+            font-size: 20px;
+        }
+
+        .item-desc {
+            font-size: 10px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .food-item {
+        width: 130px;
+        margin-bottom: 10px;
+
+        .dotted-line {
+            width: 130px;
+        }
+
+        .item-name {
+            width: 130px;
+            font-size: 12px;
+            margin: 0;
+        }
+
+        .item-desc {
+            font-size: 7px;
+        }
     }
 }
 
@@ -2079,6 +2157,31 @@ $lato: 'Lato';
     }
 }
 
+@media (max-width: 420px) {
+    .menu-header {
+        padding-bottom: 200px;
+
+        .menu-header-bg {
+            height: 400px;
+        }
+
+        .menu-header-title {
+            margin: 100px 0 0 70px;
+
+
+
+            .title {
+                width: 200px;
+                font-size: 20px;
+            }
+
+            .title-desc {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
 .starters-section {
     @include flex-column();
     text-align: center;
@@ -2127,6 +2230,77 @@ $lato: 'Lato';
     }
 }
 
+@media (max-width:920px) {
+    .starters-section {
+        .starters-header {
+            margin-bottom: 70px;
+
+            .starters-title {
+                font-size: 40px;
+            }
+        }
+
+        .starter-menu {
+            padding-bottom: 100px;
+
+            .starter-items {
+                width: 450px;
+                height: 550px;
+            }
+        }
+    }
+}
+
+@media (max-width: 845px) {
+    .starters-section {
+        .starters-header {
+            .starters-title {
+                font-size: 30px;
+            }
+        }
+
+        .starter-menu {
+            .starter-items {
+                width: 320px;
+                height: 420px;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .starters-section {
+        margin-top: 50px;
+
+        .starters-header {
+            margin-bottom: 40px;
+
+            .starters-title {
+                font-size: 20px;
+            }
+
+            .starters-title-desc {
+                font-size: 10px;
+            }
+        }
+
+        .starter-menu {
+            @include flex-row();
+            justify-content: space-evenly;
+            padding-bottom: 50px;
+
+            .starter-items {
+                width: 220px;
+                height: 260px;
+            }
+
+            .menu {
+                @include flex-column();
+            }
+        }
+    }
+}
+
 .mains-section {
     @include flex-column();
     text-align: center;
@@ -2160,6 +2334,69 @@ $lato: 'Lato';
 
         .menu {
             @include flex-column();
+        }
+    }
+}
+
+@media (max-width:920px) {
+    .mains-section {
+        .mains {
+            .mains-title {
+                font-size: 40px;
+            }
+        }
+
+        .main-menu {
+            .main-items {
+                width: 450px;
+                height: 550px;
+            }
+        }
+    }
+}
+
+@media (max-width: 845px) {
+    .mains-section {
+        .mains {
+            .mains-title {
+                font-size: 30px;
+            }
+        }
+
+        .main-menu {
+            .main-items {
+                width: 320px;
+                height: 420px;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .mains-section {
+        margin-bottom: 50px;
+
+        .mains {
+            margin-bottom: 40px;
+
+            .mains-title {
+                font-size: 20px;
+            }
+
+            .mains-title-desc {
+                font-size: 10px;
+            }
+        }
+
+        .main-menu {
+            .main-items {
+                width: 220px;
+                height: 260px;
+            }
+
+            .menu {
+                @include flex-column();
+            }
         }
     }
 }
@@ -2199,7 +2436,67 @@ $lato: 'Lato';
             @include flex-column();
         }
     }
+}
 
+@media (max-width: 920px) {
+    .pastries-section {
+        .pastries-header {
+            .pastries-title {
+                font-size: 40px;
+            }
+        }
+
+        .pastry-menu {
+            .pastry-items {
+                width: 450px;
+                height: 550px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 845px) {
+    .pastries-section {
+        .pastries-header {
+            .pastries-title {
+                font-size: 30px;
+            }
+        }
+
+        .pastry-menu {
+            .pastry-items {
+                width: 320px;
+                height: 420px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 420px) {
+    .pastries-section {
+        .pastries-header {
+            margin-bottom: 40px;
+
+            .pastries-title {
+                font-size: 20px;
+
+                .pastries-title-desc {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .pastry-menu {
+            padding-bottom: 50px;
+
+            .pastry-items {
+                width: 220px;
+                height: 260px;
+            }
+        }
+    }
 }
 
 .about-header-section {
