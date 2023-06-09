@@ -8,6 +8,7 @@ import BlogTwoColumns from "./Components/BlogTwoColumns/BlogTwoColumn";
 import BlogOneColumn from "./Components/BlogOneColumn/BlogOneColumn";
 import Menu from "./Components/Menu/Menu";
 import About from "./Components/About/About";
+import SinglePost from "./Components/SinglePost-NoSidebar/SinglePost";
 
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
                 <Route path="blog_one_column" element={<BlogOneColumn />} />
                 <Route path="menu" element={<Menu />} />
                 <Route path="about" element={<About />} />
+                <Route path="single_post_without_sidebar" element={<SinglePost />} />
             </Routes>
         </>
     );
