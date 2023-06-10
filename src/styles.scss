@@ -3360,3 +3360,187 @@ $lato: 'Lato';
 
     }
 }
+
+.portfolio-content {
+    padding: 200px 0 200px 0;
+    @include flex-column();
+    text-align: center;
+    align-items: center;
+    // position: relative;
+
+    .overlapping-content {
+        position: relative;
+
+        .section-1 {
+            @include flex-row();
+            gap: 200px;
+            z-index: 2;
+            position: absolute;
+
+            .section1-img {
+                width: 350px;
+                height: 450px;
+            }
+
+            .section1-content {
+                width: 300px;
+                text-align: left;
+                align-self: flex-start;
+
+                .content-title {
+                    font-family: $rufina;
+                    font-size: 30px;
+                }
+
+                .title-desc {
+                    font-family: $lato;
+                    font-size: 15px;
+                    color: #4D4D4D;
+                }
+
+                .content-desc {
+                    font-family: $lato;
+                    font-size: 15px;
+                    color: #4D4D4D;
+                }
+            }
+        }
+
+        .section-2 {
+            @include flex-row();
+            gap: 50px;
+            z-index: 0;
+            position: relative;
+            top: 300px;
+            left: 180px;
+
+            .section2-img {
+                width: 500px;
+                height: 650px;
+            }
+
+            .section2-content {
+                width: 300px;
+                text-align: left;
+                align-self: flex-end;
+                padding-bottom: 80px;
+
+                .content-title {
+                    font-family: $rufina;
+                    font-size: 30px;
+                }
+
+                .content-desc {
+                    font-family: $lato;
+                    font-size: 15px;
+                    color: #4D4D4D;
+                }
+            }
+        }
+    }
+
+    .section-3 {
+        @include flex-column();
+        text-align: center;
+        align-items: center;
+        position: relative;
+        top: 400px;
+        margin-bottom: 200px;
+
+        .section3-content {
+            width: 300px;
+            text-align: left;
+
+            .content-title {
+                font-family: $rufina;
+                font-size: 30px;
+            }
+
+            .title-desc {
+                font-family: $lato;
+                font-size: 15px;
+                color: #4D4D4D;
+            }
+
+            .content-desc {
+                font-family: $lato;
+                font-size: 15px;
+                color: #4D4D4D;
+            }
+
+            .section3-img {
+                width: 700px;
+                height: 400px;
+                position: relative;
+                top: 40px;
+                left: -200px;
+            }
+        }
+    }
+}
+
+.navigate-portfolio {
+    display: flex;
+    gap: 70px;
+    align-items: flex-end;
+    text-align: center;
+    justify-content: center;
+    background: #EBF0E4;
+    padding: 50px;
+    margin-top: 100px;
+
+    .previous {
+        color: #233000;
+        @include flex-column();
+        align-items: center;
+        text-align: center;
+
+        .previous-page {
+            font-family: $lato;
+            font-size: 15px;
+        }
+
+        .previous-portfolio {
+            font-family: $rufina;
+            font-size: 25px;
+            margin: 0;
+        }
+    }
+
+    .icon-back-btn {
+        border: none;
+        background: none;
+
+        .icon-back {
+            width: 40px;
+            height: 40px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                transition-duration: 0.05s;
+                box-shadow: 0 0 10px #ffffff;
+            }
+        }
+    }
+
+    .next {
+        color: #233000;
+        @include flex-column();
+        align-items: center;
+        text-align: center;
+
+        .next-page {
+            font-family: $lato;
+            font-size: 15px;
+        }
+
+        .next-portfolio {
+            font-family: $rufina;
+            font-size: 25px;
+            margin: 0;
+        }
+    }
+}
