@@ -11,6 +11,7 @@ import About from "./Components/About/About";
 import SinglePost from "./Components/SinglePost-NoSidebar/SinglePost";
 import PortfolioGrid from "./Components/PortfolioGrids/PortfolioGrid";
 import SinglePortfolio from "./Components/SinglePortfolio/SinglePortfolio";
+import SinglePostSidebar from "./Components/SinglePost-Sidebar/SinglePostSidebar";
 
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
                 <Route path="single_post_without_sidebar" element={<SinglePost />} />
                 <Route path="portfolio_grid" element={<PortfolioGrid />} />
                 <Route path="single_portfolio" element={<SinglePortfolio />} />
+                <Route path="single_post_with_sidebar" element={<SinglePostSidebar />} />
             </Routes>
         </>
     );
