@@ -2622,6 +2622,7 @@ $lato: 'Lato';
 
         .about-header-title {
             margin: 150px 0 0 80px;
+            width: 180px;
 
             .about-title {
                 font-size: 20px;
@@ -2633,16 +2634,18 @@ $lato: 'Lato';
                 margin-top: 20px;
                 font-size: 10px;
                 z-index: 1;
-                width: 300px
+                width: 250px
             }
         }
     }
 }
 
 .about-us {
+
     .our-story {
         @include flex-row();
         justify-content: space-evenly;
+        overflow: hidden;
 
         .ourstory-title {
             @include flex-column();
@@ -2651,6 +2654,14 @@ $lato: 'Lato';
             .title {
                 font-size: 50px;
                 font-family: $rufina;
+
+                @media (max-width:920px) {
+                    font-size: 40px;
+                }
+
+                @media (max-width: 420px) {
+                    font-size: 17px;
+                }
             }
 
             .title-desc {
@@ -2658,12 +2669,57 @@ $lato: 'Lato';
                 font-family: $lato;
                 width: 550px;
                 color: #4D4D4D;
+
+                @media (max-width:920px) {
+                    font-size: 17px;
+                    width: 450px;
+                }
+
+                @media (max-width:768px) {
+                    font-size: 15px;
+                    width: 400px;
+                }
+
+                @media (max-width:670px) {
+                    font-size: 12px;
+                    width: 300px;
+                }
+
+                @media (max-width: 420px) {
+                    font-size: 10px;
+                    width: 200px;
+                }
             }
         }
 
         .ourstory-img {
             width: 500px;
             height: 350px;
+
+            @media (max-width:1024px) {
+                width: 400px;
+                height: 300px;
+            }
+
+            @media (max-width:920px) {
+                width: 350px;
+                height: 300px;
+            }
+
+            @media (max-width:768px) {
+                width: 300px;
+                height: 300px;
+            }
+
+            @media (max-width: 670px) {
+                width: 250px;
+                height: 250px;
+            }
+
+            @media (max-width: 420px) {
+                width: 150px;
+                height: 180px;
+            }
         }
     }
 
@@ -2678,11 +2734,19 @@ $lato: 'Lato';
             text-align: center;
             width: 400px;
 
+            @media (max-width: 420px) {
+                margin-left: 20px;
+            }
+
             .manager-title {
                 font-size: 30px;
                 font-family: $rufina;
                 font-weight: 600;
                 margin-bottom: 0;
+
+                @media (max-width: 420px) {
+                    font-size: 17px;
+                }
             }
 
             .manager-name {
@@ -2694,6 +2758,26 @@ $lato: 'Lato';
                 width: 400px;
                 height: 500px;
                 margin-bottom: 200px;
+
+                @media (max-width:920px) {
+                    width: 350px;
+                    height: 300px;
+                }
+
+                @media (max-width:768px) {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                @media (max-width:670px) {
+                    width: 250px;
+                    height: 250px;
+                }
+
+                @media (max-width: 420px) {
+                    width: 150px;
+                    height: 180px;
+                }
             }
 
             .about-manager {
@@ -2703,6 +2787,15 @@ $lato: 'Lato';
                 width: 300px;
                 text-align: end;
                 align-self: flex-end;
+
+                @media (max-width:670px) {
+                    font-size: 12px;
+                }
+
+                @media (max-width:420px) {
+                    font-size: 10px;
+                    width: 180px;
+                }
             }
         }
 
@@ -2718,6 +2811,10 @@ $lato: 'Lato';
                 font-family: $rufina;
                 font-weight: 600;
                 margin-bottom: 0;
+
+                @media (max-width: 420px) {
+                    font-size: 17px;
+                }
             }
 
             .chef-name {
@@ -2728,6 +2825,26 @@ $lato: 'Lato';
             .chef {
                 width: 400px;
                 height: 500px;
+
+                @media (max-width:920px) {
+                    width: 400px;
+                    height: 450px;
+                }
+
+                @media (max-width:768px) {
+                    width: 350px;
+                    height: 400px;
+                }
+
+                @media (max-width:670px) {
+                    width: 300px;
+                    height: 350px;
+                }
+
+                @media (max-width: 420px) {
+                    width: 150px;
+                    height: 200px;
+                }
             }
 
             .about-chef {
@@ -2738,6 +2855,11 @@ $lato: 'Lato';
                 text-align: start;
                 margin-bottom: 100px;
                 align-self: flex-start;
+
+                @media (max-width: 420px) {
+                    font-size: 10px;
+                    width: 180px;
+                }
             }
         }
     }
@@ -2750,6 +2872,10 @@ $lato: 'Lato';
         text-align: center;
         align-items: center;
 
+        @media (max-width: 420px) {
+            padding-bottom: 100px;
+        }
+
         .ourfood {
             background-image: url("./assests/images/ourfood.png");
             width: 100%;
@@ -2758,6 +2884,10 @@ $lato: 'Lato';
             background-position: center;
             background-size: cover;
             position: absolute;
+
+            @media (max-width:420px) {
+                height: 380px;
+            }
         }
 
         .video-title {
@@ -2767,6 +2897,10 @@ $lato: 'Lato';
             z-index: 1;
             position: relative;
             margin: 120px 0 0 0;
+
+            @media (max-width:420px) {
+                font-size: 30px;
+            }
         }
 
         .title-desc {
@@ -2794,6 +2928,7 @@ $lato: 'Lato';
 .our-process {
     @include flex-column();
     margin-bottom: 150px;
+    overflow: hidden;
 
     .process-title {
         @include flex-row();
@@ -2801,15 +2936,53 @@ $lato: 'Lato';
         align-items: center;
         margin-left: 350px;
 
+        @media (max-width: 670px) {
+            margin-left: 300px;
+        }
+
+        @media (max-width: 420px) {
+            margin-left: 150px;
+        }
+
         .title {
             font-family: $rufina;
             font-size: 50px;
+
+            @media (max-width:920px) {
+                font-size: 30px;
+            }
+
+            @media (max-width: 670px) {
+                font-size: 20px;
+            }
+
+            @media (max-width: 420px) {
+                font-size: 16px;
+            }
         }
 
         .rosemary-right {
             width: 250px;
             height: 250px;
-            margin-left: 170px
+            margin-left: 140px;
+
+            @media (max-width:920px) {
+                width: 200px;
+                height: 200px;
+                margin-left: 100px;
+            }
+
+            @media (max-width:670px) {
+                width: 170px;
+                height: 150px;
+                margin-left: 100px;
+            }
+
+            @media (max-width: 420px) {
+                width: 120px;
+                height: 100px;
+                margin-left: 50px;
+            }
         }
     }
 
@@ -2819,26 +2992,57 @@ $lato: 'Lato';
         margin-top: 50px;
 
         .meat-sliced {
-            width: 450px;
-            height: 350px;
+            width: 400px;
+            height: 300px;
             margin: 10px;
+
+            @media (max-width:768px) {
+                width: 300px;
+                height: 300px;
+            }
+
+            @media (max-width:420px) {
+                width: 150px;
+                height: 160px;
+            }
         }
 
         .about-slice {
             @include flex-column();
-            width: 500px;
+            width: 350px;
             text-align: left;
+
+            @media (max-width:420px) {
+                width: 200px;
+            }
 
             .slice-title {
                 font-size: 50px;
                 font-family: $rufina;
                 margin: 0;
+
+                @media (max-width:768px) {
+                    font-size: 30px;
+                }
+
+                @media (max-width:420px) {
+                    font-size: 20px;
+                }
             }
 
-            .about-slice {
+            .aboutslice {
                 font-size: 15px;
                 font-family: $lato;
                 color: #4D4D4D;
+
+                @media (max-width:768px) {
+                    font-size: 10px;
+                    width: 300px;
+                }
+
+                @media (max-width:420px) {
+                    width: 200px;
+                }
             }
         }
     }
@@ -2855,27 +3059,58 @@ $lato: 'Lato';
             width: 450px;
 
             .meat-pickled {
-                width: 450px;
-                height: 350px;
+                width: 400px;
+                height: 300px;
                 margin: 10px;
+
+                @media (max-width:768px) {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                @media (max-width:420px) {
+                    width: 150px;
+                    height: 160px;
+                }
             }
 
             .about-pickle {
                 @include flex-column();
                 align-items: center;
                 text-align: center;
-                width: 500px;
+                width: 350px;
+
+                @media (max-width:768px) {
+                    width: 300px;
+                }
+
+                @media (max-width:420px) {
+                    width: 200px;
+                }
 
                 .pickle-title {
                     font-size: 50px;
                     font-family: $rufina;
                     margin: 20px 0 0 0;
+
+                    @media (max-width:768px) {
+                        font-size: 30px;
+                    }
+
+                    @media (max-width:420px) {
+                        font-size: 20px;
+                    }
                 }
 
-                .about-pickle {
+                .aboutpickle {
                     font-size: 15px;
                     font-family: $lato;
                     color: #4D4D4D;
+
+                    @media (max-width:420px) {
+                        width: 150px;
+                        font-size: 10px;
+                    }
                 }
             }
         }
@@ -2887,29 +3122,64 @@ $lato: 'Lato';
             margin-top: 100px;
             width: 450px;
 
+            @media (max-width:420px) {
+                margin-left: 30px;
+            }
+
             .meat-baked {
-                width: 450px;
-                height: 350px;
+                width: 400px;
+                height: 320px;
                 margin: 10px;
+
+                @media (max-width:768px) {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                @media (max-width:420px) {
+                    width: 150px;
+                    height: 160px;
+                }
             }
 
             .about-bake {
                 @include flex-column();
                 align-items: center;
                 text-align: center;
-                width: 400px;
+                width: 350px;
                 text-align: left;
+
+                @media (max-width:768px) {
+                    width: 250px;
+                }
+
+                @media (max-width:420px) {
+                    width: 200px;
+                }
 
                 .bake-title {
                     font-size: 50px;
                     font-family: $rufina;
                     margin: 0 0 20px 0;
+
+                    @media (max-width:768px) {
+                        font-size: 30px;
+                    }
+
+                    @media (max-width:420px) {
+                        font-size: 20px;
+                    }
                 }
 
-                .about-bake {
+                .aboutbake {
                     font-size: 15px;
                     font-family: $lato;
                     color: #4D4D4D;
+
+                    @media (max-width:420px) {
+                        width: 150px;
+                        font-size: 10px;
+                    }
                 }
             }
         }
