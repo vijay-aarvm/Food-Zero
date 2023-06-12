@@ -1767,10 +1767,9 @@ $lato: 'Lato';
             right: 500px;
             top: 550px;
 
-            .spice1 .spice2 .spice3 {
-                padding: 20px;
-                width: 80px;
-                height: 80px;
+            .spices-img {
+                width: 350px;
+                height: 130px;
             }
 
         }
@@ -2000,42 +1999,9 @@ $lato: 'Lato';
         display: flex;
         flex-direction: column;
 
-        .leaf-left {
-            z-index: -1;
-            position: absolute;
-            width: 204px;
-            height: 169px;
-            align-self: flex-start;
-            top: 120px;
-        }
-
         .man-sprinkles {
-            position: relative;
-            z-index: 2;
-            margin: 150px 0 -20px 0px;
-        }
-    }
-
-    .cook-details {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        .excellent-cook {
-            font-size: 30px;
-            width: 200px;
-            padding-bottom: 20px;
-        }
-
-        .cook-desc {
-            width: 230px;
-            padding-bottom: 90px;
-        }
-
-        .leaf-right {
-            width: 200px;
-            height: 200px;
-            align-self: flex-end;
+            width: 100%;
+            height: 100%;
         }
     }
 }
@@ -4928,6 +4894,80 @@ $lato: 'Lato';
         &:active {
             transition-duration: 0.05s;
             text-shadow: 0 0 2px #585858;
+        }
+    }
+}
+
+.navigation-page {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: block;
+
+    .navpage-bg {
+        width: 100%;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .close {
+        position: relative;
+        border: none;
+        background: none;
+        color: white;
+        font-size: 30px;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:active {
+            transition-duration: 0.05s;
+            box-shadow: 0 0 10px #ff9d72;
+        }
+    }
+
+    .navigation-list {
+        position: relative;
+        @include flex-row();
+        justify-content: space-between;
+
+        .page-list {
+            color: white;
+            font-size: 30px;
+        }
+
+        .navpage-address {
+            color: white;
+            font-size: 20px;
+            @include flex-column();
+            text-align: start;
+            align-items: center;
+            align-self: flex-end;
+            width: 200px;
+            padding: 100px 40px 0 0;
+
+            .contact-location {
+                .dotted-line {
+                    border: 2px dotted white;
+                }
+            }
+
+            .social-media-links {
+                @include flex-row();
+                gap: 10px;
+
+                .social-media-icon {
+                    margin: 10px;
+                }
+            }
         }
     }
 }
