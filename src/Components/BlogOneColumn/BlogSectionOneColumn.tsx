@@ -2,7 +2,7 @@ import React from "react";
 // import { useEffect, useState } from "react";
 import "../../styles.scss";
 import HorizontalBlogCard from "../CommonComponents/HorizontalBlogCard";
-import store from "./blogStore";
+import store from "./foodzeroStore";
 // import { blogList } from "./bloglist";
 
 export default function BlogSectionOneColumn() {
@@ -29,7 +29,7 @@ export default function BlogSectionOneColumn() {
                 <p className="blog-path-source-horizontal">Blog List One Column</p>
             </div>
             <div className="blog-content-horizontal">
-                {state.map((blog: any, index: number) => (
+                {state.blogData.map((blog: any, index: number) => (
                     <HorizontalBlogCard obj={blog} key={index} />
                 ))}
             </div>

@@ -8,6 +8,7 @@ import post1 from "../../assests/images/recentpost1.png";
 import post2 from "../../assests/images/recentpost2.png";
 import post3 from "../../assests/images/recentpost3.png";
 import post4 from "../../assests/images/recentpost4.png";
+import TagsCard from "./TagsCard";
 
 const categories = [
     {
@@ -62,6 +63,33 @@ const archives = [
     }
 ]
 
+const tags = [
+    {
+        "name": "Design"
+    },
+    {
+        "name": "Photography"
+    },
+    {
+        "name": "Images"
+    },
+    {
+        "name": "Video"
+    },
+    {
+        "name": "Music"
+    },
+    {
+        "name": "Travel"
+    },
+    {
+        "name": "Travel"
+    },
+    {
+        "name": "Travel"
+    }
+]
+
 export default function Sidebar() {
     return (
         <div className="sidebar">
@@ -77,7 +105,7 @@ export default function Sidebar() {
                 ))}
             </div>
             <div className="recent-comments">
-                <p className="recent-commens-title">Recent Comments</p>
+                <p className="recent-comments-title">Recent Comments</p>
                 <div className="dotted-line"></div>
                 {comments.map((comment: any, index: number) => (
                     <RecentCommentsCard obj={comment} key={index} />
@@ -97,6 +125,15 @@ export default function Sidebar() {
                 <img className="post2" src={post2} alt="post2" />
                 <img className="post3" src={post3} alt="post3" />
                 <img className="post4" src={post4} alt="post4" />
+            </div>
+            <div className="tag-section">
+                <p className="tags-title">Tags</p>
+                <div className="dotted-line"></div>
+                <div className="tags">
+                    {tags.map((tag: any, index: number) => (
+                        <TagsCard obj={tag} key={index} />
+                    ))}
+                </div>
             </div>
         </div>
     )

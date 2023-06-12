@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles.scss";
 import BlogCard from "../CommonComponents/BlogCard";
 // import { blogList } from "../BlogOneColumn/bloglist";
-import store from "../BlogOneColumn/blogStore";
+import store from "../BlogOneColumn/foodzeroStore";
 
 export default function BlogSectionTwoColumns() {
 
@@ -15,7 +15,7 @@ export default function BlogSectionTwoColumns() {
                 <p className="blog-path-source">Blog Two Columns</p>
             </div>
             <div className="blog-content">
-                {state.map((blog: any, index: number) => (
+                {state.blogData.map((blog: any, index: number) => (
                     <BlogCard obj={blog} key={index} />
                 ))}
             </div>
