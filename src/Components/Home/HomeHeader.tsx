@@ -1,7 +1,9 @@
 import React from "react";
 import "./homeHeader.scss";
 import NavigationBar from "../CommonComponents/NavigationBar";
-import spices from "../../assests/images/spices.png";
+import spices1 from "../../assests/images/spices1.png";
+import spices2 from "../../assests/images/spices2.png";
+import spices3 from "../../assests/images/spices3.png";
 import mussels from "../../assests/images/mussels.png";
 import saltpepper from "../../assests/images/salt-pepper.png";
 
@@ -17,7 +19,9 @@ export default function HomeHeader() {
                 <div className="meat-on-a-plate">
                 </div>
                 <div className="spices">
-                    <img className="spices-img" src={spices} alt="spices" />
+                    <img className="spices1" src={spices1} alt="spices" />
+                    <img className="spices2" src={spices2} alt="spices" />
+                    <img className="spices3" src={spices3} alt="spices" />
                 </div>
             </div>
             <div className="healthy-diet">

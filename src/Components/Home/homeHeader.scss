@@ -132,8 +132,10 @@ $lato: 'Lato';
         .spices {
             position: absolute;
             z-index: 2;
-            right: 500px;
-            top: 550px;
+            right: 430px;
+            top: 520px;
+            @include flex-row();
+            gap: 20px;
 
             @media (max-width:920px) {
                 right: 380px;
@@ -150,9 +152,12 @@ $lato: 'Lato';
                 }
             }
 
-            .spices-img {
-                width: 350px;
+            .spices1,
+            .spices2,
+            .spices3 {
+                width: 150px;
                 height: 130px;
+                background-size: contain;
 
                 @media (max-width:920px) {
                     width: 200px;

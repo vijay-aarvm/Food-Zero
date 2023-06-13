@@ -7,6 +7,7 @@ import RecentCommentsCard from "../CommonComponents/RecentCommentsCard";
 import ArchivesCard from "./ArchivesCard";
 import RecentPostsCard from "../CommonComponents/RecentPostsCard";
 import TagsCard from "../CommonComponents/TagsCard";
+import { Link } from "react-router-dom";
 
 const categories = [
     {
@@ -90,7 +91,11 @@ const tags = [
 
 export default function Sidebar() {
 
-    const blogData: any = useSelector((state: any) => state.blogData)
+    const blogData: any = useSelector((state: any) => state.blogData);
+
+    const scrollToTop = () => {
+        window.scrollTo(0, 0)
+    }
 
     return (
         <div className="sidebar">
@@ -125,7 +130,7 @@ export default function Sidebar() {
                 {blogData.map((blog: any, index: number) => {
                     if (index < 4) {
                         return (
-                            <RecentPostsCard obj={blog} key={index} />
+                            <Link style={{ textDecoration: "none", color: "inherit" }} onClick={scrollToTop} to={"/single_post_without_sidebar"} ><RecentPostsCard obj={blog} key={index} /></Link>
                         )
                     }
                     return null;

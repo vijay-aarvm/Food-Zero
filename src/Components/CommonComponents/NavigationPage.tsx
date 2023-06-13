@@ -46,17 +46,17 @@ export default function NavigationPage({ toggleMenu }: any) {
             <div className="navigation-list">
                 <div className="page-list">
                     <ul>
-                        <Link to={"/"}><li>Home</li></Link>
-                        <Link to={"/menu"}><li>Menu</li></Link>
+                        <Link to={"/"}><li>HOME</li></Link>
+                        <Link to={"/menu"}><li>MENU</li></Link>
                         <li>Blogs
                             <ul>
-                                <Link to={"/blog_one_column"}><li>1 Columns</li></Link>
-                                <Link to={"/blog_two_columns"}><li>2 Columns</li></Link>
-                                <Link to={"/single_post_with_sidebar"}><li>SideBar Post</li></Link>
+                                <Link to={"/blog_one_column"}><li>1 COLUMNS</li></Link>
+                                <Link to={"/blog_two_columns"}><li>2 COLUMNS</li></Link>
+                                <Link to={"/single_post_with_sidebar"}><li>SIDEBAR POST</li></Link>
                             </ul>
                         </li>
-                        <Link to={"/about"}><li>About</li></Link>
-                        <Link to={"/contact"}><li>Contact</li></Link>
+                        <Link to={"/about"}><li>ABOUT</li></Link>
+                        <Link to={"/contact"}><li>CONTACT</li></Link>
                     </ul>
                 </div>
                 <div className="navpage-address">

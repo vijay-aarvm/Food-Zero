@@ -61,6 +61,7 @@ $lato: 'Lato';
 .recent-post {
     @include flex-row();
     column-gap: 20px;
+    text-decoration: none;
 
     .recent-post-coverimg {
         width: 70px;

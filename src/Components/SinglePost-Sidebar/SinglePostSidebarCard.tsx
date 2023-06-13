@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./singlePostSidebarCard.scss";
 import { useSelector } from "react-redux";
 import NavigationBar from "../CommonComponents/NavigationBar";
@@ -13,6 +14,10 @@ export default function SinglePostSidebarCard({ obj }: any) {
 
     const AuthorData: any = useSelector((state: any) => state.blogData);
     const commentData: any = useSelector((state: any) => state.commentData);
+
+    const scrollToTop = () => {
+        window.scrollTo(0, 0)
+    }
 
     return (
         <div className="single-post-sidebar">
@@ -59,16 +64,16 @@ export default function SinglePostSidebarCard({ obj }: any) {
                 <Sidebar />
             </div>
             <div className="post-navigator">
-                <div className="previous-post">
+                <Link to={"/single_portfolio"} onClick={scrollToTop} style={{ textDecoration: "none", color: 'inherit' }}><div className="previous-post">
                     <img className="previous-post-img" src={prevpostimg} alt="previous post cover" />
                     <p className="btn">← PREVIOUS POST</p>
                     <p className="title">7 Reasons to Start Your Day With Lemon Water</p>
-                </div>
-                <div className="next-post">
+                </div></Link>
+                <Link to={"/single_portfolio"} onClick={scrollToTop} style={{ textDecoration: "none", color: 'inherit' }}><div className="next-post">
                     <img className="next-post-img" src={nextpostimg} alt="next post cover" />
                     <p className="btn">NEXT POST →</p>
                     <p className="title">12 Sparkling Wines We're Loving This Summer</p>
-                </div>
+                </div></Link>
             </div>
             <div className="comment-section">
                 <p className="total-comments">{`${Object.keys(commentData).length} Comments`}</p>
