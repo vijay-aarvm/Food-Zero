@@ -9,19 +9,24 @@ import saltpepper from "../../assests/images/salt-pepper.png";
 
 export default function HomeHeader() {
     return (
-        <div className="homepage-section1">
+        <div className="homepage-header">
             <NavigationBar />
             <div className="healthy-eating">
-                <p className="healthy-eat-description">Healthy Eating
-                    is important
-                    part of lifestyle</p>
-                {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu</p> */}
+                <div className="title-container">
+                    <p className="healthy-eat-description">Healthy Eating
+                        is important
+                        part of lifestyle</p>
+                </div>
                 <div className="meat-on-a-plate">
                 </div>
                 <div className="spices">
                     <img className="spices1" src={spices1} alt="spices" />
                     <img className="spices2" src={spices2} alt="spices" />
                     <img className="spices3" src={spices3} alt="spices" />
+                </div>
+                <div className="title-description">
+                    <p className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu</p>
+                    <p className="scroll-direction">Scroll --------------</p>
                 </div>
             </div>
             <div className="healthy-diet">
