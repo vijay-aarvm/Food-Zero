@@ -3,13 +3,13 @@ import { useSelector } from "react-redux";
 import "../../styles.scss";
 import BlogCard from "../CommonComponents/BlogCard";
 // import { blogList } from "../BlogOneColumn/bloglist";
-import store from "../BlogOneColumn/foodzeroStore";
+// import store from "../BlogOneColumn/foodzeroStore";
 
 export default function BlogSectionTwoColumns() {
 
-    const state: any = store.getState();
+    // const state: any = store.getState();
 
-    const blogData: any = useSelector(state.blogData)
+    const blogData: any = useSelector((state: any) => state.blogData)
 
     return (
         <div className="blog-section">
