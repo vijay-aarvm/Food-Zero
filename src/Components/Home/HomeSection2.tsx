@@ -39,7 +39,7 @@ export default function HomeSection2() {
                 </div>
             </div>
             <div className="food-items">
-                {menu.map((dish: any, index: number) =>
+                {menu.map((dish, index: number) =>
                     <MenuDisplay obj={dish} key={index} />
                 )}
             </div>

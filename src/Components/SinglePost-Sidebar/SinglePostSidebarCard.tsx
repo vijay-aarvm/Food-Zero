@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 import prevpostimg from "../../assests/images/prevpost.png";
 import nextpostimg from "../../assests/images/nextpost.png";
 import CommentCard from "./CommentCard";
-import store from "../BlogOneColumn/foodzeroStore";
+import store from "../../Store/foodzeroStore";
 
 
 export default function SinglePostSidebarCard({ obj }: any) {

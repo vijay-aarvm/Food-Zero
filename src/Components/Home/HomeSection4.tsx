@@ -57,7 +57,7 @@ export default function HomeSection4() {
                 </div>
             </div>
             <div className="blogs">
-                {blogs.map((blog: any, index: number) => (
+                {blogs.map((blog, index: number) => (
                     <BlogCard obj={blog} key={index} />
                 ))}
             </div>

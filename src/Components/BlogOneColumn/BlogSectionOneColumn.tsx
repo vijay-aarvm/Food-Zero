@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 // import { useEffect, useState } from "react";
 import "../../styles.scss";
 import HorizontalBlogCard from "../CommonComponents/HorizontalBlogCard";
-import store from "./foodzeroStore";
+import store from "../../Store/foodzeroStore";
 // import { blogList } from "./bloglist";
 
 export default function BlogSectionOneColumn() {
