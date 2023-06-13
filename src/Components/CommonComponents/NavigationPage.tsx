@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles.scss";
+import "./navigationPage.scss";
 import navpagebg from "../../assests/images/nav-fullscreenbg.png";
 import instagram from "../../assests/images/instagram.png";
 import twitter from "../../assests/images/twitter.png";

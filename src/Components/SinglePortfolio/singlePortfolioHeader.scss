@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@mixin flex-row {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin lato-lighter {
+    font-family: 'Lato';
+    font-weight: lighter;
+}
+
+@mixin rufina-lighter {
+    font-family: 'Rufina';
+    font-weight: lighter;
+}
+
+@mixin namefield-size {
+    width: 450px;
+    height: 60px;
+}
+
+@mixin namefield-css {
+    @include namefield-size();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin mail-phone {
+    width: 965px;
+    height: 60px;
+}
+
+@mixin mail-phone-css {
+    @include mail-phone();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin form-field-border {
+    background: none;
+    border: 1.5px solid black;
+}
+
+@mixin center-items {
+    text-align: center;
+    align-items: center;
+}
+
+$rufina : 'Rufina';
+$lato: 'Lato';
+
+.single-portfolio-header {
+    width: 100%;
+    height: 100%;
+
+    .header-bg {
+        background-image: url("../../assests/images/singleportfolio-bg.png");
+        width: 100%;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+
+        @media (max-width:670px) {
+            height: 400px;
+        }
+
+        @media (max-width:420px) {
+            height: 300px;
+        }
+    }
+
+    .header-title {
+        text-align: center;
+        position: relative;
+        color: white;
+        font-family: $rufina;
+        font-size: 70px;
+        margin: 150px 0 0 250px;
+        width: 800px;
+
+        @media (max-width:1024px) {
+            font-size: 50px;
+            width: 500px;
+
+        }
+
+        @media(max-width: 740px) {
+            width: 400px;
+            margin: 150px 0 0 200px;
+        }
+
+        @media (max-width: 670px) {
+            font-size: 25px;
+            width: 300px;
+            margin: 120px 0 0 200px;
+        }
+
+        @media (max-width:420px) {
+            font-size: 20px;
+            width: 200px;
+            margin: 100px 0 0 100px;
+        }
+    }
+}

@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@mixin flex-row {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin lato-lighter {
+    font-family: 'Lato';
+    font-weight: lighter;
+}
+
+@mixin rufina-lighter {
+    font-family: 'Rufina';
+    font-weight: lighter;
+}
+
+@mixin namefield-size {
+    width: 450px;
+    height: 60px;
+}
+
+@mixin namefield-css {
+    @include namefield-size();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin mail-phone {
+    width: 965px;
+    height: 60px;
+}
+
+@mixin mail-phone-css {
+    @include mail-phone();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin form-field-border {
+    background: none;
+    border: 1.5px solid black;
+}
+
+@mixin center-items {
+    text-align: center;
+    align-items: center;
+}
+
+$rufina : 'Rufina';
+$lato: 'Lato';
+
+.our-process {
+    @include flex-column();
+    margin-bottom: 150px;
+    overflow: hidden;
+
+    .process-title {
+        @include flex-row();
+        text-align: center;
+        align-items: center;
+        margin-left: 350px;
+
+        @media (max-width: 670px) {
+            margin-left: 300px;
+        }
+
+        @media (max-width: 420px) {
+            margin-left: 150px;
+        }
+
+        .title {
+            font-family: $rufina;
+            font-size: 50px;
+
+            @media (max-width:920px) {
+                font-size: 30px;
+            }
+
+            @media (max-width: 670px) {
+                font-size: 20px;
+            }
+
+            @media (max-width: 420px) {
+                font-size: 16px;
+            }
+        }
+
+        .rosemary-right {
+            width: 250px;
+            height: 250px;
+            margin-left: 140px;
+
+            @media (max-width:920px) {
+                width: 200px;
+                height: 200px;
+                margin-left: 100px;
+            }
+
+            @media (max-width:670px) {
+                width: 170px;
+                height: 150px;
+                margin-left: 100px;
+            }
+
+            @media (max-width: 420px) {
+                width: 100px;
+                height: 100px;
+                margin-left: 50px;
+            }
+        }
+    }
+
+    .slice {
+        @include flex-row();
+        justify-content: space-evenly;
+        margin-top: 50px;
+
+        .meat-sliced {
+            width: 400px;
+            height: 300px;
+            margin: 10px;
+
+            @media (max-width:768px) {
+                width: 300px;
+                height: 300px;
+            }
+
+            @media (max-width:420px) {
+                width: 150px;
+                height: 160px;
+            }
+        }
+
+        .about-slice {
+            @include flex-column();
+            width: 350px;
+            text-align: left;
+
+            @media (max-width:420px) {
+                width: 200px;
+            }
+
+            .slice-title {
+                font-size: 50px;
+                font-family: $rufina;
+                margin: 0;
+
+                @media (max-width:768px) {
+                    font-size: 30px;
+                }
+
+                @media (max-width:420px) {
+                    font-size: 20px;
+                }
+            }
+
+            .aboutslice {
+                font-size: 15px;
+                font-family: $lato;
+                color: #4D4D4D;
+
+                @media (max-width:768px) {
+                    font-size: 10px;
+                    width: 300px;
+                }
+
+                @media (max-width:420px) {
+                    width: 200px;
+                }
+            }
+        }
+    }
+
+    .pickle-and-bake {
+        @include flex-row();
+        margin-top: 100px;
+        justify-content: space-evenly;
+
+        .pickle {
+            @include flex-column();
+            align-items: center;
+            text-align: center;
+            width: 450px;
+
+            .meat-pickled {
+                width: 400px;
+                height: 300px;
+                margin: 10px;
+
+                @media (max-width:768px) {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                @media (max-width:420px) {
+                    width: 130px;
+                    height: 160px;
+                }
+            }
+
+            .about-pickle {
+                @include flex-column();
+                align-items: center;
+                text-align: center;
+                width: 350px;
+
+                @media (max-width:768px) {
+                    width: 300px;
+                }
+
+                @media (max-width:420px) {
+                    width: 200px;
+                }
+
+                .pickle-title {
+                    font-size: 50px;
+                    font-family: $rufina;
+                    margin: 20px 0 0 0;
+
+                    @media (max-width:768px) {
+                        font-size: 30px;
+                    }
+
+                    @media (max-width:420px) {
+                        font-size: 20px;
+                    }
+                }
+
+                .aboutpickle {
+                    font-size: 15px;
+                    font-family: $lato;
+                    color: #4D4D4D;
+
+                    @media (max-width:420px) {
+                        width: 150px;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        .bake {
+            @include flex-column();
+            align-items: center;
+            text-align: center;
+            margin-top: 100px;
+            width: 450px;
+
+            @media (max-width:420px) {
+                margin-left: 30px;
+            }
+
+            .meat-baked {
+                width: 400px;
+                height: 320px;
+                margin: 10px;
+
+                @media (max-width:768px) {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                @media (max-width:420px) {
+                    width: 150px;
+                    height: 160px;
+                }
+            }
+
+            .about-bake {
+                @include flex-column();
+                align-items: center;
+                text-align: center;
+                width: 350px;
+                text-align: left;
+
+                @media (max-width:768px) {
+                    width: 250px;
+                }
+
+                @media (max-width:420px) {
+                    width: 200px;
+                }
+
+                .bake-title {
+                    font-size: 50px;
+                    font-family: $rufina;
+                    margin: 0 0 20px 0;
+
+                    @media (max-width:768px) {
+                        font-size: 30px;
+                    }
+
+                    @media (max-width:420px) {
+                        font-size: 20px;
+                    }
+                }
+
+                .aboutbake {
+                    font-size: 15px;
+                    font-family: $lato;
+                    color: #4D4D4D;
+
+                    @media (max-width:420px) {
+                        width: 150px;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

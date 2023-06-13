@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@mixin flex-row {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin lato-lighter {
+    font-family: 'Lato';
+    font-weight: lighter;
+}
+
+@mixin rufina-lighter {
+    font-family: 'Rufina';
+    font-weight: lighter;
+}
+
+@mixin namefield-size {
+    width: 450px;
+    height: 60px;
+}
+
+@mixin namefield-css {
+    @include namefield-size();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin mail-phone {
+    width: 965px;
+    height: 60px;
+}
+
+@mixin mail-phone-css {
+    @include mail-phone();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin form-field-border {
+    background: none;
+    border: 1.5px solid black;
+}
+
+@mixin center-items {
+    text-align: center;
+    align-items: center;
+}
+
+$rufina : 'Rufina';
+$lato: 'Lato';
+
+.menupage-header {
+    width: auto;
+    height: auto;
+    padding-bottom: 200px;
+
+    .menu-header-bg {
+        background-image: url("../../assests/images/menu-bg.png");
+        width: 100%;
+        height: 650px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .menu-header-title {
+        @include flex-column();
+        color: white;
+        font-family: $rufina;
+        margin: 100px 0 0 70px;
+
+
+
+        .title {
+            width: 400px;
+            font-size: 70px;
+            position: relative;
+            z-index: 1;
+            margin: 0;
+        }
+
+        .title-desc {
+            margin-top: 20px;
+            font-size: 17px;
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .menu-header {
+        padding-bottom: 200px;
+
+        .menu-header-bg {
+            height: 400px;
+        }
+
+        .menu-header-title {
+            margin: 100px 0 0 70px;
+
+
+
+            .title {
+                width: 200px;
+                font-size: 20px;
+            }
+
+            .title-desc {
+                font-size: 10px;
+            }
+        }
+    }
+}

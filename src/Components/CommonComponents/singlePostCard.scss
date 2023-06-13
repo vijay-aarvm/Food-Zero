@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@mixin flex-row {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin lato-lighter {
+    font-family: 'Lato';
+    font-weight: lighter;
+}
+
+@mixin rufina-lighter {
+    font-family: 'Rufina';
+    font-weight: lighter;
+}
+
+@mixin namefield-size {
+    width: 450px;
+    height: 60px;
+}
+
+@mixin namefield-css {
+    @include namefield-size();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin mail-phone {
+    width: 965px;
+    height: 60px;
+}
+
+@mixin mail-phone-css {
+    @include mail-phone();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin form-field-border {
+    background: none;
+    border: 1.5px solid black;
+}
+
+@mixin center-items {
+    text-align: center;
+    align-items: center;
+}
+
+$rufina : 'Rufina';
+$lato: 'Lato';
+
+.single-post {
+    @include flex-column();
+
+    .single-post-header {
+        width: auto;
+        height: auto;
+
+        .singlepost-header-bg {
+            width: 100%;
+            height: 600px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            z-index: 0;
+
+            @media (max-width:920px) {
+                height: 500px;
+            }
+        }
+
+        .blog-header-title {
+            @include flex-column();
+            color: white;
+            font-family: $rufina;
+            width: 900px;
+            text-align: center;
+            align-items: center;
+            margin: 100px 0 0 180px;
+
+            @media (max-width:1030px) {
+                width: 700px;
+                margin: 100px 0 0 100px;
+            }
+
+            @media (max-width:920px) {
+                width: 600px;
+            }
+
+            @media (max-width: 670px) {
+                width: 480px;
+            }
+
+            .blog-title {
+                font-size: 70px;
+                z-index: 1;
+                margin: 0;
+                text-align: center;
+
+                @media (max-width:1030px) {
+                    font-size: 50px;
+                }
+
+                @media (max-width:670px) {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    .blog-content {
+        position: relative;
+        margin-top: 300px;
+        @include flex-column();
+        align-items: center;
+        text-align: center;
+
+        @media (max-width:920px) {
+            margin-top: 200px;
+        }
+
+        .blog-intro {
+            font-family: $rufina;
+            color: #4D4D4D;
+            font-size: 22px;
+            width: 800px;
+
+            @media (max-width:920px) {
+                font-size: 15px;
+                width: 700px;
+            }
+        }
+
+        .blog-images {
+            margin: 100px 0 100px 0;
+            @include flex-row();
+            justify-content: space-evenly;
+            gap: 70px;
+
+            @media (max-width:920px) {
+                gap: 40px;
+            }
+
+            .blog-image1 {
+                width: 450px;
+                height: 500px;
+
+                @media (max-width:920px) {
+                    width: 300px;
+                    height: 380px;
+                }
+            }
+
+            .blog-image2 {
+                width: 450px;
+                height: 500px;
+
+                @media (max-width:920px) {
+                    width: 300px;
+                    height: 380px;
+                }
+            }
+        }
+
+        .blog-recipe {
+            font-family: $lato;
+            font-size: 17px;
+            color: #4D4D4D;
+            width: 720px;
+            text-align: left;
+
+            @media (max-width:920px) {
+                font-size: 15px;
+                width: 650px;
+            }
+        }
+    }
+
+    .blog-quote {
+        width: auto;
+        height: auto;
+        margin: 100px 0 300px 0;
+        position: relative;
+        padding-bottom: 100px;
+
+        .quote-bg {
+            width: 100%;
+            height: 350px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            z-index: 0;
+
+            @media (max-width:920px) {
+                width: 100%;
+            }
+        }
+
+        .quote {
+            font-size: 25px;
+            z-index: 1;
+            color: white;
+            font-family: $lato;
+            font-style: italic;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 90%);
+
+            @media (max-width:920px) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .remaining-blog {
+        @include flex-column();
+        text-align: center;
+        align-items: center;
+
+        .blog-conclusion {
+            font-family: $lato;
+            font-size: 17px;
+            color: #4D4D4D;
+            width: 720px;
+            text-align: left;
+
+            @media (max-width:920px) {
+                font-size: 15px;
+                width: 650px;
+            }
+        }
+
+        .author-about-section {
+            @include flex-row();
+            width: 680px;
+            gap: 50px;
+            margin: 100px 0 100px 0;
+
+            @media (max-width:920px) {
+                width: 600px;
+            }
+
+            .author {
+                width: 150px;
+                height: 150px;
+
+                @media (max-width:920px) {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            .about-author {
+                @include flex-column();
+                text-align: start;
+
+                .author-name {
+                    font-family: $rufina;
+                    font-size: 20px;
+                    margin: 0;
+                }
+
+                .about {
+                    font-family: $lato;
+                    font-size: 15px;
+                    color: #4D4D4D;
+                }
+            }
+        }
+
+    }
+
+    .dotted-line {
+        align-self: center;
+        width: 80%;
+        border: none;
+        border-top: 3px dotted black;
+        margin-bottom: 20px;
+    }
+}

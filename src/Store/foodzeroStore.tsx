@@ -1,8 +1,8 @@
 import { legacy_createStore as createStore } from 'redux'
 
 
-import { blogList } from "../Components/BlogOneColumn/bloglist";
-import { comments } from "../Components/SinglePost-Sidebar/commentlist"
+import { blogList } from "../Components/CommonComponents/bloglist";
+import { comments } from "../Components/CommonComponents/commentlist"
 
 const storeData = {
     "blogData": blogList,

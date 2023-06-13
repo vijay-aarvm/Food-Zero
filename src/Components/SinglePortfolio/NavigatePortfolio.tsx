@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles.scss";
+import "./navigatePortfolio.scss";
 import iconback from "../../assests/images/Icon_back.png";
 
 export default function NavigatePortfolio() {

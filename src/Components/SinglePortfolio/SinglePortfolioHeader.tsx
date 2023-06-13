@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles.scss";
+import "./singlePortfolioHeader.scss";
 import NavigationBar from "../CommonComponents/NavigationBar";
 
 export default function SinglePortfolioHeader() {

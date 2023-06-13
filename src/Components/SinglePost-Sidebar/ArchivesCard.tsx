@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles.scss";
+import "./archivesCard.scss";
 
 export default function ArchivesCard({ obj }: any) {
     return (

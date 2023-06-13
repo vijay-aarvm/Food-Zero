@@ -1,6 +1,6 @@
 import React from "react";
-import "../../styles.scss";
-import SinglePostCard from "./SinglePostCard";
+// import "../../styles.scss";
+import SinglePostCard from "../CommonComponents/SinglePostCard";
 import julie from "../../assests/images/julie-christie.png";
 import cookGoatMeat from "../../assests/images/cook-goat-meat.png";
 import image1 from "../../assests/images/image1.png";

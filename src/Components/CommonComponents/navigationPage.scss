@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@mixin flex-row {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin lato-lighter {
+    font-family: 'Lato';
+    font-weight: lighter;
+}
+
+@mixin rufina-lighter {
+    font-family: 'Rufina';
+    font-weight: lighter;
+}
+
+@mixin namefield-size {
+    width: 450px;
+    height: 60px;
+}
+
+@mixin namefield-css {
+    @include namefield-size();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin mail-phone {
+    width: 965px;
+    height: 60px;
+}
+
+@mixin mail-phone-css {
+    @include mail-phone();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin form-field-border {
+    background: none;
+    border: 1.5px solid black;
+}
+
+@mixin center-items {
+    text-align: center;
+    align-items: center;
+}
+
+$rufina : 'Rufina';
+$lato: 'Lato';
+
+.navigation-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: block;
+    z-index: 999;
+    @include flex-column();
+
+    .navpage-bg {
+        width: 100%;
+        height: 440px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        z-index: 0;
+        right: 0%;
+    }
+
+    .close {
+        position: relative;
+        border: none;
+        background: none;
+        color: white;
+        font-size: 30px;
+        text-align: left;
+        width: 50px;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:active {
+            transition-duration: 0.05s;
+            box-shadow: 0 0 10px #ff9d72;
+        }
+    }
+
+    .navigation-list {
+        position: relative;
+        @include flex-row();
+        justify-content: space-between;
+
+        .page-list {
+            color: white;
+            font-size: 25px;
+            font-family: $rufina;
+            text-align: left;
+        }
+
+        .navpage-address {
+            color: white;
+            font-size: 20px;
+            @include flex-column();
+            text-align: start;
+            align-items: center;
+            align-self: flex-end;
+            width: 200px;
+            padding: 100px 40px 0 0;
+            font-family: $lato;
+
+            .contact-location {
+                .dotted-line {
+                    border: 1.5px dotted white;
+                }
+            }
+
+            .social-media-links {
+                @include flex-row();
+                gap: 10px;
+
+                .social-media-icon {
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}

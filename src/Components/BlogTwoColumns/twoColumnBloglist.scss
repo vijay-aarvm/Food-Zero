@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@mixin flex-row {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin lato-lighter {
+    font-family: 'Lato';
+    font-weight: lighter;
+}
+
+@mixin rufina-lighter {
+    font-family: 'Rufina';
+    font-weight: lighter;
+}
+
+@mixin namefield-size {
+    width: 450px;
+    height: 60px;
+}
+
+@mixin namefield-css {
+    @include namefield-size();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin mail-phone {
+    width: 965px;
+    height: 60px;
+}
+
+@mixin mail-phone-css {
+    @include mail-phone();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin form-field-border {
+    background: none;
+    border: 1.5px solid black;
+}
+
+@mixin center-items {
+    text-align: center;
+    align-items: center;
+}
+
+$rufina : 'Rufina';
+$lato: 'Lato';
+
+.blog-section {
+    @include flex-column();
+    margin-top: 250px;
+    text-align: center;
+    align-items: center;
+
+    .breadcrumbs {
+        @include flex-row();
+        margin-bottom: 50px;
+        align-self: flex-start;
+        padding-left: 50px;
+
+        .blog-path {
+            color: #B0B0B0;
+        }
+
+        .blog-path-source {
+            color: #4D4D4D;
+        }
+    }
+
+    .blog-content {
+        @include flex-row();
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 50px;
+    }
+}

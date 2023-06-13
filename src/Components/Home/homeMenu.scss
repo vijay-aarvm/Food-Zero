@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@mixin flex-row {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin lato-lighter {
+    font-family: 'Lato';
+    font-weight: lighter;
+}
+
+@mixin rufina-lighter {
+    font-family: 'Rufina';
+    font-weight: lighter;
+}
+
+@mixin namefield-size {
+    width: 450px;
+    height: 60px;
+}
+
+@mixin namefield-css {
+    @include namefield-size();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin mail-phone {
+    width: 965px;
+    height: 60px;
+}
+
+@mixin mail-phone-css {
+    @include mail-phone();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin form-field-border {
+    background: none;
+    border: 1.5px solid black;
+}
+
+@mixin center-items {
+    text-align: center;
+    align-items: center;
+}
+
+$rufina : 'Rufina';
+$lato: 'Lato';
+
+.homepage-section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    overflow: hidden;
+
+    .menu-header {
+        padding-bottom: 130px;
+        display: flex;
+        justify-content: space-between;
+
+        .food-menu {
+            margin: 80px 0 0 80px;
+
+            .our-menu {
+                font-family: $rufina;
+                line-height: 60px;
+                font-size: 54px;
+                padding-bottom: 15px;
+            }
+
+            .our-menu-desc {
+                width: 243.54px;
+                font-family: $lato;
+            }
+        }
+
+        .header-img {
+            position: absolute;
+            right: 0;
+
+            .branch {
+                @media (max-width:920px) {
+                    height: 400px;
+                }
+
+                @media (max-width:770px) {
+                    width: 300px;
+                }
+
+                @media (max-width:420px) {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    .food-items {
+        padding-bottom: 150px;
+        @include flex-row();
+        flex-wrap: wrap;
+        justify-content: space-evenly
+    }
+}

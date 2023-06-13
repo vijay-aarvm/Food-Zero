@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@mixin flex-row {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin lato-lighter {
+    font-family: 'Lato';
+    font-weight: lighter;
+}
+
+@mixin rufina-lighter {
+    font-family: 'Rufina';
+    font-weight: lighter;
+}
+
+@mixin namefield-size {
+    width: 450px;
+    height: 60px;
+}
+
+@mixin namefield-css {
+    @include namefield-size();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin mail-phone {
+    width: 965px;
+    height: 60px;
+}
+
+@mixin mail-phone-css {
+    @include mail-phone();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin form-field-border {
+    background: none;
+    border: 1.5px solid black;
+}
+
+@mixin center-items {
+    text-align: center;
+    align-items: center;
+}
+
+$rufina : 'Rufina';
+$lato: 'Lato';
+
+.gridcard {
+    position: relative;
+    width: auto;
+    height: auto;
+
+    .portfolio-cover {
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 0;
+        object-fit: cover;
+    }
+
+    .portfolio-details {
+        @include flex-column();
+        position: absolute;
+        justify-self: flex-start;
+        margin: -150px 0 0 30px;
+        z-index: 1;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+
+        .portfolio-title {
+            font-family: $rufina;
+            font-size: 25px;
+            color: white;
+            width: 400px;
+            text-align: left;
+            margin: 0;
+
+            @media (max-width: 420px) {
+                font-size: 18px;
+                width: 300px;
+            }
+        }
+
+        .tags {
+            @include flex-row();
+            gap: 20px;
+            color: white;
+
+            .session {
+                font-size: 15px;
+                font-family: $lato;
+
+                @media (max-width:420px) {
+                    font-size: 8px;
+                }
+            }
+
+            .category {
+                font-size: 15px;
+                font-family: $lato;
+
+                @media (max-width:420px) {
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+}

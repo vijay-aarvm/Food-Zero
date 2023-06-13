@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@mixin flex-row {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin lato-lighter {
+    font-family: 'Lato';
+    font-weight: lighter;
+}
+
+@mixin rufina-lighter {
+    font-family: 'Rufina';
+    font-weight: lighter;
+}
+
+@mixin namefield-size {
+    width: 450px;
+    height: 60px;
+}
+
+@mixin namefield-css {
+    @include namefield-size();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin mail-phone {
+    width: 965px;
+    height: 60px;
+}
+
+@mixin mail-phone-css {
+    @include mail-phone();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin form-field-border {
+    background: none;
+    border: 1.5px solid black;
+}
+
+@mixin center-items {
+    text-align: center;
+    align-items: center;
+}
+
+$rufina : 'Rufina';
+$lato: 'Lato';
+
+.portfolio-content {
+    padding: 300px 0 200px 0;
+    @include flex-column();
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+
+    @media (max-width:420px) {
+        padding: 200px 0 200px 0;
+    }
+
+    .overlapping-content {
+        position: relative;
+
+        .section-1 {
+            @include flex-row();
+            gap: 200px;
+            z-index: 2;
+            position: absolute;
+
+            @media (max-width:916px) {
+                gap: 80px;
+            }
+
+            @media (max-width:420px) {
+                gap: 30px;
+                margin-left: 30px;
+            }
+
+            .section1-img {
+                width: 350px;
+                height: 450px;
+
+                @media (max-width:1180px) {
+                    width: 320px;
+                    height: 420px;
+                }
+
+                @media (max-width:420px) {
+                    width: 150px;
+                    height: 300px;
+                }
+            }
+
+            .section1-content {
+                width: 300px;
+                text-align: left;
+                align-self: flex-start;
+
+                @media (max-width:916px) {
+                    width: 200px;
+                }
+
+                @media (max-width:420px) {
+                    width: 150px;
+                }
+
+                .content-title {
+                    font-family: $rufina;
+                    font-size: 30px;
+
+                    @media (max-width:916px) {
+                        font-size: 17px;
+                    }
+
+                    @media (max-width:420px) {
+                        font-size: 14px;
+                    }
+                }
+
+                .title-desc {
+                    font-family: $lato;
+                    font-size: 15px;
+                    color: #4D4D4D;
+
+                    @media (max-width:916px) {
+                        font-size: 12px;
+                    }
+
+                    @media (max-width:420px) {
+                        font-size: 10px;
+                    }
+                }
+
+                .content-desc {
+                    font-family: $lato;
+                    font-size: 15px;
+                    color: #4D4D4D;
+
+                    @media (max-width:916px) {
+                        font-size: 12px;
+                    }
+
+                    @media (max-width:420px) {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        .section-2 {
+            @include flex-row();
+            gap: 50px;
+            z-index: 0;
+            position: relative;
+            top: 300px;
+            left: 180px;
+
+            @media (max-width: 1180px) {
+                gap: 30px;
+            }
+
+            @media (max-width: 916px) {
+                left: 100px;
+            }
+
+            @media (max-width:420px) {
+                top: 230px;
+                left: 80px;
+
+            }
+
+            .section2-img {
+                width: 500px;
+                height: 650px;
+
+                @media (max-width: 1180px) {
+                    width: 350px;
+                    height: 450px;
+                }
+
+                @media (max-width:420px) {
+                    width: 170px;
+                    height: 250px;
+                }
+            }
+
+            .section2-content {
+                width: 300px;
+                text-align: left;
+                align-self: flex-end;
+                padding-bottom: 80px;
+
+                @media (max-width:916px) {
+                    width: 200px;
+                }
+
+                @media (max-width:420px) {
+                    font-size: 10px;
+                }
+
+                .content-title {
+                    font-family: $rufina;
+                    font-size: 30px;
+
+                    @media (max-width:916px) {
+                        font-size: 17px;
+                    }
+
+                    @media (max-width:420px) {
+                        font-size: 14px;
+                    }
+                }
+
+                .content-desc {
+                    font-family: $lato;
+                    font-size: 15px;
+                    color: #4D4D4D;
+
+                    @media (max-width:916px) {
+                        font-size: 12px;
+                    }
+
+                    @media (max-width:420px) {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-3 {
+        @include flex-column();
+        text-align: center;
+        align-items: center;
+        position: relative;
+        top: 400px;
+        margin-bottom: 200px;
+
+        .section3-content {
+            width: 300px;
+            text-align: left;
+
+            .content-title {
+                font-family: $rufina;
+                font-size: 30px;
+
+                @media (max-width:420px) {
+                    font-size: 14px;
+                }
+            }
+
+            .title-desc {
+                font-family: $lato;
+                font-size: 15px;
+                color: #4D4D4D;
+
+                @media (max-width:420px) {
+                    font-size: 10px;
+                }
+            }
+
+            .content-desc {
+                font-family: $lato;
+                font-size: 15px;
+                color: #4D4D4D;
+
+                @media (max-width:420px) {
+                    font-size: 10px;
+                }
+            }
+
+            .section3-img {
+                width: 700px;
+                height: 400px;
+                position: relative;
+                top: 40px;
+                left: -200px;
+
+                @media (max-width:670px) {
+                    width: 500px;
+                    height: 300px;
+                    left: -100px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@mixin flex-row {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin lato-lighter {
+    font-family: 'Lato';
+    font-weight: lighter;
+}
+
+@mixin rufina-lighter {
+    font-family: 'Rufina';
+    font-weight: lighter;
+}
+
+@mixin namefield-size {
+    width: 450px;
+    height: 60px;
+}
+
+@mixin namefield-css {
+    @include namefield-size();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin mail-phone {
+    width: 965px;
+    height: 60px;
+}
+
+@mixin mail-phone-css {
+    @include mail-phone();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin form-field-border {
+    background: none;
+    border: 1.5px solid black;
+}
+
+@mixin center-items {
+    text-align: center;
+    align-items: center;
+}
+
+$rufina : 'Rufina';
+$lato: 'Lato';
+
+.navigate-portfolio {
+    display: flex;
+    gap: 70px;
+    align-items: flex-end;
+    text-align: center;
+    justify-content: center;
+    background: #EBF0E4;
+    padding: 50px;
+    margin-top: 100px;
+
+    .previous {
+        color: #233000;
+        @include flex-column();
+        align-items: center;
+        text-align: center;
+
+        .previous-page {
+            font-family: $lato;
+            font-size: 15px;
+
+            @media (max-width:420px) {
+                font-size: 10px;
+            }
+        }
+
+        .previous-portfolio {
+            font-family: $rufina;
+            font-size: 25px;
+            margin: 0;
+
+            @media (max-width:420px) {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .icon-back-btn {
+        border: none;
+        background: none;
+
+        .icon-back {
+            width: 40px;
+            height: 40px;
+
+            @media (max-width:420px) {
+                width: 25px;
+                height: 25px;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                transition-duration: 0.05s;
+                box-shadow: 0 0 10px #ffffff;
+            }
+        }
+    }
+
+    .next {
+        color: #233000;
+        @include flex-column();
+        align-items: center;
+        text-align: center;
+
+        .next-page {
+            font-family: $lato;
+            font-size: 15px;
+
+            @media (max-width:420px) {
+                font-size: 10px;
+            }
+        }
+
+        .next-portfolio {
+            font-family: $rufina;
+            font-size: 25px;
+            margin: 0;
+
+            @media (max-width:420px) {
+                font-size: 15px;
+            }
+        }
+    }
+}

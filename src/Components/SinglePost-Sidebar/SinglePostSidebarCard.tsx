@@ -1,16 +1,18 @@
 import React from "react";
-import "../../styles.scss";
+import "./singlePostSidebarCard.scss";
+import { useSelector } from "react-redux";
 import NavigationBar from "../CommonComponents/NavigationBar";
 import Sidebar from "./Sidebar";
 import prevpostimg from "../../assests/images/prevpost.png";
 import nextpostimg from "../../assests/images/nextpost.png";
-import CommentCard from "./CommentCard";
-import store from "../../Store/foodzeroStore";
+import CommentCard from "../CommonComponents/CommentCard";
+import AuthorProfileCard from "../CommonComponents/AuthorProfileCard";
 
 
 export default function SinglePostSidebarCard({ obj }: any) {
 
-    const state = store.getState();
+    const AuthorData: any = useSelector((state: any) => state.blogData);
+    const commentData: any = useSelector((state: any) => state.commentData);
 
     return (
         <div className="single-post-sidebar">
@@ -19,15 +21,14 @@ export default function SinglePostSidebarCard({ obj }: any) {
                 <NavigationBar />
                 <div className="blog-header-title">
                     <p className="blog-title">{obj.blogTitle}</p>
-                    <div className="blog-author">
-                        <img className="author-pic" src={obj.authorProfile} alt="author" />
-                        <p className="author-name">{obj.authorName}</p>
-                        <ul className="author-details">
-                            <li className="posted-on">{obj.postedDate}</li>
-                            <li className="posted-time">{obj.postedTime}</li>
-                            <li className="no-of-comments">{obj.noOfComments}</li>
-                        </ul>
-                    </div>
+                    {AuthorData.map((author: any, index: number) => {
+                        if (index < 1) {
+                            return (
+                                <AuthorProfileCard obj={author} key={index} />
+                            )
+                        }
+                        return null;
+                    })}
                 </div>
             </div>
             <div className="post">
@@ -70,8 +71,8 @@ export default function SinglePostSidebarCard({ obj }: any) {
                 </div>
             </div>
             <div className="comment-section">
-                <p className="total-comments">{`${Object.keys(state.commentData).length} Comments`}</p>
-                {state.commentData.map((comment: any, index: number) => (
+                <p className="total-comments">{`${Object.keys(commentData).length} Comments`}</p>
+                {commentData.map((comment: any, index: number) => (
                     <CommentCard obj={comment} key={index} />
                 ))}
                 <div className="dotted-line"></div>
@@ -79,14 +80,14 @@ export default function SinglePostSidebarCard({ obj }: any) {
             <div className="comment-form">
                 <p className="form-title">Leave a Reply</p>
                 <div className="write-comment">
-                    <label htmlFor="comment">Comment</label><br />
-                    <input type="text" id="comment" className="comment"></input><br /><br />
-                    <label htmlFor="name">Name</label><br />
-                    <input type="text" id="name" className="name" required /><br /><br />
-                    <label htmlFor="email">Email</label><br />
-                    <input type="text" id="email" className="email" required /><br /><br />
-                    <label htmlFor="website">Website</label><br />
-                    <input type="text" id="website" className="website" /><br /><br />
+                    <label htmlFor="comment">Comment</label>
+                    <input type="text" id="comment" className="comment"></input>
+                    <label htmlFor="name">Name</label>
+                    <input type="text" id="name" className="name" required />
+                    <label htmlFor="email">Email</label>
+                    <input type="text" id="email" className="email" required />
+                    <label htmlFor="website">Website</label>
+                    <input type="text" id="website" className="website" />
                     <input type="submit" value="Post Comment" className="post-comment" />
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles.scss";
+import "./blogCard.scss";
 import arrow from "../../assests/images/arrow.png"
 
 export default function BlogCard({ obj }: any) {

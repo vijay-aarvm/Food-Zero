@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles.scss";
+import "./categoryCard.scss";
 
 export default function CategoryCard({ obj }: any) {
     return (

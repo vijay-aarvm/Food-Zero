@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@mixin flex-row {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin lato-lighter {
+    font-family: 'Lato';
+    font-weight: lighter;
+}
+
+@mixin rufina-lighter {
+    font-family: 'Rufina';
+    font-weight: lighter;
+}
+
+@mixin namefield-size {
+    width: 450px;
+    height: 60px;
+}
+
+@mixin namefield-css {
+    @include namefield-size();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin mail-phone {
+    width: 965px;
+    height: 60px;
+}
+
+@mixin mail-phone-css {
+    @include mail-phone();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin form-field-border {
+    background: none;
+    border: 1.5px solid black;
+}
+
+@mixin center-items {
+    text-align: center;
+    align-items: center;
+}
+
+$rufina : 'Rufina';
+$lato: 'Lato';
+
+.homepage-section4 {
+    width: auto;
+    height: auto;
+    @include flex-column();
+    align-items: center;
+    text-align: center;
+
+    .quality-ingredients {
+        @include flex-row();
+        font-family: $rufina;
+        justify-content: space-evenly;
+        padding: 150px 0;
+
+        .premium-quality,
+        .seasonal-veggies,
+        .fresh-fruit {
+            width: 30%;
+            height: 30%;
+
+            & .ingredients-image {
+                padding-bottom: 30px;
+
+                @media (max-width:420px) {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            & .ingredients {
+                font-size: 24px;
+                padding-bottom: 40px;
+
+                @media (max-width:420px) {
+                    font-size: 24px;
+                }
+            }
+
+            & .ingredient-desc {
+                font-family: $lato;
+                color: #4D4D4D;
+                font-size: 15px;
+                margin: 0;
+            }
+
+        }
+
+    }
+
+    .blogs {
+        @include flex-row();
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles.scss";
+import "./navigationBar.scss";
 import { Link } from "react-router-dom";
 import logo from "../../assests/images/Logo.png";
 import navigaition_menu from "../../assests/images/navimenu.png";

@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@mixin flex-row {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin lato-lighter {
+    font-family: 'Lato';
+    font-weight: lighter;
+}
+
+@mixin rufina-lighter {
+    font-family: 'Rufina';
+    font-weight: lighter;
+}
+
+@mixin namefield-size {
+    width: 450px;
+    height: 60px;
+}
+
+@mixin namefield-css {
+    @include namefield-size();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin mail-phone {
+    width: 965px;
+    height: 60px;
+}
+
+@mixin mail-phone-css {
+    @include mail-phone();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin form-field-border {
+    background: none;
+    border: 1.5px solid black;
+}
+
+@mixin center-items {
+    text-align: center;
+    align-items: center;
+}
+
+$rufina : 'Rufina';
+$lato: 'Lato';
+
+.homepage-section5 {
+    width: auto;
+    height: auto;
+    padding-bottom: 100px;
+    overflow: hidden;
+
+    .category-headline {
+        font-family: $rufina;
+        text-align: center;
+
+        .headline {
+            font-size: 54px;
+            width: 450px;
+            margin: 0 auto;
+            padding: 50px 0 30px 0;
+
+            @media (max-width:420px) {
+                font-size: 25px;
+                width: 300px;
+            }
+        }
+
+        .headline-desc {
+            font-size: 15px;
+            padding-bottom: 90px;
+
+            @media (max-width:420px) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .menu-category {
+        display: flex;
+        justify-content: space-evenly;
+        column-gap: 50px;
+        margin: 0 auto;
+        padding-bottom: 120px;
+
+        @media (max-width:770px) {
+            column-gap: 20px;
+        }
+
+        .starters,
+        .mains,
+        .soups {
+            width: 230px;
+            height: auto;
+
+            @media (max-width:770px) {
+                width: 170px;
+            }
+
+            @media (max-width:420px) {
+                width: 100px;
+            }
+        }
+    }
+
+    .testimonals {
+        .testimony-content {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 40px;
+
+            .client-testimony {
+                font-family: 'Rufina';
+                font-size: 25px;
+                width: 650px;
+
+                @media (max-width:770px) {
+                    font-size: 20px;
+                    width: 500px;
+                }
+
+                @media (max-width:420px) {
+                    font-size: 15px;
+                    width: 300px;
+                }
+            }
+
+            .quote {
+                float: right;
+                margin-left: -80px;
+
+                @media (max-width:420px) {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+
+        .client {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .client-info {
+                width: 200px;
+                height: 100px;
+
+                @media (max-width:420px) {
+                    width: 150px;
+                }
+            }
+
+            .paging {
+                width: 90px;
+                height: 40px;
+
+                @media (max-width:420px) {
+                    width: 60px;
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,8 @@
 import React from "react";
-import "../../styles.scss";
+// import "../../styles.scss";
 import AboutHeader from "./AboutHeader";
-import AboutUs from "./AboutUs";
-import AboutProcess from "./AboutProcess";
+import OurStory from "./OurStory";
+import Process from "./Process";
 import FormReservation from "../CommonComponents/FormReservation";
 import Footer from "../CommonComponents/Footer";
 
@@ -10,8 +10,8 @@ export default function About() {
     return (
         <div>
             <AboutHeader />
-            <AboutUs />
-            <AboutProcess />
+            <OurStory />
+            <Process />
             <FormReservation />
             <Footer />
         </div>

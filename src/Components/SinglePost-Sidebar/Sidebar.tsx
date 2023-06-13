@@ -1,14 +1,12 @@
 import React from "react";
-import "../../styles.scss";
+import { useSelector } from "react-redux";
+import "./sidebar.scss";
 import searchicon from "../../assests/images/searchicon.png";
 import CategoryCard from "./CategoryCard";
-import RecentCommentsCard from "./RecentCommentsCard";
+import RecentCommentsCard from "../CommonComponents/RecentCommentsCard";
 import ArchivesCard from "./ArchivesCard";
-import post1 from "../../assests/images/recentpost1.png";
-import post2 from "../../assests/images/recentpost2.png";
-import post3 from "../../assests/images/recentpost3.png";
-import post4 from "../../assests/images/recentpost4.png";
-import TagsCard from "./TagsCard";
+import RecentPostsCard from "../CommonComponents/RecentPostsCard";
+import TagsCard from "../CommonComponents/TagsCard";
 
 const categories = [
     {
@@ -91,6 +89,9 @@ const tags = [
 ]
 
 export default function Sidebar() {
+
+    const blogData: any = useSelector((state: any) => state.blogData)
+
     return (
         <div className="sidebar">
             <div className="searchbar">
@@ -121,10 +122,15 @@ export default function Sidebar() {
             <div className="recent-posts">
                 <p className="recent-posts-title">Recent Posted</p>
                 <div className="dotted-line"></div>
-                <img className="post1" src={post1} alt="post1" />
-                <img className="post2" src={post2} alt="post2" />
-                <img className="post3" src={post3} alt="post3" />
-                <img className="post4" src={post4} alt="post4" />
+                {blogData.map((blog: any, index: number) => {
+                    if (index < 4) {
+                        return (
+                            <RecentPostsCard obj={blog} key={index} />
+                        )
+                    }
+                    return null;
+                }
+                )}
             </div>
             <div className="tag-section">
                 <p className="tags-title">Tags</p>

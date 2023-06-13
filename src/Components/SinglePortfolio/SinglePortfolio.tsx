@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles.scss";
+// import "./singlePortfolio.scss";
 import SinglePortfolioHeader from "./SinglePortfolioHeader";
 import SinglePortfolioContent from "./SinglePortfolioContent";
 import NavigatePortfolio from "./NavigatePortfolio";
