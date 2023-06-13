@@ -5181,6 +5181,7 @@ $lato: 'Lato';
         color: white;
         font-size: 30px;
         text-align: left;
+        width: 50px;
 
         &:hover {
             cursor: pointer;
@@ -5200,6 +5201,8 @@ $lato: 'Lato';
         .page-list {
             color: white;
             font-size: 25px;
+            font-family: $rufina;
+            text-align: left;
         }
 
         .navpage-address {
@@ -5211,10 +5214,11 @@ $lato: 'Lato';
             align-self: flex-end;
             width: 200px;
             padding: 100px 40px 0 0;
+            font-family: $lato;
 
             .contact-location {
                 .dotted-line {
-                    border: 2px dotted white;
+                    border: 1.5px dotted white;
                 }
             }
 

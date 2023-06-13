@@ -94,7 +94,7 @@ export default function Sidebar() {
     return (
         <div className="sidebar">
             <div className="searchbar">
-                <input className="search" value="search..."></input>
+                <input className="search" placeholder="search..."></input>
                 <img className="search-icon" src={searchicon} alt="glass" />
             </div>
             <div className="categories">
