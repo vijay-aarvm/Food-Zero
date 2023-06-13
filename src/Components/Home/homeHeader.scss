@@ -120,12 +120,13 @@ $lato: 'Lato';
             @media (max-width:770px) {
                 height: 300px;
                 width: 260px;
-                right: 60px;
+                right: 120px;
             }
 
             @media (max-width:420px) {
                 width: 200px;
-                height: 250px;
+                height: 230px;
+                right: 50px;
             }
         }
 
@@ -138,17 +139,17 @@ $lato: 'Lato';
             gap: 20px;
 
             @media (max-width:920px) {
-                right: 380px;
-                top: 430px;
+                right: 250px;
+                top: 410px;
 
                 @media (max-width:770px) {
-                    right: 230px;
-                    top: 400px;
+                    right: 190px;
+                    top: 390px;
                 }
 
                 @media (max-width:420px) {
-                    top: 350px;
-                    right: 170px;
+                    top: 340px;
+                    right: 130px;
                 }
             }
 
@@ -160,13 +161,18 @@ $lato: 'Lato';
                 background-size: contain;
 
                 @media (max-width:920px) {
-                    width: 200px;
+                    width: 120px;
                     height: 100px;
                 }
 
                 @media (max-width:770px) {
-                    width: 170px;
+                    width: 100px;
                     height: 80px;
+                }
+
+                @media (max-width:420px) {
+                    width: 60px;
+                    height: 50px;
                 }
             }
 

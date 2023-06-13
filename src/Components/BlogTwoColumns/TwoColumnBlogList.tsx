@@ -9,7 +9,7 @@ export default function BlogSectionTwoColumns() {
 
     // const state: any = store.getState();
 
-    const blogData: any = useSelector((state: any) => state.blogData)
+    const blogData: any = useSelector((state: any) => state.blogData);
 
     return (
         <div className="blog-section">

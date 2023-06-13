@@ -58,61 +58,57 @@
 $rufina : 'Rufina';
 $lato: 'Lato';
 
-.menupage-header {
-    width: auto;
-    height: auto;
-    padding-bottom: 200px;
+.menu-card {
+    position: relative;
+    padding-bottom: 100px;
 
-    @media (max-width:420px) {
-        padding-bottom: 200px;
+    @media (max-width420px) {
+        padding-bottom: 30px;
     }
 
-    .menu-header-bg {
-        background-image: url("../../assests/images/menu-bg.png");
-        width: 100%;
-        height: 650px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+    .menucard-cover {
+        width: 230px;
+        height: auto;
         position: absolute;
-        z-index: 0;
+
+        @media (max-width:770px) {
+            width: 170px;
+        }
 
         @media (max-width:420px) {
-            height: 400px;
+            width: 100px;
         }
     }
 
-    .menu-header-title {
-        @include flex-column();
-        color: white;
-        font-family: $rufina;
-        margin: 100px 0 0 70px;
+    .menu-category {
+        position: relative;
+        @include flex-row();
+        justify-content: space-around;
+        gap: 130px;
+
+        @media (max-width:770px) {
+            gap: 90px;
+        }
 
         @media (max-width:420px) {
-            margin: 100px 0 0 70px;
+            gap: 35px;
+            padding: 0;
         }
 
-        .title {
-            width: 400px;
-            font-size: 70px;
-            position: relative;
-            z-index: 1;
-            margin: 0;
+        .category {
+            justify-self: flex-end;
+            font-size: 16px;
+            padding: 10px;
+            font-family: $rufina;
 
-            @media (max-width:420px) {
-                width: 200px;
-                font-size: 20px;
-            }
-        }
-
-        .title-desc {
-            margin-top: 20px;
-            font-size: 17px;
-            position: relative;
-            z-index: 1;
-
-            @media (max-width:420px) {
+            @media (max-width:770px) {
                 font-size: 10px;
+            }
+
+            @media (max-width:420px) {
+                font-size: 8px;
+                padding: 5px;
+                ;
             }
         }
     }

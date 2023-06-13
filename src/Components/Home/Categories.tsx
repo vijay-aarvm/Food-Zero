@@ -1,13 +1,20 @@
 import React from "react";
 import "./categories.scss";
-import starters from "../../assests/images/starters.png";
-import mains from "../../assests/images/mains.png";
-import soups from "../../assests/images/soups.png";
 import quotes from "../../assests/images/quotes.png";
 import clientinfo from "../../assests/images/client.png";
 import paging from "../../assests/images/pagination.png";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import MenuCategoryCard from "../CommonComponents/MenuCategoryCard";
 
 export default function Categories() {
+
+    const categoryData: any = useSelector((state: any) => state.menuCategoryData);
+
+    const scrollToTop = () => {
+        window.scrollTo(0, 0)
+    }
+
     return (
         <div className="homepage-section5">
             <div className="category-headline">
@@ -15,9 +22,9 @@ export default function Categories() {
                 <p className="headline-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div className="menu-category">
-                <img className="starters" src={starters} alt="starters" />
-                <img className="mains" src={mains} alt="mains" />
-                <img className="soups" src={soups} alt="soups" />
+                {categoryData.map((data: any, index: number) => (
+                    <Link to={"/menu"} onClick={scrollToTop} style={{ textDecoration: "none", color: "inherit" }} ><MenuCategoryCard obj={data} key={index} /></Link>
+                ))}
             </div>
             <div className="testimonals">
                 <div className="testimony-content">

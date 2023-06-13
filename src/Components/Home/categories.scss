@@ -96,24 +96,10 @@ $lato: 'Lato';
         column-gap: 50px;
         margin: 0 auto;
         padding-bottom: 120px;
+        font-family: $rufina;
 
         @media (max-width:770px) {
             column-gap: 20px;
-        }
-
-        .starters,
-        .mains,
-        .soups {
-            width: 230px;
-            height: auto;
-
-            @media (max-width:770px) {
-                width: 170px;
-            }
-
-            @media (max-width:420px) {
-                width: 100px;
-            }
         }
     }
 
