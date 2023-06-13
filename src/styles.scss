@@ -97,6 +97,11 @@ $lato: 'Lato';
             width: 65%;
             height: 65%;
 
+            @media (max-width:670px) {
+                width: 40%;
+                height: 40%;
+            }
+
             @media only screen and (max-width: 420px) {
                 width: 70px;
                 height: 40px;
@@ -108,6 +113,11 @@ $lato: 'Lato';
             height: 50px;
             background: none;
             border: none;
+
+            @media (max-width:670px) {
+                width: 50px;
+                height: 40px;
+            }
 
             @media only screen and (max-width: 420px) {
                 width: 50px;
@@ -146,7 +156,7 @@ $lato: 'Lato';
 
         .Reservations-menu-contact {
             @media only screen and (max-width: 870px) {
-                font-size: 13px;
+                font-size: 12px;
             }
 
             @media only screen and (max-width: 420px) {
@@ -173,8 +183,15 @@ $lato: 'Lato';
             margin: 0;
             text-decoration: none;
 
+            @media (max-width: 670px) {
+                width: 80px;
+                height: 20px;
+                font-size: 14px;
+            }
+
             @media only screen and (max-width: 420px) {
-                font-size: 10px;
+                font-size: 11px;
+                width: 60px;
             }
 
             &:active {
@@ -770,6 +787,7 @@ $lato: 'Lato';
 
         @media only screen and (max-width: 420px) {
             font-size: 8px;
+            padding: 10px 0 10px 0;
         }
 
         .brand-name {
@@ -846,6 +864,10 @@ $lato: 'Lato';
                 height: 20px;
             }
 
+            @media (max-width:420px) {
+                width: 100px;
+            }
+
             &::placeholder {
                 color: #FFFF;
 
@@ -868,6 +890,11 @@ $lato: 'Lato';
             @media only screen and (max-width: 725px) {
                 width: 50px;
                 height: 20px;
+                font-size: 7px;
+            }
+
+            @media (max-width:420px) {
+                width: 40px;
                 font-size: 7px;
             }
 
@@ -1037,17 +1064,17 @@ $lato: 'Lato';
 
                 .date {
                     height: 40px;
-                    width: 200px;
+                    width: 170px;
                 }
 
                 .time {
                     height: 40px;
-                    width: 200px;
+                    width: 170px;
                 }
 
                 .no-of-persons {
                     height: 40px;
-                    width: 200px;
+                    width: 170px;
                 }
             }
         }
@@ -1063,17 +1090,17 @@ $lato: 'Lato';
 
                 .date {
                     height: 30px;
-                    width: 100px;
+                    width: 80px;
                 }
 
                 .time {
                     height: 30px;
-                    width: 100px;
+                    width: 80px;
                 }
 
                 .no-of-persons {
                     height: 30px;
-                    width: 100px;
+                    width: 80px;
                 }
             }
         }
@@ -2945,7 +2972,7 @@ $lato: 'Lato';
             }
 
             @media (max-width: 420px) {
-                width: 120px;
+                width: 100px;
                 height: 100px;
                 margin-left: 50px;
             }
@@ -3035,7 +3062,7 @@ $lato: 'Lato';
                 }
 
                 @media (max-width:420px) {
-                    width: 150px;
+                    width: 130px;
                     height: 160px;
                 }
             }
@@ -4899,22 +4926,25 @@ $lato: 'Lato';
 }
 
 .navigation-page {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background-color: rgba(0, 0, 0, 0.8);
     display: block;
+    z-index: 999;
+    @include flex-column();
 
     .navpage-bg {
         width: 100%;
-        height: 600px;
+        height: 440px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         position: absolute;
         z-index: 0;
+        right: 0%;
     }
 
     .close {
@@ -4923,6 +4953,7 @@ $lato: 'Lato';
         background: none;
         color: white;
         font-size: 30px;
+        text-align: left;
 
         &:hover {
             cursor: pointer;
@@ -4941,7 +4972,7 @@ $lato: 'Lato';
 
         .page-list {
             color: white;
-            font-size: 30px;
+            font-size: 25px;
         }
 
         .navpage-address {
