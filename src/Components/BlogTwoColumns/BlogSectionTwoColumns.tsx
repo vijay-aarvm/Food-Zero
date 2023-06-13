@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "../../styles.scss";
 import BlogCard from "../CommonComponents/BlogCard";
 // import { blogList } from "../BlogOneColumn/bloglist";
@@ -6,7 +7,9 @@ import store from "../BlogOneColumn/foodzeroStore";
 
 export default function BlogSectionTwoColumns() {
 
-    const state = store.getState();
+    const state: any = store.getState();
+
+    const blogData: any = useSelector(state.blogData)
 
     return (
         <div className="blog-section">
@@ -15,7 +18,7 @@ export default function BlogSectionTwoColumns() {
                 <p className="blog-path-source">Blog Two Columns</p>
             </div>
             <div className="blog-content">
-                {state.blogData.map((blog: any, index: number) => (
+                {blogData.map((blog: any, index: number) => (
                     <BlogCard obj={blog} key={index} />
                 ))}
             </div>

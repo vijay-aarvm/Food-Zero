@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 // import { useEffect, useState } from "react";
 import "../../styles.scss";
 import HorizontalBlogCard from "../CommonComponents/HorizontalBlogCard";
@@ -20,7 +20,7 @@ export default function BlogSectionOneColumn() {
     //     }, 60000)
     // }, [])
 
-    const state = store.getState();
+    const state = useMemo(() => store.getState(), []);
 
     return (
         <div className="blog-section-horizontal">
