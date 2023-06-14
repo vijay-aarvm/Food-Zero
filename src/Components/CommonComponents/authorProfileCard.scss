@@ -65,16 +65,31 @@ $lato: 'Lato';
     .author-pic {
         width: 100px;
         height: 100px;
+
+        @media (max-width:420px) {
+            width: 70px;
+            height: 70px;
+        }
     }
 
     .author-name {
         font-family: $lato;
+
+        @media (max-width:420px) {
+            font-size: 10px;
+        }
     }
 
     .author-details {
         @include flex-row();
         gap: 30px;
         font-family: $lato;
+
+        @media (max-width:420px) {
+            width: 150px;
+            gap: 20px;
+            padding-left: 0;
+        }
 
         .posted-on,
         .posted-time,
@@ -83,6 +98,10 @@ $lato: 'Lato';
 
             @media (max-width:670px) {
                 font-size: 10px;
+            }
+
+            @media (max-width:420px) {
+                font-size: 8px;
             }
         }
     }

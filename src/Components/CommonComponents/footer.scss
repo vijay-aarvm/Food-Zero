@@ -153,8 +153,9 @@ $lato: 'Lato';
             &::placeholder {
                 color: #FFFF;
 
-                @media only screen and (max-width: 725x) {
-                    font-size: 8px;
+                @media only screen and (max-width: 725px) {
+                    font-size: 11px;
+                    text-indent: 10px;
                 }
             }
         }

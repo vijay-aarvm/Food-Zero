@@ -291,29 +291,30 @@ $lato: 'Lato';
 
 @media (max-width: 420px) {
     .blog-card {
-        width: 160px;
+        width: 170px;
         height: 350px;
-        margin-bottom: 100px;
+        margin: 0 0 10px 0;
 
         .blog-cover-image {
-            width: 160px;
+            width: 150px;
             height: 350px;
         }
 
         .author-info {
             margin: 0px;
+            width: 140px;
 
             .author-profile-container {
                 margin: 20px 0 10px 0;
 
                 .author-profile {
-                    width: 20px;
-                    height: 20px;
+                    width: 30px;
+                    height: 30px;
                 }
 
                 .author-bio {
-                    width: 160px;
-                    font-size: 10px;
+                    width: 100px;
+                    font-size: 6px;
 
                     .bio-list {
                         @include flex-row();
@@ -326,17 +327,17 @@ $lato: 'Lato';
 
             .post-info {
                 @include flex-column();
-                width: 150px;
+                width: 120px;
                 font-weight: 700;
 
                 .post-title {
-                    font-size: 12px;
-                    width: 150px;
+                    font-size: 10px;
+                    width: 120px;
                     margin: 10px 10px 10px 0;
                 }
 
                 .dotted-line {
-                    width: 150px;
+                    width: 120px;
                 }
 
                 .post-oneliner {
