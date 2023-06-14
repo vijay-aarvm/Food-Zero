@@ -63,6 +63,10 @@ $lato: 'Lato';
     align-items: flex-start;
     margin: 20px 0 20px 0;
 
+    &:nth-child(odd) {
+        padding-left: 40px;
+    }
+
     .user {
         width: auto;
         height: auto;
