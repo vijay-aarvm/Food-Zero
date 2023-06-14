@@ -248,10 +248,30 @@ $lato: 'Lato';
         position: relative;
         top: 200px;
         margin-bottom: 200px;
+        top: 400px;
+
+        @media (max-width:420px) {
+            top: 200px;
+        }
 
         .section3-content {
-            width: 200px;
+            width: 300px;
             text-align: left;
+
+            @media (max-width:420px) {
+                width: 250px;
+            }
+
+            .content-desc {
+                font-family: $lato;
+                font-size: 15px;
+                color: #4D4D4D;
+                position: relative;
+
+                @media (max-width:420px) {
+                    font-size: 10px;
+                }
+            }
 
             .content-title {
                 font-family: $rufina;
@@ -264,16 +284,6 @@ $lato: 'Lato';
             }
 
             .title-desc {
-                font-family: $lato;
-                font-size: 15px;
-                color: #4D4D4D;
-
-                @media (max-width:420px) {
-                    font-size: 10px;
-                }
-            }
-
-            .content-desc {
                 font-family: $lato;
                 font-size: 15px;
                 color: #4D4D4D;
@@ -298,7 +308,7 @@ $lato: 'Lato';
 
                 @media (max-width:420px) {
                     width: 350px;
-                    left: -75px;
+                    left: -50px;
 
                 }
             }
