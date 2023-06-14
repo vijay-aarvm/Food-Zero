@@ -4,6 +4,8 @@ import "./oneColumnBloglist.scss";
 import HorizontalBlogCard from "../CommonComponents/HorizontalBlogCard";
 import store from "../../Store/foodzeroStore";
 // import { blogList } from "./bloglist";
+import { Link } from "react-router-dom";
+import { scrollToTop } from "../../HelperFunctions/windowScroll";
 
 export default function OneColumnBlogs() {
 
@@ -30,10 +32,10 @@ export default function OneColumnBlogs() {
             </div>
             <div className="blog-content-horizontal">
                 {state.blogData.map((blog: any, index: number) => (
-                    <HorizontalBlogCard obj={blog} key={index} />
+                    <Link to={"/single_post_with_sidebar"} onClick={scrollToTop} style={{ textDecoration: "none", color: "inherit" }}><HorizontalBlogCard obj={blog} key={index} /></Link>
                 ))}
             </div>
-        </div>
+        </div >
 
     )
 }

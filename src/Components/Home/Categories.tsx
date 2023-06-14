@@ -6,14 +6,11 @@ import paging from "../../assests/images/pagination.png";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import MenuCategoryCard from "../CommonComponents/MenuCategoryCard";
+import { scrollToTop } from "../../HelperFunctions/windowScroll";
 
 export default function Categories() {
 
     const categoryData: any = useSelector((state: any) => state.menuCategoryData);
-
-    const scrollToTop = () => {
-        window.scrollTo(0, 0)
-    }
 
     return (
         <div className="homepage-section5">

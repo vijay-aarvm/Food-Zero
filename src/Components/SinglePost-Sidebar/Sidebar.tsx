@@ -8,6 +8,7 @@ import ArchivesCard from "./ArchivesCard";
 import RecentPostsCard from "../CommonComponents/RecentPostsCard";
 import TagsCard from "../CommonComponents/TagsCard";
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../../HelperFunctions/windowScroll";
 
 const categories = [
     {
@@ -92,10 +93,6 @@ const tags = [
 export default function Sidebar() {
 
     const blogData: any = useSelector((state: any) => state.blogData);
-
-    const scrollToTop = () => {
-        window.scrollTo(0, 0)
-    }
 
     return (
         <div className="sidebar">

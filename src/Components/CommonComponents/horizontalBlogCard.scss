@@ -64,6 +64,7 @@ $lato: 'Lato';
     height: 600px;
     justify-content: space-evenly;
     gap: 100px;
+    overflow: hidden;
 
     .blog-cover-image-horizontal {
         width: 500px;
@@ -153,7 +154,7 @@ $lato: 'Lato';
 
 @media (max-width: 1070px) {
     .blog-card-horizontal {
-        width: 700px;
+        width: 830px;
         height: 500px;
         gap: 50px;
 
@@ -180,12 +181,12 @@ $lato: 'Lato';
 
 @media (max-width: 860px) {
     .blog-card-horizontal {
-        width: 500px;
+        width: 570px;
         height: 400px;
         gap: 30px;
 
         .blog-cover-image-horizontal {
-            width: 300px;
+            width: 400px;
             height: 250px;
         }
 
@@ -320,8 +321,59 @@ $lato: 'Lato';
         height: 220px;
 
         .blog-cover-image-horizontal {
-            width: 120px;
-            height: 120px;
+            width: 140px;
+            height: 140px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .blog-card-horizontal {
+
+        width: 350px;
+        height: 180px;
+        gap: 30px;
+
+        .author-info-horizontal {
+            width: 180px;
+
+            .author-profile-container-horizontal {
+                font-size: 6px;
+            }
+
+            .post-info-horizontal {
+                @include flex-column();
+                width: 250px;
+                font-weight: 700;
+                align-items: flex-start;
+                text-align: left;
+
+                .post-title-horizontal {
+                    font-size: 11px;
+                    width: 200px;
+                }
+
+                .dotted-line-horizontal {
+                    width: 230px;
+                }
+
+                .post-oneliner-horizontal {
+                    font-size: 8px;
+                }
+
+                .read-article-horizontal {
+
+                    .read-more-horizontal {
+                        font-size: 10px;
+                        padding: 10px 10px 10px 0;
+
+                        .arrow-horizontal {
+                            width: 15px;
+                            height: 10px;
+                        }
+                    }
+                }
+            }
         }
     }
 }

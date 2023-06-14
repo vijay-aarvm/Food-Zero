@@ -68,7 +68,11 @@ $lato: 'Lato';
         @include flex-row();
         margin-bottom: 50px;
         align-self: flex-start;
-        padding-left: 110px;
+        padding-left: 190px;
+
+        @media (max-width: 420px) {
+            padding-left: 50px;
+        }
 
         .blog-path-horizontal {
             color: #B0B0B0;
