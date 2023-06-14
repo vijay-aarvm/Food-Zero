@@ -24,6 +24,10 @@ export default function SinglePostCard({ obj }: any) {
                 </div>
             </div>
             <div className="blog-content">
+                <div className="breadcrumbs">
+                    <p className="blog-path">Home/Blog/</p>
+                    <p className="blog-path-source">Three Ideas For Cooking Goat Meat at Home</p>
+                </div>
                 <p className="blog-intro">{obj.blogIntro}</p>
                 <div className="blog-images">
                     <img className="blog-image1" src={obj.blogImage1} alt="image1" />

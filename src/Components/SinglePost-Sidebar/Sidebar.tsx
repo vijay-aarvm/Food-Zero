@@ -6,7 +6,8 @@ import CategoryCard from "./CategoryCard";
 import RecentCommentsCard from "../CommonComponents/RecentCommentsCard";
 import ArchivesCard from "./ArchivesCard";
 import RecentPostsCard from "../CommonComponents/RecentPostsCard";
-import TagsCard from "../CommonComponents/TagsCard";
+// import TagsCard from "../CommonComponents/TagsCard";
+import Tags from "../CommonComponents/Tags";
 import { Link } from "react-router-dom";
 import { scrollToTop } from "../../HelperFunctions/windowScroll";
 
@@ -63,33 +64,6 @@ const archives = [
     }
 ]
 
-const tags = [
-    {
-        "name": "Design"
-    },
-    {
-        "name": "Photography"
-    },
-    {
-        "name": "Images"
-    },
-    {
-        "name": "Video"
-    },
-    {
-        "name": "Music"
-    },
-    {
-        "name": "Travel"
-    },
-    {
-        "name": "Travel"
-    },
-    {
-        "name": "Travel"
-    }
-]
-
 export default function Sidebar() {
 
     const blogData: any = useSelector((state: any) => state.blogData);
@@ -134,15 +108,7 @@ export default function Sidebar() {
                 }
                 )}
             </div>
-            <div className="tag-section">
-                <p className="tags-title">Tags</p>
-                <div className="dotted-line"></div>
-                <div className="tags">
-                    {tags.map((tag: any, index: number) => (
-                        <TagsCard obj={tag} key={index} />
-                    ))}
-                </div>
-            </div>
+            <Tags />
         </div>
     )
 }

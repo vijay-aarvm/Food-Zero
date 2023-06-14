@@ -129,6 +129,39 @@ $lato: 'Lato';
             margin-top: 200px;
         }
 
+        .breadcrumbs {
+            @include flex-row();
+            align-self: flex-start;
+            padding-left: 350px;
+            position: relative;
+            top: -100px;
+
+            @media (max-width:920px) {
+                top: -50px;
+                padding-left: 220px;
+            }
+
+            @media (max-width:670px) {
+                top: -20px;
+                padding-left: 160px;
+                font-size: 12px;
+            }
+
+            @media (max-width:420px) {
+                top: -30px;
+                padding-left: 10px;
+                font-size: 8px;
+            }
+
+            .blog-path {
+                color: #B0B0B0;
+            }
+
+            .blog-path-source {
+                color: #4D4D4D;
+            }
+        }
+
         .blog-intro {
             font-family: $rufina;
             color: #4D4D4D;
@@ -138,6 +171,10 @@ $lato: 'Lato';
             @media (max-width:920px) {
                 font-size: 15px;
                 width: 700px;
+            }
+
+            @media (max-width:670px) {
+                width: 550px;
             }
         }
 

@@ -8,6 +8,7 @@ import prevpostimg from "../../assests/images/prevpost.png";
 import nextpostimg from "../../assests/images/nextpost.png";
 import CommentCard from "../CommonComponents/CommentCard";
 import AuthorProfileCard from "../CommonComponents/AuthorProfileCard";
+import Tags from "../CommonComponents/Tags";
 
 
 export default function SinglePostSidebarCard({ obj }: any) {
@@ -39,6 +40,10 @@ export default function SinglePostSidebarCard({ obj }: any) {
             <div className="post">
                 <div className="post-content">
                     <div className="blog-content">
+                        <div className="breadcrumbs">
+                            <p className="blog-path">Home/Blog/</p>
+                            <p className="blog-path-source">Three Ideas For Cooking Goat Meat at Home</p>
+                        </div>
                         <p className="blog-intro">{obj.blogIntro}</p>
                         <div className="blog-images">
                             <img className="blog-image1" src={obj.blogImage1} alt="image1" />
@@ -51,7 +56,7 @@ export default function SinglePostSidebarCard({ obj }: any) {
                     </div>
                     <div className="remaining-blog">
                         <p className="blog-conclusion">{obj.blogConclusion}</p>
-                        {/* tag component to be added */}
+                        <Tags />
                         <div className="author-about-section">
                             <img className="author" src={obj.authorProfile} alt="author" />
                             <div className="about-author">
