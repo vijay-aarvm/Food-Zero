@@ -2,6 +2,7 @@ import React from "react";
 import "./starterCourseDishes.scss";
 import starters from "../../assests/images/starter-items.png";
 import MenuDisplay from "../CommonComponents/MenuDisplay";
+import blueberry from "../../assests/images/blueberry.png";
 
 const menu = [
     {
@@ -25,8 +26,11 @@ export default function StarterCourseDishes() {
     return (
         <div className="starters-section">
             <div className="starters-header">
-                <p className="starters-title">Starters</p>
-                <p className="starters-title-desc">This is a section of starters. Choose your starters</p>
+                <div className="title-container">
+                    <p className="starters-title">Starters</p>
+                    <p className="starters-title-desc">This is a section of starters. Choose your starters</p>
+                </div>
+                <img className="blueberry" src={blueberry} alt="blueberry" />
             </div>
             <div className="starter-menu">
                 <img className="starter-items" src={starters} alt="starters"></img>

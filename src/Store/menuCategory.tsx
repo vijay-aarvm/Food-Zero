@@ -1,6 +1,6 @@
-import starters from "../../assests/images/starters.png";
-import mains from "../../assests/images/mains.png";
-import soups from "../../assests/images/soups.png";
+import starters from "../assests/images/starters.png";
+import mains from "../assests/images/mains.png";
+import soups from "../assests/images/soups.png";
 
 export const menuCategory = [
     {

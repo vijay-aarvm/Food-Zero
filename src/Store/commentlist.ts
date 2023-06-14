@@ -1,7 +1,7 @@
-import julieChristie from "../../assests/images/julie-christie.png";
-import dianne from "../../assests/images/dianne.png";
-import jenifer from "../../assests/images/jenifer.png";
-import theresa from "../../assests/images/theresa.png";
+import julieChristie from "../assests/images/julie-christie.png";
+import dianne from "../assests/images/dianne.png";
+import jenifer from "../assests/images/jenifer.png";
+import theresa from "../assests/images/theresa.png";
 
 type commentinfo = {
     userProfile: File,

@@ -63,31 +63,89 @@ $lato: 'Lato';
     text-align: center;
 
     .starters-header {
-        @include flex-column();
-        text-align: center;
-        align-items: center;
-        margin-bottom: 70px;
+        @include flex-row();
+        padding-left: 400px;
 
-
-        .starters-title {
-            font-size: 50px;
-            font-family: $rufina;
-            margin-bottom: 0;
+        @media (max-width:855px) {
+            padding-left: 200px;
         }
 
-        .starters-title-desc {
-            font-size: 20px;
-            font-family: $lato;
-            color: #4D4D4D;
+        @media (max-width:670px) {
+            padding-top: 50px;
         }
-    }
 
-    .blueberry {
-        align-self: flex-end;
-        width: 250px;
-        height: 250px;
-        margin-left: 250px;
+        @media (max-width:420px) {
+            padding-left: 100px;
+            padding-top: 0px;
+        }
 
+        .title-container {
+            @include flex-column();
+            text-align: center;
+            align-items: center;
+            margin-bottom: 70px;
+            width: 700px;
+            z-index: 1;
+
+            @media (max-width:420px) {
+                margin-bottom: 0px;
+            }
+
+
+            .starters-title {
+                font-size: 50px;
+                font-family: $rufina;
+                margin-bottom: 0;
+
+                @media (max-width:670px) {
+                    font-size: 30px;
+                }
+
+                @media (max-width:420px) {
+                    font-size: 15px;
+                }
+            }
+
+            .starters-title-desc {
+                font-size: 20px;
+                font-family: $lato;
+                color: #4D4D4D;
+
+                @media (max-width:420px) {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .blueberry {
+            align-self: flex-end;
+            width: 180px;
+            height: 180px;
+            margin-left: 150px;
+            position: relative;
+            top: -40px;
+            z-index: 0;
+
+            @media (max-width:1024px) {
+                top: -60px;
+            }
+
+            @media (max-width:855px) {
+                top: -20px;
+                margin-left: 100px;
+            }
+
+            @media (max-width:670px) {
+                top: -60px;
+            }
+
+            @media (max-width:420px) {
+                width: 100px;
+                height: 100px;
+                top: -80px;
+                margin-left: 0;
+            }
+        }
     }
 
     .starter-menu {
@@ -111,8 +169,11 @@ $lato: 'Lato';
         .starters-header {
             margin-bottom: 70px;
 
-            .starters-title {
-                font-size: 40px;
+            .title-container {
+
+                .starters-title {
+                    font-size: 40px;
+                }
             }
         }
 
@@ -127,18 +188,21 @@ $lato: 'Lato';
     }
 }
 
-@media (max-width: 845px) {
+@media (max-width: 855px) {
     .starters-section {
         .starters-header {
-            .starters-title {
-                font-size: 30px;
+            .title-container {
+
+                .starters-title {
+                    font-size: 30px;
+                }
             }
         }
 
         .starter-menu {
             .starter-items {
-                width: 320px;
-                height: 420px;
+                width: 350px;
+                height: 450px;
             }
         }
     }
@@ -151,8 +215,11 @@ $lato: 'Lato';
         .starters-header {
             margin-bottom: 40px;
 
-            .starters-title {
-                font-size: 20px;
+            .title-container {
+
+                .starters-title {
+                    font-size: 20px;
+                }
             }
 
             .starters-title-desc {

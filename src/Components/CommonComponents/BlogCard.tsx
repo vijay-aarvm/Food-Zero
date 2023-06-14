@@ -2,6 +2,7 @@ import React from "react";
 import "./blogCard.scss";
 import arrow from "../../assests/images/arrow.png";
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../../HelperFunctions/windowScroll";
 
 export default function BlogCard({ obj }: any) {
     return (
@@ -24,7 +25,7 @@ export default function BlogCard({ obj }: any) {
                     <div className="dotted-line"></div>
                     <p className="post-oneliner">{obj.blogOneliner}</p>
                     <div className="read-article">
-                        <Link to={"/single_portfolio"} style={{ textDecoration: "none", color: "inherit" }} ><button className="read-more">{`Read More `}<img className="arrow" src={arrow} alt="arrow" /></button></Link>
+                        <Link to={"/single_portfolio"} onClick={scrollToTop} style={{ textDecoration: "none", color: "inherit" }} ><button className="read-more">{`Read More `}<img className="arrow" src={arrow} alt="arrow" /></button></Link>
                     </div>
                 </div>
             </div>

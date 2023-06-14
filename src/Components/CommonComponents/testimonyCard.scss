@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@mixin flex-row {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin lato-lighter {
+    font-family: 'Lato';
+    font-weight: lighter;
+}
+
+@mixin rufina-lighter {
+    font-family: 'Rufina';
+    font-weight: lighter;
+}
+
+@mixin namefield-size {
+    width: 450px;
+    height: 60px;
+}
+
+@mixin namefield-css {
+    @include namefield-size();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin mail-phone {
+    width: 965px;
+    height: 60px;
+}
+
+@mixin mail-phone-css {
+    @include mail-phone();
+    padding-left: 30px;
+    @include form-field-border();
+}
+
+@mixin form-field-border {
+    background: none;
+    border: 1.5px solid black;
+}
+
+@mixin center-items {
+    text-align: center;
+    align-items: center;
+}
+
+$rufina : 'Rufina';
+$lato: 'Lato';
+
+.testimonals {
+    @include flex-column();
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width:855px) {
+        margin-left: 40px;
+    }
+
+    @media (max-width:770px) {
+        margin-left: 50px;
+    }
+
+    @media (max-width:420px) {
+        margin-left: 200px;
+    }
+
+    .testimony-content {
+        width: 700px;
+        @include flex-row();
+
+        .client-testimony {
+            font-family: $rufina;
+            color: #000000;
+            font-size: 25px;
+            text-align: left;
+            z-index: 1;
+
+            @media (max-width:420px) {
+                font-size: 15px;
+                width: 300px;
+            }
+        }
+
+        .quote {
+            width: auto;
+            height: auto;
+            position: relative;
+            right: 100px;
+            z-index: 0;
+
+            @media (max-width:420px) {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+
+    .client {
+        @include flex-row();
+        align-self: flex-start;
+        gap: 300px;
+
+        @media (max-width:420px) {
+            gap: 40px;
+        }
+
+        .client-info {
+            @include flex-row();
+
+            .client-img {
+                width: auto;
+                height: auto;
+
+                @media (max-width:420px) {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+            .client-metadata {
+                @include flex-column();
+                text-align: left;
+
+                .client-name {
+                    font-family: $rufina;
+                    font-size: 15px;
+                    font-weight: 800;
+                    margin: 0;
+
+                    @media (max-width:420px) {
+                        font-size: 10px;
+                    }
+                }
+
+                .client-designation {
+                    font-family: $lato;
+                    font-size: 10px;
+
+                    @media (max-width:420px) {
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    .navigate-buttons {
+        @include flex-row();
+        font-size: 20px;
+
+        @media (max-width:420px) {
+            font-size: 10px;
+        }
+
+        .previous-quote {
+            background: none;
+            border: none;
+            width: 40px;
+            height: 20px;
+            font-size: 20px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                transition-duration: 0.05s;
+                box-shadow: 0 0 10px #ff9d72;
+            }
+
+            @media (max-width:420px) {
+                font-size: 15px;
+            }
+        }
+
+        .quote-index {
+            font-family: $rufina;
+        }
+
+        .next-quote {
+            background: none;
+            border: none;
+            width: 40px;
+            height: 20px;
+            font-size: 20px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                transition-duration: 0.05s;
+                box-shadow: 0 0 10px #ff9d72;
+            }
+
+            @media (max-width:420px) {
+                font-size: 15px;
+            }
+        }
+    }
+}

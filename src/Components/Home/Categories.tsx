@@ -1,16 +1,15 @@
 import React from "react";
 import "./categories.scss";
-import quotes from "../../assests/images/quotes.png";
-import clientinfo from "../../assests/images/client.png";
-import paging from "../../assests/images/pagination.png";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import MenuCategoryCard from "../CommonComponents/MenuCategoryCard";
 import { scrollToTop } from "../../HelperFunctions/windowScroll";
+import TestimonyCard from "../CommonComponents/TestimonyCard";
 
 export default function Categories() {
 
     const categoryData: any = useSelector((state: any) => state.menuCategoryData);
+    const quotes = useSelector((state: any) => state.blogData);
 
     return (
         <div className="homepage-section5">
@@ -24,17 +23,14 @@ export default function Categories() {
                 ))}
             </div>
             <div className="testimonals">
-                <div className="testimony-content">
-                    <h3 className="client-testimony">“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id
-                        penatibus imperdiet. Turpis
-                        egestas ultricies purus Lorem ipsum dolor sit amet .
-                    </h3>
-                    <img className="quote" src={quotes} alt="quote" />
-                </div>
-                <div className="client">
-                    <img className="client-info" src={clientinfo} alt="client-info" />
-                    <img className="paging" src={paging} alt="paging" />
-                </div>
+                {quotes.map((quote: any, index: number) => {
+                    if (index < 1) {
+                        return (
+                            <TestimonyCard obj={quote} currentIndex={index} />
+                        )
+                    }
+                    return null;
+                })}
             </div>
         </div>
     )

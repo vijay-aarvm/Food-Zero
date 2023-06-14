@@ -1,17 +1,31 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import "./testimonyCard.scss";
+import quote from "../../assests/images/quotes.png";
 
+export default function TestimonyCard({ obj, currentIndex }: any) {
 
-export default function TestimonyCard() {
+    const quotes = useSelector((state: any) => state.blogData);
+    const totalQuotes = Object.keys(quotes).length;
     return (
-        <div>
+        <div className="testimonals">
             <div className="testimony-content">
-                <h3 className="client-testimony">“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id
-                    penatibus imperdiet. Turpis
-                    egestas ultricies purus Lorem ipsum dolor sit amet .
-                </h3>
+                <p className="client-testimony">{obj.testimony}</p>
+                <img className="quote" src={quote} alt="closing quotes" />
             </div>
             <div className="client">
-
+                <div className="client-info">
+                    <img className="client-img" src={obj.authorProfile} alt="client" />
+                    <div className="client-metadata">
+                        <p className="client-name">{obj.authorName}</p>
+                        <p className="client-designation">{obj.designation}</p>
+                    </div>
+                </div>
+                <div className="navigate-buttons">
+                    <button className="previous-quote">←</button>
+                    <p className="quote-index">{`${currentIndex + 1} / ${totalQuotes}`}</p>
+                    <button className="next-quote">→</button>
+                </div>
             </div>
         </div>
     )

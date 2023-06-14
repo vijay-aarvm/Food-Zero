@@ -19,7 +19,9 @@ type bloginfo = {
     blogPostedTime: string,
     totalComments: string,
     blogTitle: string,
-    blogOneliner: string
+    blogOneliner: string,
+    designation: string,
+    testimony: string
 }
 
 export const blogList: bloginfo[] = [
@@ -32,6 +34,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "Fruit and vegetables and protection against diseases",
         "blogOneliner": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -43,6 +47,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "Asparagus Spring Salad with Rocket, Goat's Cheese",
         "blogOneliner": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -54,6 +60,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "The Best Style of Dough for Dumplings",
         "blogOneliner": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -65,6 +73,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "7 Reasons to Start Your Day With Lemon Water",
         "blogOneliner": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -76,6 +86,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "Three Ideas for Cooking Goat Meat at Home",
         "blogOneliner": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -87,6 +99,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "12 Sparkling Wines We're Loving This Summer",
         "blogOneliner": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -98,6 +112,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "2.Fruit and vegetables and protection against diseases",
         "blogOneliner": "2.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -109,6 +125,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "2.Asparagus Spring Salad with Rocket, Goat's Cheese",
         "blogOneliner": "2.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -120,6 +138,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "2.The Best Style of Dough for Dumplings",
         "blogOneliner": "2.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -131,6 +151,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "2.7 Reasons to Start Your Day With Lemon Water",
         "blogOneliner": "2.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -142,6 +164,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "2.Three Ideas for Cooking Goat Meat at Home",
         "blogOneliner": "2.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -153,6 +177,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "2.12 Sparkling Wines We're Loving This Summer",
         "blogOneliner": "2.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -164,6 +190,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "3.Fruit and vegetables and protection against diseases",
         "blogOneliner": "3.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -175,6 +203,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "3.Asparagus Spring Salad with Rocket, Goat's Cheese",
         "blogOneliner": "3.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -186,6 +216,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "3.The Best Style of Dough for Dumplings",
         "blogOneliner": "3.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -197,6 +229,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "3.7 Reasons to Start Your Day With Lemon Water",
         "blogOneliner": "3.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -208,6 +242,8 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "3.Three Ideas for Cooking Goat Meat at Home",
         "blogOneliner": "3.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     },
 
     {
@@ -219,5 +255,7 @@ export const blogList: bloginfo[] = [
         "totalComments": "2 comments",
         "blogTitle": "3.12 Sparkling Wines We're Loving This Summer",
         "blogOneliner": "3.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "designation": "blogger",
+        "testimony": "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis egestas ultricies purus  Lorem ipsum dolor sit amet."
     }
 ];

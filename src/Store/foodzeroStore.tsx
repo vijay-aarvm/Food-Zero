@@ -2,8 +2,8 @@ import { legacy_createStore as createStore } from 'redux'
 
 
 import { blogList } from "./bloglist";
-import { comments } from "../Components/CommonComponents/commentlist";
-import { menuCategory } from '../Components/Home/menuCategory';
+import { comments } from "./commentlist";
+import { menuCategory } from './menuCategory';
 
 const storeData = {
     "blogData": blogList,
