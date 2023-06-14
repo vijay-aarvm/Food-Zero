@@ -3,15 +3,16 @@ import React from "react";
 import SinglePortfolioHeader from "./SinglePortfolioHeader";
 import SinglePortfolioContent from "./SinglePortfolioContent";
 import NavigatePortfolio from "./NavigatePortfolio";
-import Footer from "../CommonComponents/Footer";
+import Layout from "../LayoutComponent/Layout";
 
 export default function SinglePortfolio() {
     return (
         <div>
-            <SinglePortfolioHeader />
-            <SinglePortfolioContent />
-            <NavigatePortfolio />
-            <Footer />
+            <Layout>
+                <SinglePortfolioHeader />
+                <SinglePortfolioContent />
+                <NavigatePortfolio />
+            </Layout>
         </div>
     )
 }

@@ -6,19 +6,20 @@ import ChefBanner from "./ChefBanner";
 import Features from "./FeaturesAndBlogs";
 import FormReservation from "../CommonComponents/FormReservation";
 import Categories from "./Categories";
-import Footer from "../CommonComponents/Footer";
+import Layout from "../LayoutComponent/Layout";
 
 
 export default function Home() {
     return (
         <div>
-            <HomeHeader />
-            <HomeMenu />
-            <ChefBanner />
-            <Features />
-            <FormReservation />
-            <Categories />
-            <Footer />
+            <Layout>
+                <HomeHeader />
+                <HomeMenu />
+                <ChefBanner />
+                <Features />
+                <FormReservation />
+                <Categories />
+            </Layout>
         </div>
     )
 }

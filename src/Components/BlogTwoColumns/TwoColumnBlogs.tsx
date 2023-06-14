@@ -2,7 +2,8 @@ import React from "react";
 import "../../styles.scss";
 import BlogHeader from "../CommonComponents/BlogHeader";
 import TwoColumnBlogList from "./TwoColumnBlogList";
-import Footer from "../CommonComponents/Footer";
+// import Footer from "../CommonComponents/Footer";
+import Layout from "../LayoutComponent/Layout";
 
 const title = [
     {
@@ -12,13 +13,14 @@ const title = [
 
 export default function TwoColumnBlogs() {
     return (
-        <div className="blog-Column-body">
-            {title.map((data, index: number) => (
-                <BlogHeader obj={data} key={index} />
-            ))}
-            <TwoColumnBlogList />
-            <Footer />
-        </div>
+        <Layout>
+            <div className="blog-Column-body">
+                {title.map((data, index: number) => (
+                    <BlogHeader obj={data} key={index} />
+                ))}
+                <TwoColumnBlogList />
+            </div>
+        </Layout>
     )
 }
 

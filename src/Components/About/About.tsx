@@ -4,16 +4,17 @@ import AboutHeader from "./AboutHeader";
 import OurStory from "./OurStory";
 import Process from "./Process";
 import FormReservation from "../CommonComponents/FormReservation";
-import Footer from "../CommonComponents/Footer";
+import Layout from "../LayoutComponent/Layout";
 
 export default function About() {
     return (
         <div>
-            <AboutHeader />
-            <OurStory />
-            <Process />
-            <FormReservation />
-            <Footer />
+            <Layout>
+                <AboutHeader />
+                <OurStory />
+                <Process />
+                <FormReservation />
+            </Layout>
         </div>
     )
 }

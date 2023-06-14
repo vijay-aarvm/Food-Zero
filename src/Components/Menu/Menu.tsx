@@ -4,18 +4,19 @@ import MenuHeader from "./MenuHeader";
 import StarterCourseDishes from "./StarterCourseDishes";
 import PastryDishes from "./PastryDishes";
 import FormReservation from "../CommonComponents/FormReservation";
-import Footer from "../CommonComponents/Footer";
+import Layout from "../LayoutComponent/Layout";
 import MainCourseDishes from "./MainCourseDishes";
 
 export default function Menu() {
     return (
         <div>
-            <MenuHeader />
-            <StarterCourseDishes />
-            <MainCourseDishes />
-            <PastryDishes />
-            <FormReservation />
-            <Footer />
+            <Layout>
+                <MenuHeader />
+                <StarterCourseDishes />
+                <MainCourseDishes />
+                <PastryDishes />
+                <FormReservation />
+            </Layout>
         </div>
     )
 }

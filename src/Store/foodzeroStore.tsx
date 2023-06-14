@@ -1,7 +1,7 @@
 import { legacy_createStore as createStore } from 'redux'
 
 
-import { blogList } from "../Components/CommonComponents/bloglist";
+import { blogList } from "./bloglist";
 import { comments } from "../Components/CommonComponents/commentlist";
 import { menuCategory } from '../Components/Home/menuCategory';
 

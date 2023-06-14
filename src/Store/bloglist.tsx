@@ -1,15 +1,15 @@
-import julieChristie from "../../assests/images/julie-christie.png";
-import mangoCover from "../../assests/images/mango.png";
-import asparagus from "../../assests/images/asparagus.png";
-import dianne from "../../assests/images/dianne.png";
-import momos from "../../assests/images/momos.png";
-import jenifer from "../../assests/images/jenifer.png";
-import lemon from "../../assests/images/lemon.png";
-import theresa from "../../assests/images/theresa.png";
-import goatMeat from "../../assests/images/goat-meat.png";
-import cody from "../../assests/images/cody.png";
-import wine from "../../assests/images/wine.png";
-import leslie from "../../assests/images/leslie.png";
+import julieChristie from "../assests/images/julie-christie.png";
+import mangoCover from "../assests/images/mango.png";
+import asparagus from "../assests/images/asparagus.png";
+import dianne from "../assests/images/dianne.png";
+import momos from "../assests/images/momos.png";
+import jenifer from "../assests/images/jenifer.png";
+import lemon from "../assests/images/lemon.png";
+import theresa from "../assests/images/theresa.png";
+import goatMeat from "../assests/images/goat-meat.png";
+import cody from "../assests/images/cody.png";
+import wine from "../assests/images/wine.png";
+import leslie from "../assests/images/leslie.png";
 
 type bloginfo = {
     blogCover: File,

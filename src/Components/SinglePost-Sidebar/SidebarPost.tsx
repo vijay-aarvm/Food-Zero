@@ -5,7 +5,7 @@ import julie from "../../assests/images/julie-christie.png";
 import cookGoatMeat from "../../assests/images/cook-goat-meat.png";
 import image1 from "../../assests/images/image1.png";
 import image2 from "../../assests/images/image2.png";
-import Footer from "../CommonComponents/Footer";
+import Layout from "../LayoutComponent/Layout";
 
 const blogContentList = [
     {
@@ -27,11 +27,12 @@ const blogContentList = [
 
 export default function SidebarPost() {
     return (
-        <div className="singlepostwithsidebar">
-            {blogContentList.map((blog: any, index: number) => (
-                <SinglePostSidebarCard obj={blog} key={index} />
-            ))}
-            <Footer />
-        </div>
+        <Layout>
+            <div className="singlepostwithsidebar">
+                {blogContentList.map((blog: any, index: number) => (
+                    <SinglePostSidebarCard obj={blog} key={index} />
+                ))}
+            </div>
+        </Layout>
     )
 }

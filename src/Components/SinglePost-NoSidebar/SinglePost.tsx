@@ -6,7 +6,7 @@ import cookGoatMeat from "../../assests/images/cook-goat-meat.png";
 import image1 from "../../assests/images/image1.png";
 import image2 from "../../assests/images/image2.png";
 import RelatedPosts from "./RelatedPosts";
-import Footer from "../CommonComponents/Footer";
+import Layout from "../LayoutComponent/Layout";
 
 
 const blogContentList = [
@@ -29,12 +29,13 @@ const blogContentList = [
 
 export default function SinglePost() {
     return (
-        <div>
-            {blogContentList.map((blog: any, index: number) => (
-                <SinglePostCard obj={blog} key={index} />
-            ))}
-            <RelatedPosts />
-            <Footer />
-        </div>
+        <Layout>
+            <div>
+                {blogContentList.map((blog: any, index: number) => (
+                    <SinglePostCard obj={blog} key={index} />
+                ))}
+                <RelatedPosts />
+            </div>
+        </Layout>
     )
 }
