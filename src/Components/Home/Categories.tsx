@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./categories.scss";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -10,6 +10,20 @@ export default function Categories() {
 
     const categoryData: any = useSelector((state: any) => state.menuCategoryData);
     const quotes = useSelector((state: any) => state.blogData);
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const handlePrevious = () => {
+        if (currentIndex > 0) {
+            setCurrentIndex(currentIndex - 1);
+        }
+    }
+
+    const handleNext = () => {
+        if (currentIndex < quotes.length - 1) {
+            setCurrentIndex(currentIndex + 1)
+        }
+    }
 
     return (
         <div className="homepage-section5">
@@ -23,14 +37,7 @@ export default function Categories() {
                 ))}
             </div>
             <div className="testimonals">
-                {quotes.map((quote: any, index: number) => {
-                    if (index < 1) {
-                        return (
-                            <TestimonyCard obj={quote} currentIndex={index} />
-                        )
-                    }
-                    return null;
-                })}
+                <TestimonyCard obj={quotes} currentIndex={currentIndex} onPrevious={handlePrevious} onNext={handleNext} />
             </div>
         </div>
     )
