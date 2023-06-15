@@ -2,6 +2,7 @@ import React from "react";
 import "./relatedPosts.scss";
 import { useSelector } from "react-redux";
 import BlogCard from "../CommonComponents/BlogCard";
+import { bloginfo } from "../../Store/bloglist";
 
 export default function RelatedPosts() {
 
@@ -10,7 +11,7 @@ export default function RelatedPosts() {
         <div className="related-posts-section">
             <h1 className="title">Related Posts</h1>
             <div className="posts">
-                {blogData.map((blog: any, index: number) => {
+                {blogData.map((blog: bloginfo, index: number) => {
                     if (index < 2) {
                         return (
                             <BlogCard obj={blog} key={index} />

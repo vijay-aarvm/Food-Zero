@@ -30,7 +30,7 @@ export default function MainCourseDishes() {
             </div>
             <div className="main-menu">
                 <div className="menu">
-                    {menu.map((item: any, index: number) => (
+                    {menu.map((item: {}, index: number) => (
                         <MenuDisplay obj={item} key={index} />
                     ))}
                 </div>

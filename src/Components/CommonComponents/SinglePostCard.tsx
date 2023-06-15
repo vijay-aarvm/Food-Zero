@@ -2,9 +2,14 @@ import React from "react";
 import "./singlePostCard.scss";
 import NavigationBar from "./NavigationBar";
 import quotebg from "../../assests/images/quote-bg.png";
+import { Postinfo } from "../../Store/blogContent";
+
+type singlePostType = {
+    obj: Postinfo
+}
 
 
-export default function SinglePostCard({ obj }: any) {
+export default function SinglePostCard({ obj }: singlePostType) {
     return (
         <div className="single-post">
             <div className="single-post-header">

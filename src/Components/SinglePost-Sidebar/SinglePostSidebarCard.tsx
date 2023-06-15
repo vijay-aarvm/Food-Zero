@@ -9,9 +9,14 @@ import nextpostimg from "../../assests/images/nextpost.png";
 import CommentCard from "../CommonComponents/CommentCard";
 import AuthorProfileCard from "../CommonComponents/AuthorProfileCard";
 import Tags from "../CommonComponents/Tags";
+import { Postinfo } from "../../Store/blogContent";
 
 
-export default function SinglePostSidebarCard({ obj }: any) {
+type sidebarPostType = {
+    obj: Postinfo
+}
+
+export default function SinglePostSidebarCard({ obj }: sidebarPostType) {
 
     const AuthorData: any = useSelector((state: any) => state.blogData);
     const commentData: any = useSelector((state: any) => state.commentData);

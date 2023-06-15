@@ -68,7 +68,7 @@ export default function Portfolios() {
                 </ul>
             </div>
             <div className="portfolio-section">
-                {portfolioList.map((portfolio: any, index: number) => (
+                {portfolioList.map((portfolio: {}, index: number) => (
                     <PortfolioCard obj={portfolio} key={index} />
                 ))}
             </div>

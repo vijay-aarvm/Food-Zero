@@ -10,6 +10,7 @@ import RecentPostsCard from "../CommonComponents/RecentPostsCard";
 import Tags from "../CommonComponents/Tags";
 import { Link } from "react-router-dom";
 import { scrollToTop } from "../../HelperFunctions/windowScroll";
+import { bloginfo } from "../../Store/bloglist";
 
 const categories = [
     {
@@ -66,7 +67,7 @@ const archives = [
 
 export default function Sidebar() {
 
-    const blogData: any = useSelector((state: any) => state.blogData);
+    const blogData = useSelector((state: any) => state.blogData);
 
     return (
         <div className="sidebar">
@@ -77,28 +78,28 @@ export default function Sidebar() {
             <div className="categories">
                 <p className="categories-title">Categories</p>
                 <div className="dotted-line"></div>
-                {categories.map((category: any, index: number) => (
+                {categories.map((category: {}, index: number) => (
                     <CategoryCard obj={category} key={index} />
                 ))}
             </div>
             <div className="recent-comments">
                 <p className="recent-comments-title">Recent Comments</p>
                 <div className="dotted-line"></div>
-                {comments.map((comment: any, index: number) => (
+                {comments.map((comment: {}, index: number) => (
                     <RecentCommentsCard obj={comment} key={index} />
                 ))}
             </div>
             <div className="archives">
                 <p className="archives-title">Archives</p>
                 <div className="dotted-line"></div>
-                {archives.map((archive: any, index: number) => (
+                {archives.map((archive: {}, index: number) => (
                     <ArchivesCard obj={archive} key={index} />
                 ))}
             </div>
             <div className="recent-posts">
                 <p className="recent-posts-title">Recent Posted</p>
                 <div className="dotted-line"></div>
-                {blogData.map((blog: any, index: number) => {
+                {blogData.map((blog: bloginfo, index: number) => {
                     if (index < 4) {
                         return (
                             <Link style={{ textDecoration: "none", color: "inherit" }} onClick={scrollToTop} to={"/single_post_without_sidebar"} ><RecentPostsCard obj={blog} key={index} /></Link>

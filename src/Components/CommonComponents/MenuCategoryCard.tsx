@@ -1,12 +1,17 @@
 import React from "react";
 import "./menuCategoryCard.scss";
+import { Menu } from "../../Store/menuCategory";
 
-export default function MenuCategoryCard({ obj }: any) {
+type MenuCategoryCardType = {
+    cardData: Menu;
+}
+
+export default function MenuCategoryCard({ cardData }: MenuCategoryCardType) {
     return (
         <div className="menu-card">
-            <img className="menucard-cover" src={obj.menuCover} alt="menu" />
+            <img className="menucard-cover" src={cardData.menuCover} alt="menu" />
             <div className="menu-category">
-                <p className="category">{obj.categoryName}</p>
+                <p className="category">{cardData.categoryName}</p>
                 <p className="vector">→</p>
             </div>
         </div>

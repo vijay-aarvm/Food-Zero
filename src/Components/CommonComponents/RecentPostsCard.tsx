@@ -1,7 +1,12 @@
 import React from "react";
 import "./recentPostsCard.scss";
+import { bloginfo } from "../../Store/bloglist";
 
-export default function RecentPostsCard({ obj }: any) {
+type recentPostsType = {
+    obj: bloginfo
+}
+
+export default function RecentPostsCard({ obj }: recentPostsType) {
     return (
         <div className="recent-post">
             <img className="recent-post-coverimg" src={obj.blogCover} alt="cover" />

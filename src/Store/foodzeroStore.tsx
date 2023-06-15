@@ -4,11 +4,13 @@ import { legacy_createStore as createStore } from 'redux'
 import { blogList } from "./bloglist";
 import { comments } from "./commentlist";
 import { menuCategory } from './menuCategory';
+import { blogContentList } from './blogContent';
 
 const storeData = {
     "blogData": blogList,
     "commentData": comments,
-    "menuCategoryData": menuCategory
+    "menuCategoryData": menuCategory,
+    "blogContent": blogContentList
 }
 
 const initialState = storeData;

@@ -4,7 +4,7 @@ import jenifer from "../assests/images/jenifer.png";
 import theresa from "../assests/images/theresa.png";
 
 type commentinfo = {
-    userProfile: File,
+    userProfile: string,
     uName: string,
     postedTime: string,
     comment: string

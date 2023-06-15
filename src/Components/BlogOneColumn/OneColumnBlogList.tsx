@@ -6,6 +6,7 @@ import store from "../../Store/foodzeroStore";
 // import { blogList } from "./bloglist";
 import { Link } from "react-router-dom";
 import { scrollToTop } from "../../HelperFunctions/windowScroll";
+import { bloginfo } from "../../Store/bloglist";
 
 export default function OneColumnBlogs() {
 
@@ -31,7 +32,7 @@ export default function OneColumnBlogs() {
                 <p className="blog-path-source-horizontal">Blog List One Column</p>
             </div>
             <div className="blog-content-horizontal">
-                {state.blogData.map((blog: any, index: number) => (
+                {state.blogData.map((blog: bloginfo, index: number) => (
                     <Link to={"/single_post_with_sidebar"} onClick={scrollToTop} style={{ textDecoration: "none", color: "inherit" }}><HorizontalBlogCard obj={blog} key={index} /></Link>
                 ))}
             </div>

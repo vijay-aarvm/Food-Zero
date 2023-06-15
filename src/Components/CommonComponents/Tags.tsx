@@ -21,12 +21,6 @@ const tags = [
     {
         "name": "Travel"
     },
-    {
-        "name": "Travel"
-    },
-    {
-        "name": "Travel"
-    }
 ]
 
 export default function Tags() {

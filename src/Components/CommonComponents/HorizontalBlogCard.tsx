@@ -1,8 +1,13 @@
 import React from "react";
 import "./horizontalBlogCard.scss";
 import arrow from "../../assests/images/arrow.png"
+import { bloginfo } from "../../Store/bloglist";
 
-export default function HorizontalBlogCard({ obj }: any) {
+type blogsType = {
+    obj: bloginfo
+}
+
+export default function HorizontalBlogCard({ obj }: blogsType) {
     return (
         <div className="blog-card-horizontal">
             <img className="blog-cover-image-horizontal" alt="post-cover-pic" src={obj.blogCover}></img>

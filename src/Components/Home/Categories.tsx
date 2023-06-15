@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import MenuCategoryCard from "../CommonComponents/MenuCategoryCard";
 import { scrollToTop } from "../../HelperFunctions/windowScroll";
 import TestimonyCard from "../CommonComponents/TestimonyCard";
+import { Menu } from "../../Store/menuCategory";
 
 export default function Categories() {
 
@@ -32,8 +33,8 @@ export default function Categories() {
                 <p className="headline-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div className="menu-category">
-                {categoryData.map((data: any, index: number) => (
-                    <Link to={"/menu"} onClick={scrollToTop} style={{ textDecoration: "none", color: "inherit" }} ><MenuCategoryCard obj={data} key={index} /></Link>
+                {categoryData.map((data: Menu, index: number) => (
+                    <Link to={"/menu"} onClick={scrollToTop} style={{ textDecoration: "none", color: "inherit" }} ><MenuCategoryCard cardData={data} key={index} /></Link>
                 ))}
             </div>
             <div className="testimonals">

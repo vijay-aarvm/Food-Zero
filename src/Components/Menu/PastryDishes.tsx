@@ -33,7 +33,7 @@ export default function PastryDishes() {
             <div className="pastry-menu">
                 <img className="pastry-items" src={pastries} alt="starters"></img>
                 <div className="menu">
-                    {menu.map((item: any, index: number) => (
+                    {menu.map((item: {}, index: number) => (
                         <MenuDisplay obj={item} key={index} />
                     ))}
                 </div>

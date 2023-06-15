@@ -11,9 +11,9 @@ import cody from "../assests/images/cody.png";
 import wine from "../assests/images/wine.png";
 import leslie from "../assests/images/leslie.png";
 
-type bloginfo = {
-    blogCover: File,
-    authorProfile: File,
+export type bloginfo = {
+    blogCover: string,
+    authorProfile: string,
     authorName: string,
     blogPostedDate: string,
     blogPostedTime: string,

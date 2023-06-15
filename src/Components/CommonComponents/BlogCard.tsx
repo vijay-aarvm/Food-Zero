@@ -3,8 +3,13 @@ import "./blogCard.scss";
 import arrow from "../../assests/images/arrow.png";
 import { Link } from "react-router-dom";
 import { scrollToTop } from "../../HelperFunctions/windowScroll";
+import { bloginfo } from "../../Store/bloglist";
 
-export default function BlogCard({ obj }: any) {
+type blogcardType = {
+    obj: bloginfo
+}
+
+export default function BlogCard({ obj }: blogcardType) {
     return (
         <div className="blog-card">
             <p className="blog-tag">Fashion</p>

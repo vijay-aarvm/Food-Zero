@@ -35,7 +35,7 @@ export default function StarterCourseDishes() {
             <div className="starter-menu">
                 <img className="starter-items" src={starters} alt="starters"></img>
                 <div className="menu">
-                    {menu.map((item: any, index: number) => (
+                    {menu.map((item: {}, index: number) => (
                         <MenuDisplay obj={item} key={index} />
                     ))}
                 </div>
