@@ -115,6 +115,11 @@ $lato: 'Lato';
             position: relative;
             right: 300px;
 
+            @media (max-width:1024px) {
+                width: 350px;
+                right: 200px;
+            }
+
             @media (max-width:920px) {
                 height: 340px;
                 width: 300px;
@@ -124,7 +129,7 @@ $lato: 'Lato';
             @media (max-width:770px) {
                 height: 300px;
                 width: 230px;
-                right: 100px;
+                right: 150px;
             }
 
             @media (max-width:420px) {
@@ -142,12 +147,17 @@ $lato: 'Lato';
             @include flex-row();
             gap: 20px;
 
+            @media (max-width:1024px) {
+                top: 480px;
+                right: 320px;
+            }
+
             @media (max-width:920px) {
                 right: 290px;
                 top: 410px;
 
                 @media (max-width:770px) {
-                    right: 170px;
+                    right: 220px;
                     top: 360px;
                 }
 
@@ -163,6 +173,11 @@ $lato: 'Lato';
                 width: 150px;
                 height: 130px;
                 background-size: contain;
+
+                @media (max-width:1024px) {
+                    width: 120px;
+                    height: 120px;
+                }
 
                 @media (max-width:920px) {
                     width: 100px;
@@ -216,6 +231,10 @@ $lato: 'Lato';
                 font-size: 20px;
                 transform: rotate(90deg);
                 padding: 450px 0 0 330px;
+
+                @media (max-width:1024px) {
+                    padding: 300px 0 0 200px;
+                }
 
                 @media (max-width:920px) {
                     font-size: 15px;
