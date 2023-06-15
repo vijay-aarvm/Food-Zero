@@ -3,13 +3,15 @@
 .menu-card {
     position: relative;
     padding-bottom: 100px;
+    width: auto;
+    height: auto;
 
     @media (max-width420px) {
         padding-bottom: 30px;
     }
 
     .menucard-cover {
-        width: 230px;
+        width: 280px;
         height: auto;
         position: absolute;
 

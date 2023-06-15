@@ -35,7 +35,7 @@ const blogs = [
 
 export default function Features() {
     return (
-        <div className="homepage-section4">
+        <div className="features">
             <div className="quality-ingredients">
                 <div className="premium-quality">
                     <img className="ingredients-image" src={fish} alt="fish" />

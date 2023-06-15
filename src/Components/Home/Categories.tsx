@@ -26,7 +26,7 @@ export default function Categories() {
     }
 
     return (
-        <div className="homepage-section5">
+        <div className="categories">
             <div className="category-headline">
                 <h1 className="headline">Calories Energy Balance</h1>
                 <p className="headline-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>

@@ -28,7 +28,7 @@ const menu = [
 
 export default function HomeMenu() {
     return (
-        <div className="homepage-section2">
+        <div className="home-menu">
             <div className="menu-header">
                 <div className="food-menu">
                     <h1 className="our-menu">Our Menu</h1>
