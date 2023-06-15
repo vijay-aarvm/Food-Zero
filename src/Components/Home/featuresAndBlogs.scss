@@ -4,8 +4,7 @@
     width: auto;
     height: auto;
     @include flex-column();
-    align-items: center;
-    text-align: center;
+    @include center-items();
 
     .quality-ingredients {
         @include flex-row();

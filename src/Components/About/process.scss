@@ -7,8 +7,6 @@
 
     .process-title {
         @include flex-row();
-        text-align: center;
-        align-items: center;
         margin-left: 350px;
 
         @media (max-width: 670px) {
@@ -129,8 +127,7 @@
 
         .pickle {
             @include flex-column();
-            align-items: center;
-            text-align: center;
+            @include center-items();
             width: 450px;
 
             .meat-pickled {
@@ -151,8 +148,7 @@
 
             .about-pickle {
                 @include flex-column();
-                align-items: center;
-                text-align: center;
+                @include center-items();
                 width: 350px;
 
                 @media (max-width:768px) {
@@ -192,8 +188,7 @@
 
         .bake {
             @include flex-column();
-            align-items: center;
-            text-align: center;
+            @include center-items();
             margin-top: 100px;
             width: 450px;
 
@@ -219,8 +214,7 @@
 
             .about-bake {
                 @include flex-column();
-                align-items: center;
-                text-align: center;
+                @include center-items();
                 width: 350px;
                 text-align: left;
 

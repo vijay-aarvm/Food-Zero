@@ -3,8 +3,7 @@
 .portfolio-content {
     padding: 300px 0 200px 0;
     @include flex-column();
-    text-align: center;
-    align-items: center;
+    @include center-items();
     overflow: hidden;
 
     @media (max-width:420px) {
@@ -185,8 +184,7 @@
 
     .section-3 {
         @include flex-column();
-        text-align: center;
-        align-items: center;
+        @include center-items();
         position: relative;
         top: 200px;
         margin-bottom: 200px;

@@ -3,8 +3,7 @@
 .blog-section-horizontal {
     @include flex-column();
     margin-top: 250px;
-    text-align: center;
-    align-items: center;
+    @include center-items();
 
     .breadcrumbs-horizontal {
         @include flex-row();
@@ -27,8 +26,7 @@
 
     .blog-content-horizontal {
         @include flex-column();
-        text-align: center;
-        align-items: center;
+        @include center-items();
         justify-content: space-evenly;
         gap: 50px;
     }

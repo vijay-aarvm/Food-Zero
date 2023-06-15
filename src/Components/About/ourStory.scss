@@ -90,8 +90,7 @@
 
         .our-manager {
             @include flex-column();
-            align-items: center;
-            text-align: center;
+            @include center-items();
             width: 400px;
 
             @media (max-width: 420px) {
@@ -229,8 +228,7 @@
         height: auto;
         padding-bottom: 300px;
         @include flex-column();
-        text-align: center;
-        align-items: center;
+        @include center-items();
 
         @media (max-width: 420px) {
             padding-bottom: 100px;

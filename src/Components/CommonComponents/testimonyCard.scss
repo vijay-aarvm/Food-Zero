@@ -2,8 +2,7 @@
 
 .testimonals {
     @include flex-column();
-    text-align: center;
-    align-items: center;
+    @include center-items();
     justify-content: center;
 
     @media (max-width:855px) {

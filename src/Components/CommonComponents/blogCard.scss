@@ -4,8 +4,7 @@
     @include flex-column();
     width: 550px;
     height: 700px;
-    text-align: center;
-    align-items: center;
+    @include center-items();
     margin-bottom: 100px;
 
     @media (max-width:1030px) {

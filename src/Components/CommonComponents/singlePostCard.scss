@@ -30,8 +30,7 @@
             color: white;
             font-family: $rufina;
             width: 900px;
-            text-align: center;
-            align-items: center;
+            @include center-items();
             margin: 100px 0 0 180px;
 
             @media (max-width:1030px) {
@@ -78,8 +77,7 @@
         position: relative;
         margin-top: 300px;
         @include flex-column();
-        align-items: center;
-        text-align: center;
+        @include center-items();
 
         @media (max-width:920px) {
             margin-top: 200px;
@@ -254,8 +252,7 @@
 
     .remaining-blog {
         @include flex-column();
-        text-align: center;
-        align-items: center;
+        @include center-items();
 
         .blog-conclusion {
             font-family: $lato;

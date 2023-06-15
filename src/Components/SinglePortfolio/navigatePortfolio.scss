@@ -17,8 +17,7 @@
     .previous {
         color: #233000;
         @include flex-column();
-        align-items: center;
-        text-align: center;
+        @include center-items();
 
         .previous-page {
             font-family: $lato;
@@ -67,8 +66,7 @@
     .next {
         color: #233000;
         @include flex-column();
-        align-items: center;
-        text-align: center;
+        @include center-items();
 
         .next-page {
             font-family: $lato;

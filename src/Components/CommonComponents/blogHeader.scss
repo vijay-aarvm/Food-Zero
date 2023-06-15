@@ -19,8 +19,7 @@
 
     .blog-column-hero {
         @include flex-column();
-        text-align: center;
-        align-items: center;
+        @include center-items();
         position: relative;
         color: white;
         padding: 75px 0 0 0px;

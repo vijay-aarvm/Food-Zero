@@ -2,8 +2,7 @@
 
 .related-posts-section {
     @include flex-column();
-    align-items: center;
-    text-align: center;
+    @include center-items();
     margin-bottom: 200px;
 
     .title {
