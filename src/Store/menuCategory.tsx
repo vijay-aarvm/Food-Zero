@@ -2,7 +2,12 @@ import starters from "../assests/images/starters.png";
 import mains from "../assests/images/mains.png";
 import soups from "../assests/images/soups.png";
 
-export const menuCategory = [
+type menu = {
+    menuCover: File,
+    categoryName: string
+}
+
+export const menuCategory: menu[] = [
     {
         "menuCover": starters,
         "categoryName": "Starters",
