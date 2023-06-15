@@ -1,68 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Rufina&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
-@mixin flex-row {
-    display: flex;
-    text-align: center;
-    align-items: center;
-}
-
-@mixin flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-@mixin lato-lighter {
-    font-family: 'Lato';
-    font-weight: lighter;
-}
-
-@mixin rufina-lighter {
-    font-family: 'Rufina';
-    font-weight: lighter;
-}
-
-@mixin namefield-size {
-    width: 450px;
-    height: 60px;
-}
-
-@mixin namefield-css {
-    @include namefield-size();
-    padding-left: 30px;
-    @include form-field-border();
-}
-
-@mixin mail-phone {
-    width: 965px;
-    height: 60px;
-}
-
-@mixin mail-phone-css {
-    @include mail-phone();
-    padding-left: 30px;
-    @include form-field-border();
-}
-
-@mixin form-field-border {
-    background: none;
-    border: 1.5px solid black;
-}
-
-@mixin center-items {
-    text-align: center;
-    align-items: center;
-}
-
-$rufina : 'Rufina';
-$lato: 'Lato';
+@import '../../styles.scss';
 
 .grid-section {
     @include flex-column();
     margin: 100px 0 100px 0;
     text-align: center;
     align-items: center;
+    overflow: hidden;
 
     .category-list {
         .list {
@@ -85,8 +28,7 @@ $lato: 'Lato';
                 }
 
                 &:active {
-                    transition-duration: 0.05s;
-                    box-shadow: 0 0 10px #cacaca;
+                    text-decoration: underline dotted 2px;
                 }
             }
         }
@@ -98,5 +40,12 @@ $lato: 'Lato';
         justify-content: center;
         align-items: center;
         gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .loading {
+        font-family: $lato;
+        border: 1px solid black;
+        padding: 5px;
     }
 }

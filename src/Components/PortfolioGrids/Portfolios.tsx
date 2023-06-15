@@ -1,6 +1,6 @@
 import React from "react";
-// import "./portfolio.scss";
-import Gridcard from "../CommonComponents/Gridcard";
+import "./portfolios.scss";
+import PortfolioCard from "../CommonComponents/PortfolioCard";
 import codfillet from "../../assests/images/whitecod.png";
 import naturalwine from "../../assests/images/natural wine.png";
 import pumpkinsoup from "../../assests/images/pumpkin soup.png";
@@ -13,37 +13,43 @@ const portfolioList = [
         "coverImage": codfillet,
         "title": "Premium Deep Sea Snow White Cod Fillet",
         "session": "Lunch",
-        "category": "Dinner"
+        "category": "Dinner",
+        "large": true,
     },
     {
         "coverImage": naturalwine,
         "title": "Option of natural wine available",
-        "session": "Launch",
-        "category": "Dinner"
+        "session": "Lunch",
+        "category": "Dinner",
+        "small": true,
     },
     {
         "coverImage": pumpkinsoup,
         "title": "Best pumpkin for pumpkin soup",
         "session": "Drink",
-        "category": "Fruits"
+        "category": "Fruits",
+        "small": true
     },
     {
         "coverImage": steak,
         "title": "Strip Steak With Rosemary Butter",
         "session": "Lunch",
-        "category": "Starters"
+        "category": "Starters",
+        "large": true
     },
     {
         "coverImage": fishmaw,
         "title": "Braised Sliced Abalone,Fish Maw with Premium Seafood",
         "session": "Dinner",
-        "category": "Lunch"
+        "category": "Lunch",
+        "medium": true
     },
     {
         "coverImage": friedprawn,
         "title": "Pan Fried Live Prawn with Superior Soy Sauce",
         "session": "Starter",
-        "category": "Dinner"
+        "category": "Dinner",
+        "medium": true
     }
 ]
 
@@ -63,9 +69,10 @@ export default function Portfolios() {
             </div>
             <div className="portfolio-section">
                 {portfolioList.map((portfolio: any, index: number) => (
-                    <Gridcard obj={portfolio} key={index} />
+                    <PortfolioCard obj={portfolio} key={index} />
                 ))}
             </div>
+            <div className="loading">Loading...</div>
         </div>
     )
 }
