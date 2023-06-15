@@ -82,9 +82,10 @@
         justify-content: center;
 
         .excellent-cook {
-            font-size: 60px;
+            font-size: 50px;
             width: 200px;
             font-family: $rufina;
+            margin-top: 180px;
 
             @media (max-width:920px) {
                 font-size: 40px;
@@ -139,7 +140,7 @@
             height: 200px;
             align-self: flex-end;
             text-align: start;
-            margin-top: 250px;
+            margin-top: 80px;
             padding-bottom: 50px;
 
             @media (max-width:920px) {
