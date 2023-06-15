@@ -60,7 +60,7 @@ $lato: 'Lato';
 
 .our-process {
     @include flex-column();
-    margin-bottom: 150px;
+    margin-bottom: 30px;
     overflow: hidden;
 
     .process-title {
@@ -315,6 +315,26 @@ $lato: 'Lato';
                     }
                 }
             }
+        }
+    }
+
+    .rosemary-left {
+        width: 250px;
+        height: 250px;
+
+        @media (max-width:920px) {
+            width: 200px;
+            height: 200px;
+        }
+
+        @media (max-width:670px) {
+            width: 170px;
+            height: 150px;
+        }
+
+        @media (max-width: 420px) {
+            width: 100px;
+            height: 100px;
         }
     }
 }

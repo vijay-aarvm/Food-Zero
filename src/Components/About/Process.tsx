@@ -4,6 +4,7 @@ import rosemaryright from "../../assests/images/rosemary-right.png";
 import meatsliced from "../../assests/images/meat-slice.png";
 import meatpickled from "../../assests/images/meat-pickle.png";
 import meatbaked from "../../assests/images/meat-baked.png";
+import rosemaryleft from "../../assests/images/rosemary-left.png";
 
 export default function Process() {
     return (
@@ -35,6 +36,7 @@ export default function Process() {
                     </div>
                 </div>
             </div>
+            <img className="rosemary-left" src={rosemaryleft} alt="rosemary" />
         </div>
     )
 }

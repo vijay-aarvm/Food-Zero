@@ -7,6 +7,7 @@ import { scrollToTop } from "../../HelperFunctions/windowScroll";
 export default function BlogCard({ obj }: any) {
     return (
         <div className="blog-card">
+            <p className="blog-tag">Fashion</p>
             <img className="blog-cover-image" alt="post-cover-pic" src={obj.blogCover}></img>
             <div className="author-info">
                 <div className="author-profile-container">

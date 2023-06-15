@@ -86,12 +86,38 @@ $lato: 'Lato';
         height: 400px;
     }
 
+    .blog-tag {
+        position: absolute;
+        border: 1px solid black;
+        padding: 5px 10px;
+        background: #5E6600;
+        color: white;
+        margin: 5px 5px 0 400px;
+        font-size: 18px;
+
+        @media (max-width:920px) {
+            font-size: 14px;
+            margin: 5px 5px 0 300px;
+        }
+
+        @media (max-width:770px) {
+            font-size: 12px;
+            margin: 5px 5px 0 230px;
+        }
+
+        @media (max-width:420px) {
+            font-size: 10px;
+            padding: 5px;
+            margin: 5px 5px 0 100px;
+        }
+    }
+
     .blog-cover-image {
-        width: 500px;
+        width: 490px;
         height: 600px;
 
         @media (max-width:1030px) {
-            width: 500px;
+            width: 490px;
             height: 600px;
         }
 
