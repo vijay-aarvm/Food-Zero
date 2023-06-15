@@ -70,21 +70,42 @@ $lato: 'Lato';
         display: flex;
         justify-content: space-between;
 
+        @media (max-width:420px) {
+            padding-bottom: 50px;
+        }
+
         .food-menu {
             margin: 80px 0 0 80px;
+
+            @media (max-width:420px) {
+                margin: 20px 0 0 20px;
+            }
 
             .our-menu {
                 font-family: $rufina;
                 line-height: 60px;
                 font-size: 54px;
                 padding-bottom: 15px;
+
+                @media (max-width:420px) {
+                    font-size: 25px;
+                    line-height: 20px;
+                    padding: 0;
+                }
             }
 
             .our-menu-desc {
                 width: 243.54px;
                 font-family: $lato;
+
+                @media (max-width:420px) {
+                    font-size: 10px;
+                    width: 150px;
+                }
             }
         }
+
+
 
         .header-img {
             position: absolute;
@@ -100,8 +121,8 @@ $lato: 'Lato';
                 }
 
                 @media (max-width:420px) {
-                    width: 200px;
-                    height: 200px;
+                    width: 120px;
+                    height: 120px;
                 }
             }
         }

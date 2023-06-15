@@ -154,8 +154,9 @@ $lato: 'Lato';
 
 @media (max-width: 420px) {
     .food-item {
-        width: 130px;
+        width: 140px;
         margin-bottom: 10px;
+        text-align: left;
 
         .dotted-line {
             width: 130px;
