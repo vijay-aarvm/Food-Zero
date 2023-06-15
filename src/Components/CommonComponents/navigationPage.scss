@@ -51,6 +51,23 @@
             font-size: 25px;
             font-family: $rufina;
             text-align: left;
+
+            .links {
+                color: white;
+                list-style: disc;
+
+                .router-link {
+                    text-decoration: none;
+
+                    .link {
+                        color: white;
+
+                        &:visited {
+                            color: white;
+                        }
+                    }
+                }
+            }
         }
 
         .navpage-address {

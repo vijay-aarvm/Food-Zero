@@ -45,18 +45,18 @@ export default function NavigationPage({ toggleMenu }: any) {
             <button className="close" id="close-button" onClick={toggleMenu}>X</button>
             <div className="navigation-list">
                 <div className="page-list">
-                    <ul>
-                        <Link to={"/"}><li>HOME</li></Link>
-                        <Link to={"/menu"}><li>MENU</li></Link>
-                        <li>Blogs
+                    <ul className="links">
+                        <Link className="router-link" to={"/"}><li className="link">HOME</li></Link>
+                        <Link className="router-link" to={"/menu"}><li className="link">MENU</li></Link>
+                        <li style={{ color: "#9CAA00" }}>Blogs
                             <ul>
-                                <Link to={"/blog_one_column"}><li>1 COLUMNS</li></Link>
-                                <Link to={"/blog_two_columns"}><li>2 COLUMNS</li></Link>
-                                <Link to={"/single_post_with_sidebar"}><li>SIDEBAR POST</li></Link>
+                                <Link style={{ listStyle: "none" }} className="router-link" to={"/blog_one_column"}><li className="link">1 COLUMNS</li></Link>
+                                <Link style={{ listStyle: "none" }} className="router-link" to={"/blog_two_columns"}><li className="link">2 COLUMNS</li></Link>
+                                <Link style={{ listStyle: "none" }} className="router-link" to={"/single_post_with_sidebar"}><li className="link">SIDEBAR POST</li></Link>
                             </ul>
                         </li>
-                        <Link to={"/about"}><li>ABOUT</li></Link>
-                        <Link to={"/contact"}><li>CONTACT</li></Link>
+                        <Link className="router-link" to={"/about"}><li className="link">ABOUT</li></Link>
+                        <Link className="router-link" to={"/contact"}><li className="link">CONTACT</li></Link>
                     </ul>
                 </div>
                 <div className="navpage-address">
