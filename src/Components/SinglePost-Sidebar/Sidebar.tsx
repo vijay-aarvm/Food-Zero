@@ -12,7 +12,22 @@ import { Link } from "react-router-dom";
 import { scrollToTop } from "../../HelperFunctions/windowScroll";
 import { bloginfo } from "../../Store/bloglist";
 
-const categories = [
+type Categoriestype = {
+    "name": string,
+    "count": string
+}[];
+
+type Commentstype = {
+    "uName": string,
+    "comment": string
+}[];
+
+type Archivestype = {
+    "month": string,
+    "archiveCount": string
+}[];
+
+const categories: Categoriestype = [
     {
         "name": "Fashion",
         "count": "16"
@@ -31,7 +46,7 @@ const categories = [
     }
 ]
 
-const comments = [
+const comments: Commentstype = [
     {
         "uName": "John Mccain",
         "comment": "Vegan baked oatmeal with fresh berries"
@@ -50,7 +65,7 @@ const comments = [
     }
 ]
 
-const archives = [
+const archives: Archivestype = [
     {
         "month": "October 2021",
         "archiveCount": "12"
@@ -78,35 +93,30 @@ export default function Sidebar() {
             <div className="categories">
                 <p className="categories-title">Categories</p>
                 <div className="dotted-line"></div>
-                {categories.map((category: {}, index: number) => (
-                    <CategoryCard obj={category} key={index} />
+                {categories.map((category) => (
+                    <CategoryCard obj={category} />
                 ))}
             </div>
             <div className="recent-comments">
                 <p className="recent-comments-title">Recent Comments</p>
                 <div className="dotted-line"></div>
-                {comments.map((comment: {}, index: number) => (
-                    <RecentCommentsCard obj={comment} key={index} />
+                {comments.map((comment) => (
+                    <RecentCommentsCard obj={comment} />
                 ))}
             </div>
             <div className="archives">
                 <p className="archives-title">Archives</p>
                 <div className="dotted-line"></div>
-                {archives.map((archive: {}, index: number) => (
-                    <ArchivesCard obj={archive} key={index} />
+                {archives.map((archive) => (
+                    <ArchivesCard obj={archive} />
                 ))}
             </div>
             <div className="recent-posts">
                 <p className="recent-posts-title">Recent Posted</p>
                 <div className="dotted-line"></div>
-                {blogData.map((blog: bloginfo, index: number) => {
-                    if (index < 4) {
-                        return (
-                            <Link style={{ textDecoration: "none", color: "inherit" }} onClick={scrollToTop} to={"/single_post_without_sidebar"} ><RecentPostsCard obj={blog} key={index} /></Link>
-                        )
-                    }
-                    return null;
-                }
+                {blogData.slice(0, 4).map((blog: bloginfo) => (
+                    <Link style={{ textDecoration: "none", color: "inherit" }} onClick={scrollToTop} to={"/single_post_without_sidebar"} ><RecentPostsCard obj={blog} /></Link>
+                )
                 )}
             </div>
             <Tags />

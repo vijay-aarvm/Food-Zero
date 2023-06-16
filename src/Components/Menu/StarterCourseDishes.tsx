@@ -3,8 +3,9 @@ import "./starterCourseDishes.scss";
 import starters from "../../assests/images/starter-items.png";
 import MenuDisplay from "../CommonComponents/MenuDisplay";
 import blueberry from "../../assests/images/blueberry.png";
+import { Menucoursetype } from "../../Menucoursetypes";
 
-const menu = [
+const menu: Menucoursetype = [
     {
         "price": "$20",
         "dish": "Grilled Okra and Tomatoes ",
@@ -35,8 +36,8 @@ export default function StarterCourseDishes() {
             <div className="starter-menu">
                 <img className="starter-items" src={starters} alt="starters"></img>
                 <div className="menu">
-                    {menu.map((item: {}, index: number) => (
-                        <MenuDisplay obj={item} key={index} />
+                    {menu.map((item) => (
+                        <MenuDisplay obj={item} />
                     ))}
                 </div>
             </div>

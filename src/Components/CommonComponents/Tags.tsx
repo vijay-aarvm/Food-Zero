@@ -9,7 +9,7 @@ export default function Tags() {
             <p className="tags-title">Tags</p>
             <div className="dotted-line"></div>
             <div className="tags">
-                {tags.map((tag: any) => (
+                {tags.map((tag: string) => (
                     <div className="tag-container">
                         <p className="tag-name">{tag}</p>
                     </div>

@@ -13,8 +13,8 @@ export default function SidebarPost() {
     return (
         <Layout>
             <div className="singlepostwithsidebar">
-                {blogContentList.map((blog: Postinfo, index: number) => (
-                    <SinglePostSidebarCard obj={blog} key={index} />
+                {blogContentList.map((blog: Postinfo) => (
+                    <SinglePostSidebarCard obj={blog} />
                 ))}
             </div>
         </Layout>

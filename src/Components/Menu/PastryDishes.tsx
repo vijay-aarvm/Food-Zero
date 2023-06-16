@@ -3,8 +3,9 @@ import "./pastryDishes.scss";
 import pastries from "../../assests/images/pastry-drinks.png"
 import MenuDisplay from "../CommonComponents/MenuDisplay";
 import avocado from "../../assests/images/avocado.png";
+import { Menucoursetype } from "../../Menucoursetypes";
 
-const menu = [
+const menu: Menucoursetype = [
     {
         "price": "$158",
         "dish": "Wine Pairing",
@@ -33,8 +34,8 @@ export default function PastryDishes() {
             <div className="pastry-menu">
                 <img className="pastry-items" src={pastries} alt="starters"></img>
                 <div className="menu">
-                    {menu.map((item: {}, index: number) => (
-                        <MenuDisplay obj={item} key={index} />
+                    {menu.map((item) => (
+                        <MenuDisplay obj={item} />
                     ))}
                 </div>
             </div>

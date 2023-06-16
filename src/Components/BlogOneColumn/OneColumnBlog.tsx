@@ -15,8 +15,8 @@ export default function OneColumnBlog() {
     return (
         <Layout>
             <div className="blog-Column-body">
-                {title.map((data, index: number) => (
-                    <BlogHeader obj={data} key={index} />
+                {title.map((data) => (
+                    <BlogHeader obj={data} />
                 ))}
                 <OneColumnBlogList />
             </div>

@@ -31,8 +31,8 @@ export default function OneColumnBlogs() {
                 <p className="blog-path-source-horizontal">Blog List One Column</p>
             </div>
             <div className="blog-content-horizontal">
-                {blogs.map((blog: bloginfo, index: number) => (
-                    <HorizontalBlogCard obj={blog} key={index} />
+                {blogs.map((blog: bloginfo) => (
+                    <HorizontalBlogCard obj={blog} />
                 ))}
             </div>
         </div >

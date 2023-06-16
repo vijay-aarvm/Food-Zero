@@ -2,8 +2,10 @@ import React from "react";
 import "./mainCourseDishes.scss";
 import MenuDisplay from "../CommonComponents/MenuDisplay";
 import mains from "../../assests/images/mains-items.png"
+import { Menucoursetype } from "../../Menucoursetypes";
 
-const menu = [
+
+const menu: Menucoursetype = [
     {
         "price": "$20",
         "dish": "Deep Sea Snow White Cod Fillet",
@@ -30,8 +32,8 @@ export default function MainCourseDishes() {
             </div>
             <div className="main-menu">
                 <div className="menu">
-                    {menu.map((item: {}, index: number) => (
-                        <MenuDisplay obj={item} key={index} />
+                    {menu.map((item) => (
+                        <MenuDisplay obj={item} />
                     ))}
                 </div>
                 <img className="main-items" src={mains} alt="mains"></img>

@@ -10,6 +10,8 @@ import CommentCard from "../CommonComponents/CommentCard";
 import AuthorProfileCard from "../CommonComponents/AuthorProfileCard";
 import { Postinfo } from "../../Store/blogContent";
 import { scrollToTop } from "../../HelperFunctions/windowScroll";
+import { bloginfo } from "../../Store/bloglist";
+import { commentinfo } from "../../Store/commentlist";
 
 
 type sidebarPostType = {
@@ -28,14 +30,9 @@ export default function SinglePostSidebarCard({ obj }: sidebarPostType) {
                 <NavigationBar />
                 <div className="blog-header-title">
                     <p className="blog-title">{obj.blogTitle}</p>
-                    {authorData.map((author: any, index: number) => {
-                        if (index < 1) {
-                            return (
-                                <AuthorProfileCard obj={author} key={index} />
-                            )
-                        }
-                        return null;
-                    })}
+                    {authorData.slice(0, 1).map((author: bloginfo) => (
+                        <AuthorProfileCard obj={author} />
+                    ))}
                 </div>
             </div>
             <div className="post">
@@ -83,8 +80,8 @@ export default function SinglePostSidebarCard({ obj }: sidebarPostType) {
             </div>
             <div className="comment-section">
                 <p className="total-comments">{`${Object.keys(commentData).length} Comments`}</p>
-                {commentData.map((comment: any, index: number) => (
-                    <CommentCard obj={comment} key={index} />
+                {commentData.map((comment: commentinfo) => (
+                    <CommentCard obj={comment} />
                 ))}
                 <div className="dotted-line"></div>
             </div>

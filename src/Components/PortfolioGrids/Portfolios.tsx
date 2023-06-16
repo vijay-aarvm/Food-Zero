@@ -8,6 +8,14 @@ import steak from "../../assests/images/strip steak.png";
 import friedprawn from "../../assests/images/fried prawn.png";
 import fishmaw from "../../assests/images/fishmaw.png";
 
+// type Portfoliotype = {
+//     "coverImage": string,
+//     "title": string,
+//     "session": string,
+//     "category": string,
+//     '"large" | "small" | "medium"': boolean;
+// }[];
+
 const portfolioList = [
     {
         "coverImage": codfillet,
@@ -35,7 +43,8 @@ const portfolioList = [
         "title": "Strip Steak With Rosemary Butter",
         "session": "Lunch",
         "category": "Starters",
-        "large": true
+        "large": true,
+
     },
     {
         "coverImage": fishmaw,
@@ -68,8 +77,8 @@ export default function Portfolios() {
                 </ul>
             </div>
             <div className="portfolio-section">
-                {portfolioList.map((portfolio: {}, index: number) => (
-                    <PortfolioCard obj={portfolio} key={index} />
+                {portfolioList.map((portfolio) => (
+                    <PortfolioCard obj={portfolio} />
                 ))}
             </div>
             <div className="loading">Loading...</div>

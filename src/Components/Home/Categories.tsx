@@ -33,8 +33,8 @@ export default function Categories() {
                 <p className="headline-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div className="menu-category">
-                {categoryData.map((data: Menu, index: number) => (
-                    <Link to={"/menu"} onClick={scrollToTop} style={{ textDecoration: "none", color: "inherit" }} ><MenuCategoryCard cardData={data} key={index} /></Link>
+                {categoryData.map((data: Menu) => (
+                    <Link to={"/menu"} onClick={scrollToTop} style={{ textDecoration: "none", color: "inherit" }} ><MenuCategoryCard cardData={data} /></Link>
                 ))}
             </div>
             <div className="testimonals">

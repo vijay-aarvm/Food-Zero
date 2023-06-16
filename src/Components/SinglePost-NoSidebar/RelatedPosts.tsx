@@ -12,8 +12,8 @@ export default function RelatedPosts() {
         <div className="related-posts-section">
             <h1 className="title">Related Posts</h1>
             <div className="posts">
-                {blogData.slice(0, 2).map((blog: bloginfo, index: number) => (
-                    <BlogCard obj={blog} key={index} />
+                {blogData.slice(0, 2).map((blog: bloginfo) => (
+                    <BlogCard obj={blog} />
                 ))}
             </div>
         </div>

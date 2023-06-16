@@ -34,14 +34,9 @@ export default function Features() {
                 </div>
             </div>
             <div className="blogs">
-                {blogs.map((blog: bloginfo, index: number) => {
-                    if (index < 2) {
-                        return (
-                            <BlogCard obj={blog} key={index} />
-                        )
-                    }
-                    return null;
-                }
+                {blogs.slice(0, 2).map((blog: bloginfo) => (
+                    <BlogCard obj={blog} />
+                )
                 )}
             </div>
         </div>
