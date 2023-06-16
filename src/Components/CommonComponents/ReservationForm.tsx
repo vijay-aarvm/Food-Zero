@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "./reservationForm.scss";
-import mint from "../../assests/images/Mint.png"
+import mint from "../../assests/images/Mint.png";
+
+const timeSlots = ["11:00 am", "13:00 pm", "14:00 pm", "15:00 pm", "16:00 pm", "18:00 pm", "19:00 pm"];
+
+const noOfPersons = ["0", "2", "4", "6", "8", "10", "15"];
 
 export default function ReservationForm() {
 
@@ -59,23 +63,15 @@ export default function ReservationForm() {
                 <div className="schedule">
                     <input type="date" className="select-date" name="date" placeholder="Choose the date" onChange={handleChange} value={formData.date}></input>
                     <select className="time" name="time" onChange={handleChange} value={formData.time}>
-                        <option>11:00 am</option>
-                        <option>13:00 pm</option>
-                        <option>14:00 pm</option>
-                        <option>15:00 pm</option>
-                        <option>16:00 pm</option>
-                        <option>18:00 pm</option>
-                        <option>19:00 pm</option>
+                        {timeSlots.map((slot) => (
+                            <option value={slot} key={slot}>{slot}</option>
+                        ))}
                     </select>
                 </div>
                 <select className="no-of-persons" name="noOfPersons" onChange={handleChange} value={formData.noOfPersons}>
-                    <option>0</option>
-                    <option>2</option>
-                    <option>4</option>
-                    <option>6</option>
-                    <option>8</option>
-                    <option>10</option>
-                    <option>15</option>
+                    {noOfPersons.map((count) => (
+                        <option value={count} key={count}>{count}</option>
+                    ))}
                 </select>
                 <button type="submit" className="book-now" onClick={handleSubmit}>Book Now</button>
             </div>
