@@ -1,27 +1,7 @@
 import React from "react";
-import TagsCard from "./TagsCard";
 import "./tags.scss";
 
-const tags = [
-    {
-        "name": "Design"
-    },
-    {
-        "name": "Photography"
-    },
-    {
-        "name": "Images"
-    },
-    {
-        "name": "Video"
-    },
-    {
-        "name": "Music"
-    },
-    {
-        "name": "Travel"
-    },
-]
+const tags = ["Design", "Photography", "Images", "Video", "Music", "Travel"];
 
 export default function Tags() {
     return (
@@ -29,8 +9,10 @@ export default function Tags() {
             <p className="tags-title">Tags</p>
             <div className="dotted-line"></div>
             <div className="tags">
-                {tags.map((tag: any, index: number) => (
-                    <TagsCard obj={tag} key={index} />
+                {tags.map((tag: any) => (
+                    <div className="tag-container">
+                        <p className="tag-name">{tag}</p>
+                    </div>
                 ))}
             </div>
         </div>

@@ -8,7 +8,6 @@ import prevpostimg from "../../assests/images/prevpost.png";
 import nextpostimg from "../../assests/images/nextpost.png";
 import CommentCard from "../CommonComponents/CommentCard";
 import AuthorProfileCard from "../CommonComponents/AuthorProfileCard";
-import Tags from "../CommonComponents/Tags";
 import { Postinfo } from "../../Store/blogContent";
 
 
@@ -61,7 +60,7 @@ export default function SinglePostSidebarCard({ obj }: sidebarPostType) {
                     </div>
                     <div className="remaining-blog">
                         <p className="blog-conclusion">{obj.blogConclusion}</p>
-                        <Tags />
+                        {/* <Tags /> */}
                         <div className="author-about-section">
                             <img className="author" src={obj.authorProfile} alt="author" />
                             <div className="about-author">
