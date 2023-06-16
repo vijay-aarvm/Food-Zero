@@ -11,7 +11,7 @@ export default function Process() {
         <div className="our-process">
             <div className="process-title">
                 <h1 className="title">Sophisticated Process</h1>
-                <img className="rosemary-right" src={rosemaryright} alt="rosemary" />
+                <img className="title-wrapper-image rosemary-right" src={rosemaryright} alt="rosemary" />
             </div>
             <div className="slice">
                 <img className="meat-sliced" src={meatsliced} alt="meat sliced" />
@@ -36,7 +36,7 @@ export default function Process() {
                     </div>
                 </div>
             </div>
-            <img className="rosemary-left" src={rosemaryleft} alt="rosemary" />
+            <img className="our-process-wrapper-image rosemary-left" src={rosemaryleft} alt="rosemary" />
         </div>
     )
 }

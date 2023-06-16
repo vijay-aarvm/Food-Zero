@@ -8,7 +8,7 @@ export default function AddressAndLocation() {
     return (
         <div className="address-location">
             <div className="contact-section">
-                <div className="lemon-with-orange">
+                <div className="contact-section-wrapper">
                     <img className="orange" src={orange} alt="orange"></img>
                     <img className="lemons-on-table" src={lemonsOnTable} alt="lemons"></img>
                 </div>

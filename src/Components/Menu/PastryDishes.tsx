@@ -29,7 +29,7 @@ export default function PastryDishes() {
             <div className="pastries-header">
                 <p className="pastries-title">Pastries & Drinks</p>
                 <p className="pastries-title-desc">This is a section of pastries & drinks. Choose your Pastries & drinks</p>
-                <img className="avocado" src={avocado} alt="avocado" />
+                <img className="pastries-title-wrapper-image avocado" src={avocado} alt="avocado" />
             </div>
             <div className="pastry-menu">
                 <img className="pastry-items" src={pastries} alt="starters"></img>

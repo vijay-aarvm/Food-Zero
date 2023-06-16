@@ -31,7 +31,7 @@ export default function StarterCourseDishes() {
                     <p className="starters-title">Starters</p>
                     <p className="starters-title-desc">This is a section of starters. Choose your starters</p>
                 </div>
-                <img className="blueberry" src={blueberry} alt="blueberry" />
+                <img className="starters-title-wrapper-image blueberry" src={blueberry} alt="blueberry" />
             </div>
             <div className="starter-menu">
                 <img className="starter-items" src={starters} alt="starters"></img>
