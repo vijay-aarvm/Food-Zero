@@ -8,18 +8,24 @@
     margin-bottom: 100px;
 
     @media (max-width:1030px) {
-        width: 520px;
+        width: 490px;
         height: 670px;
+        margin-bottom: 130px;
     }
 
     @media (max-width:920px) {
         width: 450px;
         height: 580px;
+        // margin-top: 20px;
     }
 
     @media (max-width:900px) {
         width: 400px;
         height: 500px;
+    }
+
+    @media (max-width:670px) {
+        width: 300px;
     }
 
     @media (max-width:420px) {
@@ -70,6 +76,10 @@
         @media (max-width:770px) {
             width: 300px;
             height: 400px;
+        }
+
+        @media (max-width:670px) {
+            width: 300px;
         }
     }
 
