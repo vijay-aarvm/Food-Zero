@@ -9,6 +9,7 @@ import nextpostimg from "../../assests/images/nextpost.png";
 import CommentCard from "../CommonComponents/CommentCard";
 import AuthorProfileCard from "../CommonComponents/AuthorProfileCard";
 import { Postinfo } from "../../Store/blogContent";
+import { scrollToTop } from "../../HelperFunctions/windowScroll";
 
 
 type sidebarPostType = {
@@ -19,10 +20,6 @@ export default function SinglePostSidebarCard({ obj }: sidebarPostType) {
 
     const AuthorData: any = useSelector((state: any) => state.blogData);
     const commentData: any = useSelector((state: any) => state.commentData);
-
-    const scrollToTop = () => {
-        window.scrollTo(0, 0)
-    }
 
     return (
         <div className="single-post-sidebar">
