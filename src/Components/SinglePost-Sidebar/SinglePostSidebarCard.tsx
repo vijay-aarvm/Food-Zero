@@ -18,7 +18,7 @@ type sidebarPostType = {
 
 export default function SinglePostSidebarCard({ obj }: sidebarPostType) {
 
-    const AuthorData: any = useSelector((state: any) => state.blogData);
+    const authorData: any = useSelector((state: any) => state.blogData);
     const commentData: any = useSelector((state: any) => state.commentData);
 
     return (
@@ -28,7 +28,7 @@ export default function SinglePostSidebarCard({ obj }: sidebarPostType) {
                 <NavigationBar />
                 <div className="blog-header-title">
                     <p className="blog-title">{obj.blogTitle}</p>
-                    {AuthorData.map((author: any, index: number) => {
+                    {authorData.map((author: any, index: number) => {
                         if (index < 1) {
                             return (
                                 <AuthorProfileCard obj={author} key={index} />
