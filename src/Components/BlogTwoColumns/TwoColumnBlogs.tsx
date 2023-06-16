@@ -5,19 +5,11 @@ import TwoColumnBlogList from "./TwoColumnBlogList";
 // import Footer from "../CommonComponents/Footer";
 import Layout from "../LayoutComponent/Layout";
 
-const title = [
-    {
-        "titleName": "Blogs - Two Columns"
-    }
-]
-
 export default function TwoColumnBlogs() {
     return (
         <Layout>
             <div className="blog-Column-body">
-                {title.map((data) => (
-                    <BlogHeader obj={data} />
-                ))}
+                <BlogHeader obj={{ titleName: "Blogs - Two Columns" }} />
                 <TwoColumnBlogList />
             </div>
         </Layout>
