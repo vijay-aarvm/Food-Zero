@@ -1,6 +1,6 @@
 @import '../../styles.scss';
 
-.archives-card {
+.type-and-count {
     @include flex-row();
     font-size: 13px;
     font-family: $secondary-font;

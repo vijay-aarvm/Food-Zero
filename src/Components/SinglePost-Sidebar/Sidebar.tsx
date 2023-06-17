@@ -2,9 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import "./sidebar.scss";
 import searchicon from "../../assests/images/searchicon.png";
-import CategoryCard from "./CategoryCard";
 import RecentCommentsCard from "../CommonComponents/RecentCommentsCard";
-import ArchivesCard from "./ArchivesCard";
+import TypeAndCount from "./TypeAndCount";
 import RecentPostsCard from "../CommonComponents/RecentPostsCard";
 // import TagsCard from "../CommonComponents/TagsCard";
 import Tags from "../CommonComponents/Tags";
@@ -94,7 +93,7 @@ export default function Sidebar() {
                 <p className="categories-title">Categories</p>
                 <div className="dotted-line"></div>
                 {categories.map((category) => (
-                    <CategoryCard obj={category} />
+                    <TypeAndCount obj={category} type="category" />
                 ))}
             </div>
             <div className="recent-comments">
@@ -108,7 +107,7 @@ export default function Sidebar() {
                 <p className="archives-title">Archives</p>
                 <div className="dotted-line"></div>
                 {archives.map((archive) => (
-                    <ArchivesCard obj={archive} />
+                    <TypeAndCount obj={archive} type="archive" />
                 ))}
             </div>
             <div className="recent-posts">
