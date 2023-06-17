@@ -10,7 +10,7 @@
         font-size: 10px;
     }
 
-    @media (max-width:430px) {
+    @media (max-width:$mobile-size) {
         font-size: 7px;
         // gap:
     }

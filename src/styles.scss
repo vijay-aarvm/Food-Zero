@@ -58,6 +58,8 @@
 $primary-font : 'Rufina';
 $secondary-font: 'Lato';
 $inter: 'Inter';
+$tablet-size: '1030px';
+$mobile-size: '430px';
 
 @mixin epmloyee-title {
     font-family: $primary-font;

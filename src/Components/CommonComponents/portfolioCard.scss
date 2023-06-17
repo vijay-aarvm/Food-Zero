@@ -27,7 +27,7 @@
             width: 380px;
         }
 
-        @media (max-width:420px) {
+        @media (max-width:$mobile-size) {
             width: 210px;
             height: 300px;
         }
@@ -41,7 +41,7 @@
         z-index: 1;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 
-        @media (max-width:420px) {
+        @media (max-width:$mobile-size) {
             margin: -50px 0 0 10px;
         }
 
@@ -57,7 +57,7 @@
                 width: 350px;
             }
 
-            @media (max-width: 420px) {
+            @media (max-width: $mobile-size) {
                 font-size: 10px;
                 width: 190px;
             }
@@ -72,7 +72,7 @@
                 font-size: 15px;
                 font-family: $secondary-font;
 
-                @media (max-width:420px) {
+                @media (max-width:$mobile-size) {
                     font-size: 8px;
                 }
             }
@@ -81,7 +81,7 @@
                 font-size: 15px;
                 font-family: $secondary-font;
 
-                @media (max-width:420px) {
+                @media (max-width:$mobile-size) {
                     font-size: 8px;
                 }
             }
@@ -116,7 +116,7 @@
             width: 220px;
         }
 
-        @media (max-width:420px) {
+        @media (max-width:$mobile-size) {
             width: 100px;
             height: 300px;
         }
@@ -131,7 +131,7 @@
         z-index: 1;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 
-        @media (max-width:420px) {
+        @media (max-width:$mobile-size) {
             margin: -50px 0 0 10px
         }
 
@@ -155,7 +155,7 @@
                 width: 200px;
             }
 
-            @media (max-width: 420px) {
+            @media (max-width: $mobile-size) {
                 font-size: 10px;
                 width: 100px;
             }
@@ -170,7 +170,7 @@
                 font-size: 15px;
                 font-family: $secondary-font;
 
-                @media (max-width:420px) {
+                @media (max-width:$mobile-size) {
                     font-size: 8px;
                 }
             }
@@ -179,7 +179,7 @@
                 font-size: 15px;
                 font-family: $secondary-font;
 
-                @media (max-width:420px) {
+                @media (max-width:$mobile-size) {
                     font-size: 8px;
                 }
             }
@@ -214,7 +214,7 @@
             width: 300px;
         }
 
-        @media (max-width:420px) {
+        @media (max-width:$mobile-size) {
             width: 155px;
             height: 300px;
         }
@@ -228,7 +228,7 @@
         z-index: 1;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 
-        @media (max-width:420px) {
+        @media (max-width:$mobile-size) {
             margin: -50px 0 0 10px;
         }
 
@@ -252,7 +252,7 @@
                 width: 275px;
             }
 
-            @media (max-width: 420px) {
+            @media (max-width: $mobile-size) {
                 font-size: 10px;
                 width: 150px;
             }
@@ -267,7 +267,7 @@
                 font-size: 15px;
                 font-family: $secondary-font;
 
-                @media (max-width:420px) {
+                @media (max-width:$mobile-size) {
                     font-size: 8px;
                 }
             }
@@ -276,7 +276,7 @@
                 font-size: 15px;
                 font-family: $secondary-font;
 
-                @media (max-width:420px) {
+                @media (max-width:$mobile-size) {
                     font-size: 8px;
                 }
             }

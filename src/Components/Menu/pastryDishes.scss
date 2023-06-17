@@ -30,7 +30,7 @@
             z-index: 0;
             top: -150px;
 
-            @media (max-width:420px) {
+            @media (max-width:$mobile-size) {
                 width: 120px;
                 height: 120px;
                 top: -100px;
@@ -90,7 +90,7 @@
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: $mobile-size) {
     .pastries-section {
         .pastries-header {
             margin-bottom: 40px;

@@ -24,7 +24,7 @@
         color: white;
         top: 100px;
 
-        @media (max-width: 420px) {
+        @media (max-width: $mobile-size) {
             font-size: 30px;
             margin-bottom: 130px;
         }

@@ -94,7 +94,7 @@
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: $mobile-size) {
     .food-item {
         width: 140px;
         margin-bottom: 10px;

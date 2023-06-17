@@ -71,7 +71,7 @@
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: $mobile-size) {
     .mains-section {
         margin-bottom: 50px;
 

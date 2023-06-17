@@ -11,7 +11,7 @@
         align-self: flex-start;
         padding-left: 190px;
 
-        @media (max-width: 420px) {
+        @media (max-width: $mobile-size) {
             padding-left: 50px;
         }
 

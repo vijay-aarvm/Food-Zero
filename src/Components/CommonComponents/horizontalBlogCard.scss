@@ -269,7 +269,7 @@
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: $mobile-size) {
     .blog-card-horizontal {
 
         width: 350px;

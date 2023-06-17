@@ -37,7 +37,7 @@
     }
 }
 
-@media (max-width: 1030px) {
+@media (max-width: $tablet-size) {
     .about-header-section {
 
         .about-header-title {
@@ -71,7 +71,7 @@
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: $mobile-size) {
     .about-header-section {
 
         .about-header-bg {

@@ -21,7 +21,7 @@
             & .ingredients-image {
                 padding-bottom: 30px;
 
-                @media (max-width:420px) {
+                @media (max-width:$mobile-size) {
                     width: 100px;
                     height: 100px;
                 }
@@ -31,7 +31,7 @@
                 font-size: 24px;
                 padding-bottom: 40px;
 
-                @media (max-width:420px) {
+                @media (max-width:$mobile-size) {
                     font-size: 24px;
                 }
             }
