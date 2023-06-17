@@ -89,13 +89,7 @@ export default function Sidebar() {
                 <input className="search" placeholder="search..."></input>
                 <img className="search-icon" src={searchicon} alt="glass" />
             </div>
-            <div className="categories">
-                <p className="categories-title">Categories</p>
-                <div className="dotted-line"></div>
-                {categories.map((category) => (
-                    <TypeAndCount obj={category} type="category" />
-                ))}
-            </div>
+            <TypeAndCount title="Categories" obj={categories} />
             <div className="recent-comments">
                 <p className="recent-comments-title">Recent Comments</p>
                 <div className="dotted-line"></div>
@@ -103,13 +97,7 @@ export default function Sidebar() {
                     <RecentCommentsCard obj={comment} />
                 ))}
             </div>
-            <div className="archives">
-                <p className="archives-title">Archives</p>
-                <div className="dotted-line"></div>
-                {archives.map((archive) => (
-                    <TypeAndCount obj={archive} type="archive" />
-                ))}
-            </div>
+            <TypeAndCount title="Archives" obj={archives} />
             <div className="recent-posts">
                 <p className="recent-posts-title">Recent Posted</p>
                 <div className="dotted-line"></div>
