@@ -25,22 +25,6 @@
             color: #5E6600;
             font-size: 12px;
             margin: 20px 0 10px 0;
-
-            .author-profile-horizontal {
-                width: 60px;
-                height: 60px;
-            }
-
-            .author-bio-horizontal {
-                @include flex-row();
-                gap: 0px;
-
-                .bio-list-horizontal {
-                    @include flex-row();
-                    gap: 30px;
-                    padding-left: 20px;
-                }
-            }
         }
 
         .post-info-horizontal {
@@ -136,18 +120,6 @@
             .author-profile-container-horizontal {
                 font-size: 9px;
                 margin: 20px 0 10px 0;
-
-                .author-profile-horizontal {
-                    width: 40px;
-                    height: 40px;
-                }
-
-                .author-bio-horizontal {
-                    .bio-list-horizontal {
-                        gap: 30px;
-                        padding-left: 20px;
-                    }
-                }
             }
 
             .post-info-horizontal {
@@ -174,18 +146,6 @@
             .author-profile-container-horizontal {
                 font-size: 9px;
                 margin: 20px 0 10px 0;
-
-                .author-profile-horizontal {
-                    width: 40px;
-                    height: 40px;
-                }
-
-                .author-bio-horizontal {
-                    .bio-list-horizontal {
-                        gap: 30px;
-                        padding-left: 20px;
-                    }
-                }
             }
 
             .post-info-horizontal {
@@ -223,18 +183,6 @@
             .author-profile-container-horizontal {
                 font-size: 7px;
                 margin: 10px 0 10px 0;
-
-                .author-profile-horizontal {
-                    width: 30px;
-                    height: 30px;
-                }
-
-                .author-bio-horizontal {
-                    .bio-list-horizontal {
-                        gap: 20px;
-                        padding-left: 20px;
-                    }
-                }
             }
 
             .post-info-horizontal {

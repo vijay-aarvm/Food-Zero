@@ -4,48 +4,66 @@
     z-index: 1;
     @include flex-row();
 
-    .author-pic {
-        width: 100px;
-        height: 100px;
-
-        @media (max-width:$mobile-size) {
-            width: 70px;
-            height: 70px;
-        }
+    .author-profile {
+        width: 60px;
+        height: 60px;
     }
 
-    .author-name {
-        font-family: $secondary-font;
+    .author-bio {
+        @include flex-row();
+        gap: 0px;
 
-        @media (max-width:$mobile-size) {
+        @media (max-width:770px) {
+            width: 200px;
             font-size: 10px;
         }
-    }
 
-    .author-details {
-        @include flex-row();
-        gap: 30px;
-        font-family: $secondary-font;
-
-        @media (max-width:$mobile-size) {
-            width: 150px;
-            gap: 20px;
-            padding-left: 0;
-        }
-
-        .posted-on,
-        .posted-time,
-        .no-of-comments {
-            font-size: 16px;
-
-            @media (max-width:670px) {
-                font-size: 10px;
-            }
-
-            @media (max-width:$mobile-size) {
-                font-size: 8px;
-            }
+        .bio-list {
+            @include flex-row();
+            gap: 30px;
+            padding-left: 20px;
         }
     }
+}
 
+@media (max-width: 770px) {
+    .author-info {
+        width: 100%;
+        // margin-left: 20px;
+    }
+}
+
+
+
+
+@media (max-width: 576px) {
+
+    .author-info {
+        .author-profile-container {
+            .author-profile {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-size) {
+
+    .author-profile {
+        width: 30px;
+        height: 30px;
+    }
+
+    .author-bio {
+        width: 100px;
+        font-size: 6px;
+
+        .bio-list {
+            @include flex-row();
+            gap: 0px;
+            padding-left: 0px;
+            list-style: none
+        }
+    }
 }

@@ -8,13 +8,15 @@ export default function AuthorProfileCard({ obj }: any) {
 
     return (
         <div className="blog-author">
-            <img className="author-pic" src={authorProfile} alt="author" />
-            <p className="author-name">{authorName}</p>
-            <ul className="author-details">
-                <li className="posted-on">{blogPostedDate}</li>
-                <li className="posted-time">{blogPostedTime}</li>
-                <li className="no-of-comments">{totalComments}</li>
-            </ul>
+            <img className="author-profile" alt="author" src={authorProfile}></img>
+            <div className="author-bio">
+                <p className="author-name">{authorName}</p>
+                <ul className="bio-list">
+                    <li className="posted-date">{blogPostedDate}</li>
+                    <li className="posted-time">{blogPostedTime}</li>
+                    <li className="total-comments">{totalComments}</li>
+                </ul>
+            </div>
         </div>
     )
 }

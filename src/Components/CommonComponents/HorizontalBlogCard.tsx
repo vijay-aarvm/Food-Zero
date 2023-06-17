@@ -4,6 +4,7 @@ import arrow from "../../assests/images/arrow.png"
 import { bloginfo } from "../../Store/bloglist";
 import { scrollToTop } from "../../HelperFunctions/windowScroll";
 import { Link } from "react-router-dom";
+import AuthorProfileCard from "./AuthorProfileCard";
 
 type Blogstype = {
     obj: bloginfo
@@ -15,15 +16,7 @@ export default function HorizontalBlogCard({ obj }: Blogstype) {
             <img className="blog-cover-image-horizontal" alt="post-cover-pic" src={obj.blogCover}></img>
             <div className="author-info-horizontal">
                 <div className="author-profile-container-horizontal">
-                    <img className="author-profile-horizontal" alt="author" src={obj.authorProfile}></img>
-                    <div className="author-bio-horizontal">
-                        <p className="author-name-horizontal">{obj.authorName}</p>
-                        <ul className="bio-list-horizontal">
-                            <li className="posted-date-horizontal">{obj.blogPostedDate}</li>
-                            <li className="posted-time-horizontal">{obj.blogPostedTime}</li>
-                            <li className="total-comments-horizontal">{obj.totalComments}</li>
-                        </ul>
-                    </div>
+                    <AuthorProfileCard obj={obj} />
                 </div>
                 <div className="post-info-horizontal">
                     <p className="post-title-horizontal">{obj.blogTitle}</p>
