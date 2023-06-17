@@ -13,14 +13,14 @@
 
         .reservation-header-title {
             font-size: 50px;
-            font-family: $rufina;
+            font-family: $primary-font;
             margin-bottom: 0px;
         }
 
         .reservation-header-headline {
             font-size: 15px;
             margin-top: 0px;
-            font-family: $lato;
+            font-family: $secondary-font;
             color: #4D4D4D;
         }
     }
@@ -60,7 +60,7 @@
         .book-now {
             width: 200px;
             height: 50px;
-            font-family: $rufina;
+            font-family: $primary-font;
             color: white;
             @include form-field-border();
             background-color: #233000;

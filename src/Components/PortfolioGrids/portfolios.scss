@@ -20,7 +20,7 @@
             button {
                 border: none;
                 background: none;
-                font-family: $lato;
+                font-family: $secondary-font;
 
                 &:hover {
                     cursor: pointer;
@@ -43,7 +43,7 @@
     }
 
     .loading {
-        font-family: $lato;
+        font-family: $secondary-font;
         border: 1px solid black;
         padding: 5px;
     }

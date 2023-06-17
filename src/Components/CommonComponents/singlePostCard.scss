@@ -28,7 +28,7 @@
         .blog-header-title {
             @include flex-column();
             color: white;
-            font-family: $rufina;
+            font-family: $primary-font;
             width: 900px;
             @include center-items();
             margin: 100px 0 0 180px;
@@ -117,7 +117,7 @@
         }
 
         .blog-intro {
-            font-family: $rufina;
+            font-family: $primary-font;
             color: #4D4D4D;
             font-size: 22px;
             width: 800px;
@@ -185,7 +185,7 @@
         }
 
         .blog-recipe {
-            font-family: $lato;
+            font-family: $secondary-font;
             font-size: 17px;
             color: #4D4D4D;
             width: 720px;
@@ -232,7 +232,7 @@
             font-size: 25px;
             z-index: 1;
             color: white;
-            font-family: $lato;
+            font-family: $secondary-font;
             font-style: italic;
             position: absolute;
             top: 50%;
@@ -255,7 +255,7 @@
         @include center-items();
 
         .blog-conclusion {
-            font-family: $lato;
+            font-family: $secondary-font;
             font-size: 17px;
             color: #4D4D4D;
             width: 720px;
@@ -309,7 +309,7 @@
                 text-align: start;
 
                 .author-name {
-                    font-family: $rufina;
+                    font-family: $primary-font;
                     font-size: 20px;
                     margin: 0;
 
@@ -319,7 +319,7 @@
                 }
 
                 .about {
-                    font-family: $lato;
+                    font-family: $secondary-font;
                     font-size: 15px;
                     color: #4D4D4D;
 

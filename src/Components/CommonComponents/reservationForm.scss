@@ -43,7 +43,7 @@
                 margin: 0;
                 font-size: 70px;
                 font-weight: 500;
-                font-family: $rufina;
+                font-family: $primary-font;
 
                 @media only screen and (max-width: 870px) {
                     font-size: 40px;
@@ -258,7 +258,7 @@
             height: 60px;
             font-size: 20px;
             @include form-field-border();
-            font-family: $rufina;
+            font-family: $primary-font;
             color: white;
             background-color: #5E6600;
 

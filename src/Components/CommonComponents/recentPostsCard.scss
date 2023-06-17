@@ -24,7 +24,7 @@
         @include flex-column();
 
         .recent-post-title {
-            font-family: $rufina;
+            font-family: $primary-font;
             font-size: 12px;
             margin: 0;
             text-align: left;
@@ -39,7 +39,7 @@
         }
 
         .recent-post-metadata {
-            font-family: $lato;
+            font-family: $secondary-font;
             font-size: 8px;
             color: #B0B0B0;
             @include flex-row();

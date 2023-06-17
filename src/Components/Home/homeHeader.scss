@@ -15,7 +15,7 @@
             @include flex-column();
 
             .healthy-eat-description {
-                font-family: $rufina;
+                font-family: $primary-font;
                 width: 500px;
                 font-size: 70px;
                 // padding: 0 0 0 20px;
@@ -144,7 +144,7 @@
             @include flex-column();
 
             .description {
-                font-family: $lato;
+                font-family: $secondary-font;
                 font-size: 12px;
                 width: 300px;
                 padding: 200px 10px 0 165px;
@@ -169,7 +169,7 @@
             }
 
             .scroll-direction {
-                font-family: $rufina;
+                font-family: $primary-font;
                 font-size: 20px;
                 transform: rotate(90deg);
                 padding: 450px 0 0 330px;
@@ -233,7 +233,7 @@
             }
 
             .diet-desc {
-                font-family: $rufina;
+                font-family: $primary-font;
                 font-weight: 700;
                 font-size: 35px;
                 line-height: 44px;
@@ -252,7 +252,7 @@
             }
 
             .mussel-description {
-                font-family: $rufina;
+                font-family: $primary-font;
                 font-weight: 70;
                 font-size: 20px;
                 width: 430px;
@@ -276,7 +276,7 @@
             align-items: center;
 
             .salt-pepper-desc {
-                font-family: $rufina;
+                font-family: $primary-font;
                 font-weight: 70;
                 font-size: 20px;
                 width: 360px;

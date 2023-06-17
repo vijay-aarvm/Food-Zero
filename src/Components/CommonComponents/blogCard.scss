@@ -96,7 +96,7 @@
 
         .author-profile-container {
             @include flex-row();
-            font-family: $lato;
+            font-family: $secondary-font;
             color: #5E6600;
             font-size: 12px;
             margin: 20px 0 10px 0;
@@ -139,7 +139,7 @@
             }
 
             .post-title {
-                font-family: $rufina;
+                font-family: $primary-font;
                 font-size: 30px;
                 width: 380px;
                 margin: 10px 10px 10px 0;
@@ -161,7 +161,7 @@
             }
 
             .post-oneliner {
-                font-family: $lato;
+                font-family: $secondary-font;
                 font-size: 15px;
                 color: #4D4D4D;
 
@@ -177,7 +177,7 @@
                 .read-more {
                     background: none;
                     border: none;
-                    font-family: $lato;
+                    font-family: $secondary-font;
                     font-size: 15px;
                     padding: 20px 10px 10px 0;
 
@@ -327,7 +327,7 @@
                     .read-more {
                         background: none;
                         border: none;
-                        font-family: $lato;
+                        font-family: $secondary-font;
                         font-size: 10px;
                         padding: 20px 10px 10px 0;
 

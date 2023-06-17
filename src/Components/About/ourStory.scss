@@ -13,7 +13,7 @@
 
             .title {
                 font-size: 50px;
-                font-family: $rufina;
+                font-family: $primary-font;
 
                 @media (max-width:920px) {
                     font-size: 40px;
@@ -26,7 +26,7 @@
 
             .title-desc {
                 font-size: 15px;
-                font-family: $lato;
+                font-family: $secondary-font;
                 width: 550px;
                 color: #4D4D4D;
 
@@ -99,7 +99,7 @@
 
             .manager-title {
                 font-size: 30px;
-                font-family: $rufina;
+                @include epmloyee-title();
                 font-weight: 600;
                 margin-bottom: 0;
 
@@ -110,7 +110,7 @@
 
             .manager-name {
                 font-size: 15px;
-                font-family: $lato;
+                @include epmloyee-name();
             }
 
             .manager {
@@ -141,7 +141,7 @@
 
             .about-manager {
                 font-size: 15px;
-                font-family: $lato;
+                font-family: $secondary-font;
                 color: #4D4D4D;
                 width: 300px;
                 text-align: end;
@@ -167,7 +167,7 @@
 
             .chef-title {
                 font-size: 30px;
-                font-family: $rufina;
+                @include epmloyee-title();
                 font-weight: 600;
                 margin-bottom: 0;
 
@@ -178,7 +178,7 @@
 
             .chef-name {
                 font-size: 15px;
-                font-family: $lato;
+                @include epmloyee-name();
             }
 
             .chef {
@@ -208,7 +208,7 @@
 
             .about-chef {
                 font-size: 15px;
-                font-family: $lato;
+                font-family: $secondary-font;
                 color: #4D4D4D;
                 width: 300px;
                 text-align: start;
@@ -250,7 +250,7 @@
 
         .video-title {
             font-size: 70px;
-            font-family: $rufina;
+            font-family: $primary-font;
             color: white;
             z-index: 1;
             position: relative;
@@ -263,7 +263,7 @@
 
         .title-desc {
             font-size: 20px;
-            font-family: $lato;
+            font-family: $secondary-font;
             color: white;
             z-index: 1;
             position: relative;

@@ -55,6 +55,14 @@
     align-items: center;
 }
 
-$rufina : 'Rufina';
-$lato: 'Lato';
+$primary-font : 'Rufina';
+$secondary-font: 'Lato';
 $inter: 'Inter';
+
+@mixin epmloyee-title {
+    font-family: $primary-font;
+}
+
+@mixin epmloyee-name {
+    font-family: $secondary-font;
+}

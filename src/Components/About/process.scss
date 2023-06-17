@@ -18,7 +18,7 @@
         }
 
         .title {
-            font-family: $rufina;
+            font-family: $primary-font;
             font-size: 50px;
 
             @media (max-width:920px) {
@@ -91,7 +91,7 @@
 
             .slice-title {
                 font-size: 50px;
-                font-family: $rufina;
+                font-family: $primary-font;
                 margin: 0;
 
                 @media (max-width:768px) {
@@ -105,7 +105,7 @@
 
             .aboutslice {
                 font-size: 15px;
-                font-family: $lato;
+                font-family: $secondary-font;
                 color: #4D4D4D;
 
                 @media (max-width:768px) {
@@ -161,7 +161,7 @@
 
                 .pickle-title {
                     font-size: 50px;
-                    font-family: $rufina;
+                    font-family: $primary-font;
                     margin: 20px 0 0 0;
 
                     @media (max-width:768px) {
@@ -175,7 +175,7 @@
 
                 .aboutpickle {
                     font-size: 15px;
-                    font-family: $lato;
+                    font-family: $secondary-font;
                     color: #4D4D4D;
 
                     @media (max-width:420px) {
@@ -228,7 +228,7 @@
 
                 .bake-title {
                     font-size: 50px;
-                    font-family: $rufina;
+                    font-family: $primary-font;
                     margin: 0 0 20px 0;
 
                     @media (max-width:768px) {
@@ -242,7 +242,7 @@
 
                 .aboutbake {
                     font-size: 15px;
-                    font-family: $lato;
+                    font-family: $secondary-font;
                     color: #4D4D4D;
 
                     @media (max-width:420px) {

@@ -1,7 +1,7 @@
 @import '../../styles.scss';
 
 .category {
-    font-family: $lato;
+    font-family: $secondary-font;
     font-size: 13px;
     @include flex-row();
     justify-content: space-between;

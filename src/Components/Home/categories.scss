@@ -7,7 +7,7 @@
     overflow: hidden;
 
     .category-headline {
-        font-family: $rufina;
+        font-family: $primary-font;
         text-align: center;
 
         .headline {
@@ -38,7 +38,7 @@
         column-gap: 50px;
         margin: 0 auto;
         padding-bottom: 120px;
-        font-family: $rufina;
+        font-family: $primary-font;
 
         @media (max-width:770px) {
             column-gap: 20px;

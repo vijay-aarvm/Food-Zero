@@ -20,7 +20,7 @@
         @include center-items();
 
         .previous-page {
-            font-family: $lato;
+            font-family: $secondary-font;
             font-size: 15px;
 
             @media (max-width:420px) {
@@ -29,7 +29,7 @@
         }
 
         .previous-portfolio {
-            font-family: $rufina;
+            font-family: $primary-font;
             font-size: 25px;
             margin: 0;
 
@@ -69,7 +69,7 @@
         @include center-items();
 
         .next-page {
-            font-family: $lato;
+            font-family: $secondary-font;
             font-size: 15px;
 
             @media (max-width:420px) {
@@ -78,7 +78,7 @@
         }
 
         .next-portfolio {
-            font-family: $rufina;
+            font-family: $primary-font;
             font-size: 25px;
             margin: 0;
 

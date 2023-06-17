@@ -22,7 +22,7 @@
         @include flex-row();
 
         .client-testimony {
-            font-family: $rufina;
+            font-family: $primary-font;
             color: #000000;
             font-size: 25px;
             text-align: left;
@@ -75,7 +75,7 @@
                 text-align: left;
 
                 .client-name {
-                    font-family: $rufina;
+                    font-family: $primary-font;
                     font-size: 15px;
                     font-weight: 800;
                     margin: 0;
@@ -86,7 +86,7 @@
                 }
 
                 .client-designation {
-                    font-family: $lato;
+                    font-family: $secondary-font;
                     font-size: 10px;
 
                     @media (max-width:420px) {
@@ -127,7 +127,7 @@
         }
 
         .quote-index {
-            font-family: $rufina;
+            font-family: $primary-font;
         }
 
         .next-quote {

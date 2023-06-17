@@ -3,7 +3,7 @@
 .archives-card {
     @include flex-row();
     font-size: 13px;
-    font-family: $lato;
+    font-family: $secondary-font;
     justify-content: space-between;
 
     @media (max-width:670px) {

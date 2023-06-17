@@ -8,7 +8,7 @@
 
     .quality-ingredients {
         @include flex-row();
-        font-family: $rufina;
+        font-family: $primary-font;
         justify-content: space-evenly;
         padding: 150px 0;
 
@@ -37,7 +37,7 @@
             }
 
             & .ingredient-desc {
-                font-family: $lato;
+                font-family: $secondary-font;
                 color: #4D4D4D;
                 font-size: 15px;
                 margin: 0;

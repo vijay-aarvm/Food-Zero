@@ -27,7 +27,7 @@
     .menu-header-title {
         @include flex-column();
         color: white;
-        font-family: $rufina;
+        font-family: $primary-font;
         margin: 100px 0 0 70px;
 
         @media (max-width:420px) {

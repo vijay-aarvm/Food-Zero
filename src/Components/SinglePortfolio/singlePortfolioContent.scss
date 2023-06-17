@@ -57,7 +57,7 @@
                 }
 
                 .content-title {
-                    font-family: $rufina;
+                    font-family: $primary-font;
                     font-size: 30px;
 
                     @media (max-width:916px) {
@@ -70,7 +70,7 @@
                 }
 
                 .title-desc {
-                    font-family: $lato;
+                    font-family: $secondary-font;
                     font-size: 15px;
                     color: #4D4D4D;
 
@@ -84,7 +84,7 @@
                 }
 
                 .content-desc {
-                    font-family: $lato;
+                    font-family: $secondary-font;
                     font-size: 15px;
                     color: #4D4D4D;
 
@@ -152,7 +152,7 @@
                 }
 
                 .content-title {
-                    font-family: $rufina;
+                    font-family: $primary-font;
                     font-size: 30px;
 
                     @media (max-width:916px) {
@@ -165,7 +165,7 @@
                 }
 
                 .content-desc {
-                    font-family: $lato;
+                    font-family: $secondary-font;
                     font-size: 15px;
                     color: #4D4D4D;
 
@@ -203,7 +203,7 @@
             }
 
             .content-desc {
-                font-family: $lato;
+                font-family: $secondary-font;
                 font-size: 15px;
                 color: #4D4D4D;
                 position: relative;
@@ -214,7 +214,7 @@
             }
 
             .content-title {
-                font-family: $rufina;
+                font-family: $primary-font;
                 font-size: 30px;
                 font-weight: 600;
 
@@ -224,7 +224,7 @@
             }
 
             .title-desc {
-                font-family: $lato;
+                font-family: $secondary-font;
                 font-size: 15px;
                 color: #4D4D4D;
 

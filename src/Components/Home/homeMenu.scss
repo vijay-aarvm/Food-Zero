@@ -24,7 +24,7 @@
             }
 
             .our-menu {
-                font-family: $rufina;
+                font-family: $primary-font;
                 line-height: 60px;
                 font-size: 54px;
                 padding-bottom: 15px;
@@ -38,7 +38,7 @@
 
             .our-menu-desc {
                 width: 243.54px;
-                font-family: $lato;
+                font-family: $secondary-font;
 
                 @media (max-width:420px) {
                     font-size: 10px;
