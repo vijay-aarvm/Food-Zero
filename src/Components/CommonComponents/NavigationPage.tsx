@@ -5,7 +5,7 @@ import instagram from "../../assests/images/instagram.png";
 import twitter from "../../assests/images/twitter.png";
 import facebook from "../../assests/images/facebook.png";
 import youtube from "../../assests/images/youtube.png";
-import { Link } from "react-router-dom";
+import MenuLinks from "./MenuLinks";
 
 const socialMediaIcons = [{
     name: "instagram",
@@ -46,17 +46,7 @@ export default function NavigationPage({ toggleMenu }: any) {
             <div className="navigation-list">
                 <div className="page-list">
                     <ul className="links">
-                        <Link className="router-link" to={"/"}><li className="link">HOME</li></Link>
-                        <Link className="router-link" to={"/menu"}><li className="link">MENU</li></Link>
-                        <li style={{ color: "#9CAA00" }}>Blogs
-                            <ul>
-                                <Link style={{ listStyle: "none" }} className="router-link" to={"/blog_one_column"}><li className="link">1 COLUMNS</li></Link>
-                                <Link style={{ listStyle: "none" }} className="router-link" to={"/blog_two_columns"}><li className="link">2 COLUMNS</li></Link>
-                                <Link style={{ listStyle: "none" }} className="router-link" to={"/single_post_with_sidebar"}><li className="link">SIDEBAR POST</li></Link>
-                            </ul>
-                        </li>
-                        <Link className="router-link" to={"/about"}><li className="link">ABOUT</li></Link>
-                        <Link className="router-link" to={"/contact"}><li className="link">CONTACT</li></Link>
+                        <MenuLinks />
                     </ul>
                 </div>
                 <div className="navpage-address">
