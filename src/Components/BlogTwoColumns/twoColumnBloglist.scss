@@ -9,21 +9,6 @@
         margin-top: 100px;
     }
 
-    .breadcrumbs {
-        @include flex-row();
-        margin-bottom: 50px;
-        align-self: flex-start;
-        padding-left: 50px;
-
-        .blog-path {
-            color: #B0B0B0;
-        }
-
-        .blog-path-source {
-            color: #4D4D4D;
-        }
-    }
-
     .blog-content {
         @include flex-row();
         flex-wrap: wrap;

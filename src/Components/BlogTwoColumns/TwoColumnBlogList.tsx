@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import "./twoColumnBloglist.scss";
 import BlogCard from "../CommonComponents/BlogCard";
 import { bloginfo } from "../../Store/bloglist";
+import BreadCrumbs from "../CommonComponents/BreadCrumbs";
 
 
 export default function BlogSectionTwoColumns() {
@@ -24,10 +25,7 @@ export default function BlogSectionTwoColumns() {
 
     return (
         <div className="blog-section">
-            <div className="breadcrumbs">
-                <p className="blog-path">Home/Blog/</p>
-                <p className="blog-path-source">Blog Two Columns</p>
-            </div>
+            <BreadCrumbs path="Home / Blog /" source="Blog Two Columns" />
             <div className="blog-content">
                 {currentBlogs.map((blog: bloginfo, index: number) => (
                     <BlogCard obj={blog} key={index} />

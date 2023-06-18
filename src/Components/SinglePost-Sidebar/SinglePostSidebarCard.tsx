@@ -12,6 +12,7 @@ import { Postinfo } from "../../Store/blogContent";
 import { scrollToTop } from "../../HelperFunctions/windowScroll";
 import { bloginfo } from "../../Store/bloglist";
 import { commentinfo } from "../../Store/commentlist";
+import BreadCrumbs from "../CommonComponents/BreadCrumbs";
 
 
 type sidebarPostType = {
@@ -38,10 +39,7 @@ export default function SinglePostSidebarCard({ obj }: sidebarPostType) {
             <div className="post">
                 <div className="post-content">
                     <div className="blog-content">
-                        <div className="breadcrumbs">
-                            <p className="blog-path">Home/Blog/</p>
-                            <p className="blog-path-source">Three Ideas For Cooking Goat Meat at Home</p>
-                        </div>
+                        <BreadCrumbs path="Home / Blog / " source="Three Ideas for Cooking Goat Meat at Home" />
                         <p className="blog-intro">{obj.blogIntro}</p>
                         <div className="blog-images">
                             <img className="blog-image1" src={obj.blogImage1} alt="image1" />

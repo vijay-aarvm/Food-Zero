@@ -6,6 +6,7 @@ import HorizontalBlogCard from "../CommonComponents/HorizontalBlogCard";
 // import { Link } from "react-router-dom";
 import { bloginfo } from "../../Store/bloglist";
 import { useSelector } from "react-redux";
+import BreadCrumbs from "../CommonComponents/BreadCrumbs";
 
 export default function OneColumnBlogs() {
 
@@ -26,10 +27,7 @@ export default function OneColumnBlogs() {
 
     return (
         <div className="blog-section-horizontal">
-            <div className="breadcrumbs-horizontal">
-                <p className="blog-path-horizontal">Home/Blog/</p>
-                <p className="blog-path-source-horizontal">Blog List One Column</p>
-            </div>
+            <BreadCrumbs path="Home / Blog /" source="Blog List One Column" />
             <div className="blog-content-horizontal">
                 {blogs.map((blog: bloginfo) => (
                     <HorizontalBlogCard obj={blog} />
