@@ -1,17 +1,18 @@
 import React from "react";
 import "../../styles.scss";
 import ContactHeader from "./ContactHeader";
-import AddressLocation from "./AddressLocation";
-import ReservationForm from "./ReservationForm";
-import Footer from "../CommonComponents/Footer";
+import AddressAndLocation from "./AddressAndLocation";
+import ReservationForm from "../CommonComponents/ReservationForm";
+import Layout from "../LayoutComponent/Layout";
 
 export default function Contact() {
     return (
         <>
-            <ContactHeader />
-            <AddressLocation />
-            <ReservationForm />
-            <Footer />
+            <Layout>
+                <ContactHeader />
+                <AddressAndLocation />
+                <ReservationForm />
+            </Layout>
         </>
     )
 }

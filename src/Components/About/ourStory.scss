@@ -1,0 +1,284 @@
+@import '../../styles.scss';
+
+.about-us {
+
+    .our-story {
+        @include flex-row();
+        justify-content: space-evenly;
+        overflow: hidden;
+
+        .ourstory-title {
+            @include flex-column();
+            text-align: start;
+
+            .title {
+                font-size: 50px;
+                font-family: $primary-font;
+
+                @media (max-width:920px) {
+                    font-size: 40px;
+                }
+
+                @media (max-width: $mobile-size) {
+                    font-size: 17px;
+                }
+            }
+
+            .title-desc {
+                font-size: 15px;
+                font-family: $secondary-font;
+                width: 550px;
+                color: #4D4D4D;
+
+                @media (max-width:920px) {
+                    font-size: 17px;
+                    width: 450px;
+                }
+
+                @media (max-width:768px) {
+                    font-size: 15px;
+                    width: 400px;
+                }
+
+                @media (max-width:670px) {
+                    font-size: 12px;
+                    width: 300px;
+                }
+
+                @media (max-width: $mobile-size) {
+                    font-size: 10px;
+                    width: 200px;
+                }
+            }
+        }
+
+        .ourstory-img {
+            width: 500px;
+            height: 350px;
+
+            @media (max-width:1024px) {
+                width: 400px;
+                height: 300px;
+            }
+
+            @media (max-width:920px) {
+                width: 350px;
+                height: 300px;
+            }
+
+            @media (max-width:768px) {
+                width: 300px;
+                height: 300px;
+            }
+
+            @media (max-width: 670px) {
+                width: 250px;
+                height: 250px;
+            }
+
+            @media (max-width: $mobile-size) {
+                width: 150px;
+                height: 180px;
+            }
+        }
+    }
+
+    .our-team {
+        @include flex-row();
+        margin: 100px 0 200px 0;
+        justify-content: space-evenly;
+
+        .our-manager {
+            @include flex-column();
+            @include center-items();
+            width: 400px;
+
+            @media (max-width: $mobile-size) {
+                margin-left: 20px;
+            }
+
+            .manager-title {
+                font-size: 30px;
+                @include epmloyee-title();
+                font-weight: 600;
+                margin-bottom: 0;
+
+                @media (max-width: $mobile-size) {
+                    font-size: 17px;
+                }
+            }
+
+            .manager-name {
+                font-size: 15px;
+                @include epmloyee-name();
+            }
+
+            .manager {
+                width: 400px;
+                height: 500px;
+                margin-bottom: 200px;
+
+                @media (max-width:920px) {
+                    width: 350px;
+                    height: 300px;
+                }
+
+                @media (max-width:768px) {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                @media (max-width:670px) {
+                    width: 250px;
+                    height: 250px;
+                }
+
+                @media (max-width: $mobile-size) {
+                    width: 150px;
+                    height: 180px;
+                }
+            }
+
+            .about-manager {
+                font-size: 15px;
+                font-family: $secondary-font;
+                color: #4D4D4D;
+                width: 300px;
+                text-align: end;
+                align-self: flex-end;
+
+                @media (max-width:670px) {
+                    font-size: 12px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    font-size: 10px;
+                    width: 180px;
+                }
+            }
+        }
+
+        .our-chef {
+            @include flex-column();
+            align-items: center;
+            text-align: center;
+            width: 400px;
+            margin-top: 100px;
+
+            .chef-title {
+                font-size: 30px;
+                @include epmloyee-title();
+                font-weight: 600;
+                margin-bottom: 0;
+
+                @media (max-width: $mobile-size) {
+                    font-size: 17px;
+                }
+            }
+
+            .chef-name {
+                font-size: 15px;
+                @include epmloyee-name();
+            }
+
+            .chef {
+                width: 400px;
+                height: 500px;
+
+                @media (max-width:920px) {
+                    width: 400px;
+                    height: 450px;
+                }
+
+                @media (max-width:768px) {
+                    width: 350px;
+                    height: 400px;
+                }
+
+                @media (max-width:670px) {
+                    width: 300px;
+                    height: 350px;
+                }
+
+                @media (max-width: $mobile-size) {
+                    width: 150px;
+                    height: 200px;
+                }
+            }
+
+            .about-chef {
+                font-size: 15px;
+                font-family: $secondary-font;
+                color: #4D4D4D;
+                width: 300px;
+                text-align: start;
+                margin-bottom: 100px;
+                align-self: flex-start;
+
+                @media (max-width: $mobile-size) {
+                    font-size: 10px;
+                    width: 160px;
+                }
+            }
+        }
+    }
+
+    .our-food-video {
+        width: auto;
+        height: auto;
+        padding-bottom: 300px;
+        @include flex-column();
+        @include center-items();
+
+        @media (max-width: $mobile-size) {
+            padding-bottom: 100px;
+        }
+
+        .ourfood {
+            background-image: url("../../assests/images/ourfood.png");
+            width: 100%;
+            height: 500px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+
+            @media (max-width:$mobile-size) {
+                height: 380px;
+            }
+        }
+
+        .video-title {
+            font-size: 70px;
+            font-family: $primary-font;
+            color: white;
+            z-index: 1;
+            position: relative;
+            margin: 120px 0 0 0;
+
+            @media (max-width:$mobile-size) {
+                font-size: 30px;
+            }
+        }
+
+        .title-desc {
+            font-size: 20px;
+            font-family: $secondary-font;
+            color: white;
+            z-index: 1;
+            position: relative;
+        }
+
+        .play-btn {
+            background: none;
+            position: relative;
+            border: none;
+
+            .play-pause {
+                width: 70px;
+                height: 70px;
+            }
+
+        }
+    }
+}

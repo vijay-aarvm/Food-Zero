@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles.scss";
+import "./aboutHeader.scss"
 import NavigationBar from "../CommonComponents/NavigationBar";
 
 export default function AboutHeader() {

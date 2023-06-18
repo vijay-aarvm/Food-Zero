@@ -1,0 +1,347 @@
+@import '../../styles.scss';
+
+.single-post {
+    @include flex-column();
+
+    .single-post-header {
+        width: auto;
+        height: auto;
+
+        .singlepost-header-bg {
+            width: 100%;
+            height: 600px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            z-index: 0;
+
+            @media (max-width:920px) {
+                height: 500px;
+            }
+
+            @media (max-width:$mobile-size) {
+                height: 400px;
+            }
+        }
+
+        .blog-header-title {
+            @include flex-column();
+            color: white;
+            font-family: $primary-font;
+            width: 900px;
+            @include center-items();
+            margin: 100px 0 0 180px;
+
+            @media (max-width:$tablet-size) {
+                width: 700px;
+                margin: 100px 0 0 100px;
+            }
+
+            @media (max-width:920px) {
+                width: 600px;
+            }
+
+            @media (max-width: 670px) {
+                width: 480px;
+            }
+
+            @media (max-width:$mobile-size) {
+                width: 250px;
+                margin: 100px 0 0 60px;
+            }
+
+            .blog-title {
+                font-size: 70px;
+                z-index: 1;
+                margin: 0;
+                text-align: center;
+
+                @media (max-width:$tablet-size) {
+                    font-size: 50px;
+                }
+
+                @media (max-width:670px) {
+                    font-size: 30px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    font-size: 23px;
+                    width: 270px;
+                }
+            }
+        }
+    }
+
+    .blog-content {
+        position: relative;
+        margin-top: 300px;
+        @include flex-column();
+        @include center-items();
+
+        @media (max-width:920px) {
+            margin-top: 200px;
+        }
+
+        .breadcrumbs {
+            @include flex-row();
+            align-self: flex-start;
+            padding-left: 350px;
+            position: relative;
+            top: -100px;
+
+            @media (max-width:920px) {
+                top: -50px;
+                padding-left: 220px;
+            }
+
+            @media (max-width:670px) {
+                top: -20px;
+                padding-left: 160px;
+                font-size: 12px;
+            }
+
+            @media (max-width:$mobile-size) {
+                top: -30px;
+                padding-left: 10px;
+                font-size: 8px;
+            }
+
+            .blog-path {
+                color: #B0B0B0;
+            }
+
+            .blog-path-source {
+                color: #4D4D4D;
+            }
+        }
+
+        .blog-intro {
+            font-family: $primary-font;
+            color: #4D4D4D;
+            font-size: 22px;
+            width: 800px;
+
+            @media (max-width:920px) {
+                font-size: 15px;
+                width: 700px;
+            }
+
+            @media (max-width:670px) {
+                width: 550px;
+            }
+
+            @media (max-width:$mobile-size) {
+                width: 350px;
+                font-size: 12px;
+            }
+        }
+
+        .blog-images {
+            margin: 100px 0 100px 0;
+            @include flex-row();
+            justify-content: space-evenly;
+            gap: 70px;
+            width: auto;
+            height: auto;
+
+            @media (max-width:920px) {
+                gap: 40px;
+            }
+
+            @media (max-width:$mobile-size) {
+                gap: 20px;
+            }
+
+            .blog-image1 {
+                width: 450px;
+                height: 500px;
+
+                @media (max-width:920px) {
+                    width: 300px;
+                    height: 380px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 170px;
+                    height: 170px;
+                }
+            }
+
+            .blog-image2 {
+                width: 450px;
+                height: 500px;
+
+                @media (max-width:920px) {
+                    width: 300px;
+                    height: 380px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 170px;
+                    height: 170px;
+                }
+            }
+        }
+
+        .blog-recipe {
+            font-family: $secondary-font;
+            font-size: 17px;
+            color: #4D4D4D;
+            width: 720px;
+            text-align: left;
+
+            @media (max-width:920px) {
+                font-size: 15px;
+                width: 650px;
+            }
+
+            @media (max-width:$mobile-size) {
+                font-size: 12px;
+                width: 350px;
+            }
+        }
+    }
+
+    .blog-quote {
+        width: auto;
+        height: auto;
+        margin: 100px 0 300px 0;
+        position: relative;
+        padding-bottom: 100px;
+
+        .quote-bg {
+            width: 100%;
+            height: 350px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            z-index: 0;
+
+            @media (max-width:920px) {
+                width: 100%;
+            }
+
+            @media (max-width:$mobile-size) {
+                height: 250px;
+            }
+        }
+
+        .quote {
+            font-size: 25px;
+            z-index: 1;
+            color: white;
+            font-family: $secondary-font;
+            font-style: italic;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 90%);
+
+            @media (max-width:920px) {
+                font-size: 20px;
+            }
+
+            @media (max-width:$mobile-size) {
+                font-size: 12px;
+                width: 250px;
+            }
+        }
+    }
+
+    .remaining-blog {
+        @include flex-column();
+        @include center-items();
+
+        .blog-conclusion {
+            font-family: $secondary-font;
+            font-size: 17px;
+            color: #4D4D4D;
+            width: 720px;
+            text-align: left;
+
+            @media (max-width:920px) {
+                font-size: 15px;
+                width: 650px;
+            }
+
+            @media (max-width:$mobile-size) {
+                width: 350px;
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+
+        .author-about-section {
+            @include flex-row();
+            width: 680px;
+            gap: 50px;
+            margin: 100px 0 100px 0;
+
+            @media (max-width:920px) {
+                width: 600px;
+            }
+
+            @media (max-width:$mobile-size) {
+                margin: 50px 0 50px 0;
+                width: 300px;
+                gap: 10px;
+            }
+
+            .author {
+                width: 150px;
+                height: 150px;
+
+                @media (max-width:920px) {
+                    width: 100px;
+                    height: 100px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+
+            .about-author {
+                @include flex-column();
+                text-align: start;
+
+                .author-name {
+                    font-family: $primary-font;
+                    font-size: 20px;
+                    margin: 0;
+
+                    @media (max-width:$mobile-size) {
+                        font-size: 10px;
+                    }
+                }
+
+                .about {
+                    font-family: $secondary-font;
+                    font-size: 15px;
+                    color: #4D4D4D;
+
+                    @media (max-width:$mobile-size) {
+                        font-size: 10px;
+                        width: 230px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .dotted-line {
+        align-self: center;
+        width: 80%;
+        border: none;
+        border-top: 3px dotted black;
+        margin-bottom: 20px;
+
+        @media (max-width:$mobile-size) {
+            width: 80%;
+        }
+    }
+}

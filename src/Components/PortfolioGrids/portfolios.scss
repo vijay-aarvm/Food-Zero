@@ -1,0 +1,50 @@
+@import '../../styles.scss';
+
+.grid-section {
+    @include flex-column();
+    margin: 100px 0 100px 0;
+    @include center-items();
+    overflow: hidden;
+
+    .category-list {
+        .list {
+            list-style-type: none;
+            @include flex-row();
+            gap: 30px;
+            padding: 0;
+
+            @media (max-width: $mobile-size) {
+                gap: 2px;
+            }
+
+            button {
+                border: none;
+                background: none;
+                font-family: $secondary-font;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &:active {
+                    text-decoration: underline dotted 2px;
+                }
+            }
+        }
+    }
+
+    .portfolio-section {
+        @include flex-row();
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .loading {
+        font-family: $secondary-font;
+        border: 1px solid black;
+        padding: 5px;
+    }
+}

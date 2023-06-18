@@ -1,0 +1,117 @@
+@import '../../styles.scss';
+
+.food-item {
+    @include flex-column();
+    width: 450px;
+    align-content: space-evenly;
+    margin-bottom: 40px;
+
+    .item-price {
+        font-family: $primary-font;
+        align-self: flex-end;
+    }
+
+    .dotted-line {
+        border-bottom: 2px dotted #000000;
+        width: 450px;
+    }
+
+    .item-name {
+        font-family: $primary-font;
+        width: 450px;
+        font-size: 35px;
+        align-self: flex-start;
+        text-align: start;
+        margin: 0;
+
+        @media (max-width:920px) {
+            font-size: 30px;
+        }
+    }
+
+    .item-desc {
+        color: #4D4D4D;
+        font-family: $secondary-font;
+        font-size: 15px;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 920px) {
+    .food-item {
+        width: 400px;
+        margin-bottom: 20px;
+
+        .dotted-line {
+            width: 400px;
+        }
+
+        .item-name {
+            width: 400px;
+            font-size: 30px;
+        }
+    }
+}
+
+@media (max-width:845px) {
+    .food-item {
+        width: 360px;
+        margin-bottom: 10px;
+
+        .item-price {
+            font-size: 8px;
+            margin: 0;
+        }
+
+        .dotted-line {
+            width: 360px;
+        }
+
+        .item-name {
+            width: 360px;
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .food-item {
+        width: 300px;
+        margin-bottom: 20px;
+
+        .dotted-line {
+            width: 300px;
+        }
+
+        .item-name {
+            width: 300px;
+            font-size: 20px;
+        }
+
+        .item-desc {
+            font-size: 10px;
+        }
+    }
+}
+
+@media (max-width: $mobile-size) {
+    .food-item {
+        width: 140px;
+        margin-bottom: 10px;
+        text-align: left;
+
+        .dotted-line {
+            width: 130px;
+        }
+
+        .item-name {
+            width: 130px;
+            font-size: 12px;
+            margin: 0;
+        }
+
+        .item-desc {
+            font-size: 7px;
+        }
+    }
+}

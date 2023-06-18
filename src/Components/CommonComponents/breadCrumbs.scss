@@ -1,0 +1,29 @@
+@import "../../styles.scss";
+
+.breadcrumbs {
+    @include flex-row();
+    align-self: flex-start;
+    padding-left: 50px;
+    position: relative;
+    top: -20px;
+
+    @media (max-width:670px) {
+        top: -50px;
+        padding-left: 30px;
+        font-size: 12px;
+    }
+
+    @media (max-width:420px) {
+        top: -30px;
+        padding-left: 10px;
+        font-size: 8px;
+    }
+
+    .blog-path {
+        color: #B0B0B0;
+    }
+
+    .blog-path-source {
+        color: #4D4D4D;
+    }
+}

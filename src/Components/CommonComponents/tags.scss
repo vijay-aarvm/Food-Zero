@@ -1,0 +1,57 @@
+@import '../../styles.scss';
+
+.tag-section {
+    @include flex-column();
+
+    .tags-title {
+        font-family: $primary-font;
+        font-size: 20px;
+        align-self: flex-start;
+
+        @media (max-width:430px) {
+            font-size: 10px;
+        }
+    }
+
+    .dotted-line {
+        border-bottom: 2px dotted #000000;
+        width: auto;
+    }
+
+    .tags {
+        @include flex-row();
+        gap: 7px;
+        flex-wrap: wrap;
+        font-size: 12px;
+
+        @media (max-width:430px) {
+            gap: 3px;
+        }
+
+        @media (max-width:670px) {
+            font-size: 10px;
+        }
+
+        @media (max-width:430px) {
+            font-size: 6px;
+        }
+
+        .tag-container {
+            margin-top: 20px;
+
+            @media (max-width:430px) {
+                margin-top: 10px;
+            }
+
+            .tag-name {
+                border: 1px solid black;
+                margin: 0;
+                padding: 5px;
+
+                @media (max-width:430px) {
+                    padding: 2px;
+                }
+            }
+        }
+    }
+}

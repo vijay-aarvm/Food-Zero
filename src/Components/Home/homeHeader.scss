@@ -1,0 +1,314 @@
+@import '../../styles.scss';
+
+.homepage-header {
+    background-color: #233000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+
+    .healthy-eating {
+        padding: 150px 0 100px 0;
+        position: relative;
+
+        .title-container {
+            @include flex-column();
+
+            .healthy-eat-description {
+                font-family: $primary-font;
+                width: 500px;
+                font-size: 70px;
+                // padding: 0 0 0 20px;
+                display: flex;
+                color: #ffff;
+                position: absolute;
+                top: 10px;
+                z-index: 1;
+                left: 160px;
+
+                @media (max-width:920px) {
+                    font-size: 50px;
+                    width: 380px;
+                    top: 40px;
+                }
+
+                @media (max-width:770px) {
+                    font-size: 40px;
+                    width: 300px;
+                    top: 70px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    font-size: 20px;
+                    width: 150px;
+                    top: 110px;
+                    left: 35px;
+                }
+            }
+        }
+
+        .meat-on-a-plate {
+            background: url("../../assests/images/meat-plate.png") no-repeat;
+            background-size: contain;
+            z-index: 0;
+            float: right;
+            height: 500px;
+            width: 400px;
+            position: relative;
+            right: 300px;
+
+            @media (max-width:1024px) {
+                width: 350px;
+                right: 200px;
+            }
+
+            @media (max-width:920px) {
+                height: 340px;
+                width: 300px;
+                right: 180px;
+            }
+
+            @media (max-width:770px) {
+                height: 300px;
+                width: 230px;
+                right: 150px;
+            }
+
+            @media (max-width:$mobile-size) {
+                width: 200px;
+                height: 200px;
+                right: 40px;
+            }
+        }
+
+        .spices {
+            position: absolute;
+            z-index: 2;
+            right: 430px;
+            top: 520px;
+            @include flex-row();
+            gap: 20px;
+
+            @media (max-width:1024px) {
+                top: 480px;
+                right: 320px;
+            }
+
+            @media (max-width:920px) {
+                right: 290px;
+                top: 410px;
+
+                @media (max-width:770px) {
+                    right: 220px;
+                    top: 360px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    top: 320px;
+                    right: 150px;
+                }
+            }
+
+            .spices1,
+            .spices2,
+            .spices3 {
+                width: 150px;
+                height: 130px;
+                background-size: contain;
+
+                @media (max-width:1024px) {
+                    width: 120px;
+                    height: 120px;
+                }
+
+                @media (max-width:920px) {
+                    width: 100px;
+                    height: 100px;
+                }
+
+                @media (max-width:770px) {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+        }
+
+        .title-description {
+            color: white;
+            @include flex-column();
+
+            .description {
+                font-family: $secondary-font;
+                font-size: 12px;
+                width: 300px;
+                padding: 200px 10px 0 165px;
+
+                @media (max-width:920px) {
+                    font-size: 10px;
+                    width: 200px;
+                    padding: 150px 10px 0 165px;
+                }
+
+                @media (max-width:770px) {
+                    font-size: 8px;
+                    width: 150px;
+                    padding: 120px 10px 0 165px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    font-size: 6px;
+                    width: 100px;
+                    padding: 60px 10px 0 35px;
+                }
+            }
+
+            .scroll-direction {
+                font-family: $primary-font;
+                font-size: 20px;
+                transform: rotate(90deg);
+                padding: 450px 0 0 330px;
+
+                @media (max-width:1024px) {
+                    padding: 300px 0 0 200px;
+                }
+
+                @media (max-width:920px) {
+                    font-size: 15px;
+                    padding: 200px 0 0 230px;
+                }
+
+                @media (max-width:770px) {
+                    font-size: 12px;
+                    padding: 170px 0 0 180px;
+                }
+
+                @media (max-width:670px) {
+                    font-size: 12px;
+                    padding: 100px 0 0 170px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    font-size: 10px;
+                    padding: 80px 0 0 70px;
+                }
+            }
+        }
+    }
+
+    .healthy-diet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: center;
+        padding-top: 100px;
+        padding-bottom: 190px;
+
+        .mussels {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @media (max-width:770px) {
+                // margin-left: 30px;
+            }
+
+            .mussel-pasta {
+                width: 80%;
+                height: auto;
+
+                @media (max-width:920px) {
+                    width: 80%;
+                    height: 50%;
+                }
+
+                @media (max-width:770px) {
+                    width: 60%;
+                }
+            }
+
+            .diet-desc {
+                font-family: $primary-font;
+                font-weight: 700;
+                font-size: 35px;
+                line-height: 44px;
+                width: 250px;
+                word-spacing: 1px;
+                color: white;
+
+                @media (max-width:920px) {
+                    font-size: 25px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    font-size: 17px;
+                    width: 150px;
+                }
+            }
+
+            .mussel-description {
+                font-family: $primary-font;
+                font-weight: 70;
+                font-size: 20px;
+                width: 430px;
+                color: white;
+
+                @media (max-width:920px) {
+                    font-size: 17px;
+                    width: 350px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    font-size: 12px;
+                    width: 150px;
+                }
+            }
+        }
+
+        .salt-pepper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .salt-pepper-desc {
+                font-family: $primary-font;
+                font-weight: 70;
+                font-size: 20px;
+                width: 360px;
+                color: white;
+                padding-bottom: 100px;
+
+                @media (max-width:920px) {
+                    font-size: 17px;
+                    width: 300px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    font-size: 12px;
+                    width: 150px;
+                }
+            }
+
+            .salt-pepper-img {
+                width: 80%;
+                height: auto;
+                color: white;
+
+                @media (max-width:920px) {
+                    width: 80%;
+                    height: 60%;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 70%;
+                    height: 70%;
+                }
+            }
+        }
+    }
+}

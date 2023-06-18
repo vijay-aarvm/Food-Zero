@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles.scss";
+import "./singlePortfolioContent.scss";
 import lemonjuice from "../../assests/images/lemonjuice.png";
 import spinachrice from "../../assests/images/spinachrice.png";
 import bread from "../../assests/images/bread.png";

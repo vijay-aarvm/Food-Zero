@@ -1,0 +1,55 @@
+@import '../../styles.scss';
+
+.features {
+    width: auto;
+    height: auto;
+    @include flex-column();
+    @include center-items();
+
+    .quality-ingredients {
+        @include flex-row();
+        font-family: $primary-font;
+        justify-content: space-evenly;
+        padding: 150px 0;
+
+        .premium-quality,
+        .seasonal-veggies,
+        .fresh-fruit {
+            width: 30%;
+            height: 30%;
+
+            & .ingredients-image {
+                padding-bottom: 30px;
+
+                @media (max-width:$mobile-size) {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            & .ingredients {
+                font-size: 24px;
+                padding-bottom: 40px;
+
+                @media (max-width:$mobile-size) {
+                    font-size: 24px;
+                }
+            }
+
+            & .ingredient-desc {
+                font-family: $secondary-font;
+                color: #4D4D4D;
+                font-size: 15px;
+                margin: 0;
+            }
+
+        }
+
+    }
+
+    .blogs {
+        @include flex-row();
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+}

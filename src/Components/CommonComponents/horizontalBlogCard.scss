@@ -1,0 +1,269 @@
+@import '../../styles.scss';
+
+.blog-card-horizontal {
+    @include flex-row();
+    width: 900px;
+    height: 600px;
+    justify-content: space-evenly;
+    gap: 100px;
+    overflow: hidden;
+
+    .blog-cover-image-horizontal {
+        width: 500px;
+        height: 500px;
+    }
+
+    .author-info-horizontal {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+
+        .author-profile-container-horizontal {
+            @include flex-row();
+            font-family: $secondary-font;
+            color: #5E6600;
+            font-size: 12px;
+            margin: 20px 0 10px 0;
+        }
+
+        .post-info-horizontal {
+            @include flex-column();
+            width: 450px;
+            font-weight: 700;
+            align-items: flex-start;
+            text-align: left;
+
+            .post-title-horizontal {
+                font-family: $primary-font;
+                font-size: 30px;
+                width: 380px;
+                margin: 10px 10px 10px 0;
+            }
+
+            .dotted-line-horizontal {
+                width: 380px;
+                border: none;
+                border-top: 2px dotted black;
+            }
+
+            .post-oneliner-horizontal {
+                font-family: $secondary-font;
+                font-size: 15px;
+                color: #4D4D4D;
+            }
+
+            .read-article-horizontal {
+                @include flex-row();
+
+                .read-more-horizontal {
+                    background: none;
+                    border: none;
+                    font-family: $secondary-font;
+                    font-size: 15px;
+                    padding: 20px 10px 10px 0;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    .arrow-horizontal {
+                        width: 20px;
+                        height: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1070px) {
+    .blog-card-horizontal {
+        width: 830px;
+        height: 500px;
+        gap: 50px;
+
+        .blog-cover-image-horizontal {
+            width: 400px;
+            height: 400px;
+        }
+    }
+}
+
+
+@media (max-width: 920px) {
+    .blog-card-horizontal {
+        width: 600px;
+        height: 400px;
+        gap: 40px;
+
+        .blog-cover-image-horizontal {
+            width: 400px;
+            height: 350px;
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .blog-card-horizontal {
+        width: 570px;
+        height: 400px;
+        gap: 30px;
+
+        .blog-cover-image-horizontal {
+            width: 400px;
+            height: 250px;
+        }
+
+        .author-info-horizontal {
+            .author-profile-container-horizontal {
+                font-size: 9px;
+                margin: 20px 0 10px 0;
+            }
+
+            .post-info-horizontal {
+                width: 430px;
+
+                .post-title-horizontal {
+                    font-size: 25px;
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .blog-card-horizontal {
+
+        .blog-cover-image-horizontal {
+            width: 300px;
+            height: 250px;
+        }
+
+        .author-info-horizontal {
+            .author-profile-container-horizontal {
+                font-size: 9px;
+                margin: 20px 0 10px 0;
+            }
+
+            .post-info-horizontal {
+                width: 350px;
+
+                .post-title-horizontal {
+                    font-size: 20px;
+                    width: 300px;
+                }
+
+                .dotted-line-horizontal {
+                    width: 250px;
+                }
+
+                .post-oneliner-horizontal {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 650px) {
+    .blog-card-horizontal {
+        width: 300px;
+        height: 250px;
+
+        .blog-cover-image-horizontal {
+            width: 250px;
+            height: 200px;
+        }
+
+        .author-info-horizontal {
+            .author-profile-container-horizontal {
+                font-size: 7px;
+                margin: 10px 0 10px 0;
+            }
+
+            .post-info-horizontal {
+                width: 300px;
+
+                .post-title-horizontal {
+                    font-size: 15px;
+                    width: 300px;
+                }
+
+                .dotted-line-horizontal {
+                    width: 250px;
+                }
+
+                .post-oneliner-horizontal {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .blog-card-horizontal {
+        width: 200px;
+        height: 220px;
+
+        .blog-cover-image-horizontal {
+            width: 140px;
+            height: 140px;
+        }
+    }
+}
+
+@media (max-width: $mobile-size) {
+    .blog-card-horizontal {
+
+        width: 350px;
+        height: 180px;
+        gap: 30px;
+
+        .author-info-horizontal {
+            width: 180px;
+
+            .author-profile-container-horizontal {
+                font-size: 6px;
+            }
+
+            .post-info-horizontal {
+                @include flex-column();
+                width: 250px;
+                font-weight: 700;
+                align-items: flex-start;
+                text-align: left;
+
+                .post-title-horizontal {
+                    font-size: 11px;
+                    width: 200px;
+                }
+
+                .dotted-line-horizontal {
+                    width: 230px;
+                }
+
+                .post-oneliner-horizontal {
+                    font-size: 8px;
+                }
+
+                .read-article-horizontal {
+
+                    .read-more-horizontal {
+                        font-size: 10px;
+                        padding: 10px 10px 10px 0;
+
+                        .arrow-horizontal {
+                            width: 15px;
+                            height: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

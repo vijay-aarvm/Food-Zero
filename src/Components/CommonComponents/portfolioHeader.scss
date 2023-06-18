@@ -1,0 +1,62 @@
+@import '../../styles.scss';
+
+.header {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width:$mobile-size) {
+        height: 400px;
+    }
+
+    .header-bg {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+
+        @media (max-width:670px) {
+            height: 400px;
+        }
+
+        @media (max-width:$mobile-size) {
+            height: 300px;
+        }
+    }
+
+    .header-title {
+        text-align: center;
+        position: relative;
+        color: white;
+        font-family: $primary-font;
+        font-size: 70px;
+        margin: 150px 0 0 250px;
+        width: 800px;
+
+        @media (max-width:1024px) {
+            font-size: 50px;
+            width: 500px;
+
+        }
+
+        @media(max-width: 740px) {
+            width: 400px;
+            margin: 150px 0 0 200px;
+        }
+
+        @media (max-width: 670px) {
+            font-size: 25px;
+            width: 300px;
+            margin: 120px 0 0 200px;
+        }
+
+        @media (max-width:$mobile-size) {
+            font-size: 20px;
+            width: 200px;
+            margin: 100px 0 0 100px;
+        }
+    }
+}

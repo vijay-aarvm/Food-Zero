@@ -1,0 +1,58 @@
+@import '../../styles.scss';
+
+.comment-card {
+    @include flex-row();
+    align-items: flex-start;
+    margin: 20px 0 20px 0;
+
+    &:nth-child(odd) {
+        padding-left: 100px;
+    }
+
+    .user {
+        width: auto;
+        height: auto;
+    }
+
+    .comment-info {
+        @include flex-column();
+        font-family: $secondary-font;
+        font-size: 12px;
+        text-align: left;
+
+        @media (max-width:430px) {
+            font-size: 7px;
+        }
+
+
+        .username {
+            font-weight: 900;
+            margin-top: 0;
+        }
+
+        .postedtime {
+            color: #B0B0B0;
+            margin-top: 0;
+        }
+
+        .comment {
+            color: #4D4D4D;
+            margin-top: 0;
+        }
+    }
+
+    .reply-btn {
+        border: none;
+        background: none;
+        font-weight: 700;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:active {
+            transition-duration: 0.05s;
+            text-shadow: 0 0 2px #585858;
+        }
+    }
+}

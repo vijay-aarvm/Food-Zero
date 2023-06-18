@@ -1,0 +1,21 @@
+@import '../../styles.scss';
+
+.related-posts-section {
+    @include flex-column();
+    @include center-items();
+    margin-bottom: 200px;
+
+    .title {
+        font-family: $primary-font;
+        margin: 70px 0 100px 0;
+    }
+
+    .posts {
+        @include flex-row();
+        justify-content: space-evenly;
+
+        @media (max-width:920px) {
+            gap: 30px;
+        }
+    }
+}

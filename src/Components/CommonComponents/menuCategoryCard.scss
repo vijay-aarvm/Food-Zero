@@ -1,0 +1,59 @@
+@import '../../styles.scss';
+
+.menu-card {
+    position: relative;
+    padding-bottom: 100px;
+    width: auto;
+    height: auto;
+
+    @media (max-width: $mobile-size) {
+        padding-bottom: 30px;
+    }
+
+    .menucard-cover {
+        width: 280px;
+        height: auto;
+        position: absolute;
+
+        @media (max-width:770px) {
+            width: 170px;
+        }
+
+        @media (max-width:$mobile-size) {
+            width: 100px;
+        }
+    }
+
+    .menu-category {
+        position: relative;
+        @include flex-row();
+        justify-content: space-around;
+        gap: 130px;
+
+        @media (max-width:770px) {
+            gap: 90px;
+        }
+
+        @media (max-width:$mobile-size) {
+            gap: 35px;
+            padding: 0;
+        }
+
+        .category {
+            justify-self: flex-end;
+            font-size: 16px;
+            padding: 10px;
+            font-family: $primary-font;
+
+            @media (max-width:770px) {
+                font-size: 10px;
+            }
+
+            @media (max-width:$mobile-size) {
+                font-size: 8px;
+                padding: 5px;
+                ;
+            }
+        }
+    }
+}

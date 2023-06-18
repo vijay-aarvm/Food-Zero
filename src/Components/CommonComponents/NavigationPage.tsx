@@ -1,11 +1,11 @@
 import React from "react";
-import "../../styles.scss";
+import "./navigationPage.scss";
 import navpagebg from "../../assests/images/nav-fullscreenbg.png";
 import instagram from "../../assests/images/instagram.png";
 import twitter from "../../assests/images/twitter.png";
 import facebook from "../../assests/images/facebook.png";
 import youtube from "../../assests/images/youtube.png";
-import { Link } from "react-router-dom";
+import MenuLinks from "./MenuLinks";
 
 const socialMediaIcons = [{
     name: "instagram",
@@ -45,18 +45,8 @@ export default function NavigationPage({ toggleMenu }: any) {
             <button className="close" id="close-button" onClick={toggleMenu}>X</button>
             <div className="navigation-list">
                 <div className="page-list">
-                    <ul>
-                        <Link to={"/"}><li>Home</li></Link>
-                        <Link to={"/menu"}><li>Menu</li></Link>
-                        <li>Blogs
-                            <ul>
-                                <Link to={"/blog_one_column"}><li>1 Columns</li></Link>
-                                <Link to={"/blog_two_columns"}><li>2 Columns</li></Link>
-                                <Link to={"/single_post_with_sidebar"}><li>SideBar Post</li></Link>
-                            </ul>
-                        </li>
-                        <Link to={"/about"}><li>About</li></Link>
-                        <Link to={"/contact"}><li>Contact</li></Link>
+                    <ul className="links">
+                        <MenuLinks />
                     </ul>
                 </div>
                 <div className="navpage-address">

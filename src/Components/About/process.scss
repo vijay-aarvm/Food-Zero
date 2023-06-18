@@ -1,0 +1,276 @@
+@import '../../styles.scss';
+
+.our-process {
+    @include flex-column();
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    .process-title {
+        @include flex-row();
+        margin-left: 350px;
+
+        @media (max-width: 670px) {
+            margin-left: 300px;
+        }
+
+        @media (max-width: $mobile-size) {
+            margin-left: 150px;
+        }
+
+        .title {
+            font-family: $primary-font;
+            font-size: 50px;
+
+            @media (max-width:920px) {
+                font-size: 30px;
+            }
+
+            @media (max-width: 670px) {
+                font-size: 20px;
+            }
+
+            @media (max-width: $mobile-size) {
+                font-size: 16px;
+            }
+        }
+
+        .rosemary-right {
+            width: 250px;
+            height: 250px;
+            margin-left: 140px;
+
+            @media (max-width:920px) {
+                width: 200px;
+                height: 200px;
+                margin-left: 100px;
+            }
+
+            @media (max-width:670px) {
+                width: 170px;
+                height: 150px;
+                margin-left: 100px;
+            }
+
+            @media (max-width: $mobile-size) {
+                width: 100px;
+                height: 100px;
+                margin-left: 50px;
+            }
+        }
+    }
+
+    .slice {
+        @include flex-row();
+        justify-content: space-evenly;
+        margin-top: 50px;
+
+        .meat-sliced {
+            width: 400px;
+            height: 300px;
+            margin: 10px;
+
+            @media (max-width:768px) {
+                width: 300px;
+                height: 300px;
+            }
+
+            @media (max-width:$mobile-size) {
+                width: 150px;
+                height: 160px;
+            }
+        }
+
+        .about-slice {
+            @include flex-column();
+            width: 350px;
+            text-align: left;
+
+            @media (max-width:$mobile-size) {
+                width: 200px;
+            }
+
+            .slice-title {
+                font-size: 50px;
+                font-family: $primary-font;
+                margin: 0;
+
+                @media (max-width:768px) {
+                    font-size: 30px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    font-size: 20px;
+                }
+            }
+
+            .aboutslice {
+                font-size: 15px;
+                font-family: $secondary-font;
+                color: #4D4D4D;
+
+                @media (max-width:768px) {
+                    font-size: 10px;
+                    width: 300px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 200px;
+                }
+            }
+        }
+    }
+
+    .pickle-and-bake {
+        @include flex-row();
+        margin-top: 100px;
+        justify-content: space-evenly;
+
+        .pickle {
+            @include flex-column();
+            @include center-items();
+            width: 450px;
+
+            .meat-pickled {
+                width: 400px;
+                height: 300px;
+                margin: 10px;
+
+                @media (max-width:768px) {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 130px;
+                    height: 160px;
+                }
+            }
+
+            .about-pickle {
+                @include flex-column();
+                @include center-items();
+                width: 350px;
+
+                @media (max-width:768px) {
+                    width: 300px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 200px;
+                }
+
+                .pickle-title {
+                    font-size: 50px;
+                    font-family: $primary-font;
+                    margin: 20px 0 0 0;
+
+                    @media (max-width:768px) {
+                        font-size: 30px;
+                    }
+
+                    @media (max-width:$mobile-size) {
+                        font-size: 20px;
+                    }
+                }
+
+                .aboutpickle {
+                    font-size: 15px;
+                    font-family: $secondary-font;
+                    color: #4D4D4D;
+
+                    @media (max-width:$mobile-size) {
+                        width: 150px;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        .bake {
+            @include flex-column();
+            @include center-items();
+            margin-top: 100px;
+            width: 450px;
+
+            @media (max-width:$mobile-size) {
+                margin-left: 30px;
+            }
+
+            .meat-baked {
+                width: 400px;
+                height: 320px;
+                margin: 10px;
+
+                @media (max-width:768px) {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 150px;
+                    height: 160px;
+                }
+            }
+
+            .about-bake {
+                @include flex-column();
+                @include center-items();
+                width: 350px;
+                text-align: left;
+
+                @media (max-width:768px) {
+                    width: 250px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 200px;
+                }
+
+                .bake-title {
+                    font-size: 50px;
+                    font-family: $primary-font;
+                    margin: 0 0 20px 0;
+
+                    @media (max-width:768px) {
+                        font-size: 30px;
+                    }
+
+                    @media (max-width:$mobile-size) {
+                        font-size: 20px;
+                    }
+                }
+
+                .aboutbake {
+                    font-size: 15px;
+                    font-family: $secondary-font;
+                    color: #4D4D4D;
+
+                    @media (max-width:$mobile-size) {
+                        width: 150px;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .rosemary-left {
+        width: 250px;
+        height: 250px;
+
+        @media (max-width:920px) {
+            width: 200px;
+            height: 200px;
+        }
+
+        @media (max-width:670px) {
+            width: 170px;
+            height: 150px;
+        }
+
+        @media (max-width: $mobile-size) {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
