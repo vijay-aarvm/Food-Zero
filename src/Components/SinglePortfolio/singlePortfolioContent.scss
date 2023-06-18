@@ -1,17 +1,17 @@
 @import '../../styles.scss';
 
 .portfolio-content {
-    padding: 300px 0 200px 0;
+    padding: 150px 0 200px 0;
     @include flex-column();
     @include center-items();
     overflow: hidden;
+    position: relative;
 
     @media (max-width:$mobile-size) {
-        padding: 200px 0 10px 0;
+        padding: 10px 0 10px 0;
     }
 
     .overlapping-content {
-        position: relative;
 
         .section-1 {
             @include flex-row();
