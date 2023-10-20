@@ -1,0 +1,177 @@
+@import '../../styles.scss';
+
+.address-location {
+    background: none;
+    margin-top: 300px;
+    color: #233000;
+    font-family: $primary-font;
+    @include flex-column();
+    @include center-items();
+    padding-bottom: 150px;
+
+    @media only screen and (max-width: $mobile-size) {
+        margin-top: 200px;
+    }
+
+    .contact-section {
+        @include flex-row();
+        gap: 200px;
+
+        @media only screen and (max-width: $mobile-size) {
+            gap: 50px;
+        }
+
+        .contact-section-wrapper {
+            position: relative;
+
+            .orange {
+                position: absolute;
+                z-index: -1;
+                left: 325px;
+                top: -60px;
+                width: 200px;
+                height: 200px;
+
+                @media only screen and (max-width: 1000px) {
+                    top: -50px;
+                    left: 245px;
+                    width: 150px;
+                    height: 150px;
+                }
+
+                @media only screen and (max-width: 870px) {
+                    top: -40px;
+                    left: 155px;
+                    width: 130px;
+                    height: 130px;
+                }
+
+                @media only screen and (max-width: $mobile-size) {
+                    top: -30px;
+                    left: 88px;
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+
+            .lemons-on-table {
+                width: 400px;
+                height: 350px;
+
+                @media only screen and (max-width: 1000px) {
+                    width: 300px;
+                    height: 250px;
+                }
+
+                @media only screen and (max-width: 870px) {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                @media only screen and (max-width: $mobile-size) {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+        }
+
+        .email-and-phone {
+            width: 350px;
+            font-size: 20px;
+            text-align: left;
+            align-self: end;
+            padding-bottom: 30px;
+
+            @media only screen and (max-width: 870px) {
+                width: 250px;
+                font-size: 15px;
+            }
+
+            @media only screen and (max-width: $mobile-size) {
+                width: 130px;
+                font-size: 8px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #9CAA00;
+        }
+    }
+
+    .address-section {
+        @include flex-row();
+        margin-top: 100px;
+        gap: 100px;
+
+        @media only screen and (max-width: $mobile-size) {
+            gap: 50px;
+        }
+
+        .address-and-map {
+            @include flex-column();
+
+            .address {
+                width: 450px;
+                text-align: left;
+                font-size: 20px;
+
+                @media only screen and (max-width: 870px) {
+                    width: 250px;
+                    font-size: 15px;
+                }
+
+                @media only screen and (max-width: $mobile-size) {
+                    width: 130px;
+                    font-size: 8px;
+                }
+            }
+
+            .map-link {
+                font-size: 20px;
+                width: 150px;
+                height: 50px;
+                font-family: $primary-font;
+                background: none;
+
+                @media only screen and (max-width: 870px) {
+                    width: 150px;
+                    font-size: 15px;
+                }
+
+                @media only screen and (max-width: $mobile-size) {
+                    width: 90px;
+                    font-size: 10px;
+                }
+
+                p {
+                    margin: 0;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &:active {
+                    transition-duration: 0.05s;
+                    box-shadow: 0 0 10px #2d2d2d;
+                }
+            }
+        }
+
+        .restaurant-sv {
+            width: 400px;
+            height: 350px;
+
+            @media only screen and (max-width: 1000px) {
+                width: 300px;
+                height: 250px;
+            }
+
+            @media only screen and (max-width: $mobile-size) {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    }
+}

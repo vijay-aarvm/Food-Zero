@@ -1,0 +1,177 @@
+@import '../../styles.scss';
+
+.footer-container {
+    background-color: #233000;
+    color: #FFFF;
+
+    .footer {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px 0 20px 0;
+
+        @media only screen and (max-width: $mobile-size) {
+            font-size: 8px;
+            padding: 10px 0 10px 0;
+        }
+
+        .brand-name {
+            font-family: $primary-font;
+            font-size: 30px;
+            word-wrap: break-word;
+            width: 120px;
+
+            @media only screen and (max-width: $mobile-size) {
+                font-size: 12px;
+                width: 50px;
+            }
+        }
+
+        .contact-us,
+        .mail-title {
+            font-family: $primary-font;
+            font-size: 20px;
+            padding-bottom: 35px;
+
+            @media only screen and (max-width: $mobile-size) {
+                font-size: 10px;
+                padding-bottom: 20px;
+            }
+        }
+
+        .telephone {
+            font-family: $secondary-font;
+        }
+
+        .address {
+            font-family: $secondary-font;
+            width: 170px;
+
+            @media only screen and (max-width: $mobile-size) {
+                width: 100px;
+            }
+        }
+
+        .mail {
+            padding-bottom: 20px;
+            font-family: $secondary-font;
+
+            a {
+                color: #FFFF;
+                text-decoration: none;
+            }
+        }
+
+        .telephone a {
+            color: #FFFF;
+            text-decoration: none;
+        }
+
+        .mail-to-us {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding-bottom: 15px;
+        }
+
+        .mail-id {
+            border: 1.5px solid;
+            border-radius: 0px;
+            width: 300px;
+            height: 45px;
+            text-indent: 20px;
+            font-family: $secondary-font;
+            background-color: #233000;
+            color: #FFFF;
+
+            @media only screen and (max-width: 725px) {
+                width: 130px;
+                height: 20px;
+            }
+
+            @media (max-width:$mobile-size) {
+                width: 100px;
+            }
+
+            &::placeholder {
+                color: #FFFF;
+
+                @media only screen and (max-width: 725px) {
+                    font-size: 11px;
+                    text-indent: 10px;
+                }
+            }
+        }
+
+        .mail-button {
+            font-size: 15px;
+            font-family: $primary-font;
+            border-radius: 0px;
+            border: 0px;
+            width: 100px;
+            height: 43px;
+            background-color: #5E6600;
+            color: #FFFF;
+
+            @media only screen and (max-width: 725px) {
+                width: 50px;
+                height: 20px;
+                font-size: 7px;
+            }
+
+            @media (max-width:$mobile-size) {
+                width: 40px;
+                font-size: 7px;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                background-color: #495100;
+            }
+        }
+
+        .subscription-note {
+            font-family: $secondary-font;
+            font-size: 10px;
+
+            @media only screen and (max-width: $mobile-size) {
+                font-size: 6px;
+                width: 130px;
+            }
+        }
+    }
+
+    .footer-dotted-line {
+        border-bottom: 2px dotted #FFFF;
+    }
+
+    .copyright-section {
+        padding: 0px 0 30px 0;
+        @include flex-row();
+        justify-content: space-between;
+
+        .copyright {
+            font-family: $secondary-font;
+            padding-left: 100px;
+
+            @media only screen and (max-width: $mobile-size) {
+                padding-left: 10px;
+            }
+        }
+
+        .social-media-icon {
+            padding: 5px;
+        }
+
+        .social-media-links {
+            padding-right: 100px;
+
+            @media only screen and (max-width: $mobile-size) {
+                width: 150px;
+                padding-right: 10px;
+            }
+        }
+    }
+}

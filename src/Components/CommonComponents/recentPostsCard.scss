@@ -1,0 +1,58 @@
+@import '../../styles.scss';
+
+.recent-post {
+    @include flex-row();
+    column-gap: 20px;
+    text-decoration: none;
+
+    .recent-post-coverimg {
+        width: 70px;
+        height: 70px;
+
+        @media (max-width:670px) {
+            width: 50px;
+            height: 50px;
+        }
+
+        @media (max-width:$mobile-size) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .recent-post-info {
+        @include flex-column();
+
+        .recent-post-title {
+            font-family: $primary-font;
+            font-size: 12px;
+            margin: 0;
+            text-align: left;
+
+            @media (max-width:670px) {
+                font-size: 10px;
+            }
+
+            @media (max-width:$mobile-size) {
+                font-size: 8px;
+            }
+        }
+
+        .recent-post-metadata {
+            font-family: $secondary-font;
+            font-size: 8px;
+            color: #B0B0B0;
+            @include flex-row();
+            gap: 20px;
+
+            @media (max-width:670px) {
+                font-size: 6px;
+            }
+
+            @media (max-width:$mobile-size) {
+                font-size: 4px;
+                margin: 0;
+            }
+        }
+    }
+}

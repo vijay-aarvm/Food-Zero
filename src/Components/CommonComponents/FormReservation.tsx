@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles.scss";
+import "./formReservation.scss";
 
 // const handleSubmit = (e) => {
 //     e.preventDefault();

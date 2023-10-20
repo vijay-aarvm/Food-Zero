@@ -1,0 +1,257 @@
+@import '../../styles.scss';
+
+.portfolio-content {
+    padding: 150px 0 200px 0;
+    @include flex-column();
+    @include center-items();
+    overflow: hidden;
+    position: relative;
+
+    @media (max-width:$mobile-size) {
+        padding: 10px 0 10px 0;
+    }
+
+    .overlapping-content {
+
+        .section-1 {
+            @include flex-row();
+            gap: 200px;
+            z-index: 2;
+            position: absolute;
+
+            @media (max-width:916px) {
+                gap: 80px;
+            }
+
+            @media (max-width:$mobile-size) {
+                gap: 30px;
+                margin-left: 30px;
+            }
+
+            .section1-img {
+                width: 350px;
+                height: 450px;
+
+                @media (max-width:1180px) {
+                    width: 320px;
+                    height: $mobile-size;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 150px;
+                    height: 200px;
+                }
+            }
+
+            .section1-content {
+                width: 300px;
+                text-align: left;
+                align-self: flex-start;
+
+                @media (max-width:916px) {
+                    width: 200px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 150px;
+                }
+
+                .content-title {
+                    font-family: $primary-font;
+                    font-size: 30px;
+
+                    @media (max-width:916px) {
+                        font-size: 17px;
+                    }
+
+                    @media (max-width:$mobile-size) {
+                        font-size: 14px;
+                    }
+                }
+
+                .title-desc {
+                    font-family: $secondary-font;
+                    font-size: 15px;
+                    color: #4D4D4D;
+
+                    @media (max-width:916px) {
+                        font-size: 12px;
+                    }
+
+                    @media (max-width:$mobile-size) {
+                        font-size: 10px;
+                    }
+                }
+
+                .content-desc {
+                    font-family: $secondary-font;
+                    font-size: 15px;
+                    color: #4D4D4D;
+
+                    @media (max-width:916px) {
+                        font-size: 12px;
+                    }
+
+                    @media (max-width:$mobile-size) {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        .section-2 {
+            @include flex-row();
+            gap: 50px;
+            z-index: 0;
+            position: relative;
+            top: 300px;
+            left: 180px;
+
+            @media (max-width: 1180px) {
+                gap: 30px;
+            }
+
+            @media (max-width: 916px) {
+                left: 100px;
+            }
+
+            @media (max-width:$mobile-size) {
+                top: 160px;
+                left: 100px;
+                gap: 10px;
+
+            }
+
+            .section2-img {
+                width: 500px;
+                height: 650px;
+
+                @media (max-width: 1180px) {
+                    width: 350px;
+                    height: 450px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 170px;
+                    height: 250px;
+                }
+            }
+
+            .section2-content {
+                width: 300px;
+                text-align: left;
+                align-self: flex-end;
+                padding-bottom: 80px;
+
+                @media (max-width:916px) {
+                    width: 200px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    font-size: 10px;
+                }
+
+                .content-title {
+                    font-family: $primary-font;
+                    font-size: 30px;
+
+                    @media (max-width:916px) {
+                        font-size: 17px;
+                    }
+
+                    @media (max-width:$mobile-size) {
+                        font-size: 13px;
+                    }
+                }
+
+                .content-desc {
+                    font-family: $secondary-font;
+                    font-size: 15px;
+                    color: #4D4D4D;
+
+                    @media (max-width:916px) {
+                        font-size: 12px;
+                    }
+
+                    @media (max-width:$mobile-size) {
+                        font-size: 7px;
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-3 {
+        @include flex-column();
+        @include center-items();
+        position: relative;
+        top: 200px;
+        margin-bottom: 200px;
+        top: 400px;
+
+        @media (max-width:$mobile-size) {
+            top: 200px;
+        }
+
+        .section3-content {
+            width: 300px;
+            text-align: left;
+
+            @media (max-width:$mobile-size) {
+                width: 250px;
+            }
+
+            .content-desc {
+                font-family: $secondary-font;
+                font-size: 15px;
+                color: #4D4D4D;
+                position: relative;
+
+                @media (max-width:$mobile-size) {
+                    font-size: 10px;
+                }
+            }
+
+            .content-title {
+                font-family: $primary-font;
+                font-size: 30px;
+                font-weight: 600;
+
+                @media (max-width:$mobile-size) {
+                    font-size: 14px;
+                }
+            }
+
+            .title-desc {
+                font-family: $secondary-font;
+                font-size: 15px;
+                color: #4D4D4D;
+
+                @media (max-width:$mobile-size) {
+                    font-size: 10px;
+                }
+            }
+
+            .section3-img {
+                width: 700px;
+                height: 400px;
+                position: relative;
+                top: 40px;
+                left: -200px;
+
+                @media (max-width:670px) {
+                    width: 500px;
+                    height: 300px;
+                    left: -100px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 350px;
+                    left: -50px;
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@import '../../styles.scss';
+
+.blog-section {
+    @include flex-column();
+    margin-top: 250px;
+    @include center-items();
+
+    @media (max-width:$mobile-size) {
+        margin-top: 100px;
+    }
+
+    .blog-content {
+        @include flex-row();
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 50px;
+        margin-bottom: 50px;
+
+        @media (max-width:$tablet-size) {
+            gap: 0px;
+        }
+
+        @media (max-width:920px) {
+            gap: 10px;
+        }
+
+        @media (max-width:670px) {
+            gap: 0px;
+        }
+    }
+
+    .pagination {
+        @include flex-row();
+        gap: 30px;
+
+        li {
+            list-style: none;
+            font-family: $secondary-font;
+            padding: 5px 10px;
+            border: 1px solid black;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                transition-duration: 0.05s;
+                box-shadow: 0 0 10px #344730;
+            }
+        }
+
+        .active {
+            background: #344730;
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import '../../styles.scss';
+
+.blog-section-horizontal {
+    @include flex-column();
+    margin-top: 250px;
+    @include center-items();
+
+    .blog-content-horizontal {
+        @include flex-column();
+        @include center-items();
+        justify-content: space-evenly;
+        gap: 50px;
+    }
+}

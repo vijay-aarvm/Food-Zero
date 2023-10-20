@@ -1,0 +1,154 @@
+@import '../../styles.scss';
+
+.testimonals {
+    @include flex-column();
+    @include center-items();
+    justify-content: center;
+
+    @media (max-width:855px) {
+        margin-left: 40px;
+    }
+
+    @media (max-width:770px) {
+        margin-left: 50px;
+    }
+
+    @media (max-width:$mobile-size) {
+        margin-left: 200px;
+    }
+
+    .testimony-content {
+        width: 700px;
+        @include flex-row();
+
+        .client-testimony {
+            font-family: $primary-font;
+            color: #000000;
+            font-size: 25px;
+            text-align: left;
+            z-index: 1;
+
+            @media (max-width:$mobile-size) {
+                font-size: 15px;
+                width: 300px;
+            }
+        }
+
+        .quote {
+            width: auto;
+            height: auto;
+            position: relative;
+            right: 100px;
+            z-index: 0;
+
+            @media (max-width:$mobile-size) {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+
+    .client {
+        @include flex-row();
+        align-self: flex-start;
+        gap: 300px;
+
+        @media (max-width:$mobile-size) {
+            gap: 40px;
+        }
+
+        .client-info {
+            @include flex-row();
+
+            .client-img {
+                width: auto;
+                height: auto;
+
+                @media (max-width:$mobile-size) {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+            .client-metadata {
+                @include flex-column();
+                text-align: left;
+
+                .client-name {
+                    font-family: $primary-font;
+                    font-size: 15px;
+                    font-weight: 800;
+                    margin: 0;
+
+                    @media (max-width:$mobile-size) {
+                        font-size: 10px;
+                    }
+                }
+
+                .client-designation {
+                    font-family: $secondary-font;
+                    font-size: 10px;
+
+                    @media (max-width:$mobile-size) {
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    .navigate-buttons {
+        @include flex-row();
+        font-size: 20px;
+
+        @media (max-width:$mobile-size) {
+            font-size: 10px;
+        }
+
+        .previous-quote {
+            background: none;
+            border: none;
+            width: 40px;
+            height: 20px;
+            font-size: 20px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                transition-duration: 0.05s;
+                box-shadow: 0 0 10px #ff9d72;
+            }
+
+            @media (max-width:$mobile-size) {
+                font-size: 15px;
+            }
+        }
+
+        .quote-index {
+            font-family: $primary-font;
+        }
+
+        .next-quote {
+            background: none;
+            border: none;
+            width: 40px;
+            height: 20px;
+            font-size: 20px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                transition-duration: 0.05s;
+                box-shadow: 0 0 10px #ff9d72;
+            }
+
+            @media (max-width:$mobile-size) {
+                font-size: 15px;
+            }
+        }
+    }
+}

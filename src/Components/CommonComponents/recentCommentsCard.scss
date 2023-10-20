@@ -1,0 +1,21 @@
+@import '../../styles.scss';
+
+.comments {
+    font-size: 10px;
+    font-family: $secondary-font;
+    @include flex-row();
+    text-align: left;
+    gap: 5px;
+
+    @media (max-width:430px) {
+        font-size: 7px;
+    }
+
+    .user-name {
+        color: #B0B0B0;
+    }
+
+    .comment {
+        color: black;
+    }
+}

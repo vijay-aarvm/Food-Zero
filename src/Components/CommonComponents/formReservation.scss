@@ -1,0 +1,155 @@
+@import '../../styles.scss';
+
+.form-reservation {
+    display: flex;
+    flex-direction: column;
+    @include center-items();
+    background-color: #EBF0E4;
+    overflow: hidden;
+
+    .reservation-header {
+        @include flex-column();
+        margin: 40px 0 60px 0;
+
+        .reservation-header-title {
+            font-size: 50px;
+            font-family: $primary-font;
+            margin-bottom: 0px;
+        }
+
+        .reservation-header-headline {
+            font-size: 15px;
+            margin-top: 0px;
+            font-family: $secondary-font;
+            color: #4D4D4D;
+        }
+    }
+
+    .schedule-options {
+        @include flex-column();
+        @include center-items();
+        margin-bottom: 150px;
+
+        .select-schedule {
+            @include flex-row();
+            margin-bottom: 100px;
+            gap: 30px;
+
+            .date {
+                height: 50px;
+                width: 280px;
+                background-color: #EBF0E4;
+                @include form-field-border();
+            }
+
+            .time {
+                height: 50px;
+                width: 280px;
+                background-color: #EBF0E4;
+                @include form-field-border();
+            }
+
+            .no-of-persons {
+                height: 50px;
+                width: 280px;
+                background-color: #EBF0E4;
+                @include form-field-border();
+            }
+        }
+
+        .book-now {
+            width: 200px;
+            height: 50px;
+            font-family: $primary-font;
+            color: white;
+            @include form-field-border();
+            background-color: #233000;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                transition-duration: 0.05s;
+                box-shadow: 0 0 10px #ff9d72;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 900px) {
+    .form-reservation {
+
+        .schedule-options {
+
+            .select-schedule {
+
+                .date {
+                    height: 40px;
+                    width: 250px;
+                }
+
+                .time {
+                    height: 40px;
+                    width: 250px;
+                }
+
+                .no-of-persons {
+                    height: 40px;
+                    width: 250px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .form-reservation {
+        .schedule-options {
+            .select-schedule {
+
+                .date {
+                    height: 40px;
+                    width: 170px;
+                }
+
+                .time {
+                    height: 40px;
+                    width: 170px;
+                }
+
+                .no-of-persons {
+                    height: 40px;
+                    width: 170px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-size) {
+    .form-reservation {
+        .schedule-options {
+            margin-bottom: 100px;
+
+            .select-schedule {
+
+                .date {
+                    height: 30px;
+                    width: 80px;
+                }
+
+                .time {
+                    height: 30px;
+                    width: 80px;
+                }
+
+                .no-of-persons {
+                    height: 30px;
+                    width: 80px;
+                }
+            }
+        }
+    }
+}

@@ -1,29 +1,29 @@
 import React from "react";
-import "../../styles.scss";
+import "./horizontalBlogCard.scss";
 import arrow from "../../assests/images/arrow.png"
+import { bloginfo } from "../../Store/bloglist";
+import { scrollToTop } from "../../HelperFunctions/windowScroll";
+import { Link } from "react-router-dom";
+import AuthorProfileCard from "./AuthorProfileCard";
 
-export default function HorizontalBlogCard({ obj }: any) {
+type Blogstype = {
+    obj: bloginfo
+}
+
+export default function HorizontalBlogCard({ obj }: Blogstype) {
     return (
         <div className="blog-card-horizontal">
             <img className="blog-cover-image-horizontal" alt="post-cover-pic" src={obj.blogCover}></img>
             <div className="author-info-horizontal">
                 <div className="author-profile-container-horizontal">
-                    <img className="author-profile-horizontal" alt="author" src={obj.authorProfile}></img>
-                    <div className="author-bio-horizontal">
-                        <p className="author-name-horizontal">{obj.authorName}</p>
-                        <ul className="bio-list-horizontal">
-                            <li className="posted-date-horizontal">{obj.blogPostedDate}</li>
-                            <li className="posted-time-horizontal">{obj.blogPostedTime}</li>
-                            <li className="total-comments-horizontal">{obj.totalComments}</li>
-                        </ul>
-                    </div>
+                    <AuthorProfileCard obj={obj} />
                 </div>
                 <div className="post-info-horizontal">
                     <p className="post-title-horizontal">{obj.blogTitle}</p>
                     <div className="dotted-line-horizontal"></div>
                     <p className="post-oneliner-horizontal">{obj.blogOneliner}</p>
                     <div className="read-article-horizontal">
-                        <button className="read-more-horizontal">{`Read More `}<img className="arrow-horizontal" src={arrow} alt="arrow" /></button>
+                        <Link to={"/single_post_with_sidebar"} onClick={scrollToTop} style={{ textDecoration: "none", color: "inherit" }}><button className="read-more-horizontal">{`Read More `}<img className="arrow-horizontal" src={arrow} alt="arrow" /></button></Link>
                     </div>
                 </div>
             </div>

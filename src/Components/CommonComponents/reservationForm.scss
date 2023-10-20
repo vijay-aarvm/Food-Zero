@@ -1,0 +1,280 @@
+@import '../../styles.scss';
+
+.form {
+    background-color: #EBF0E4;
+    @include flex-column();
+    @include center-items();
+
+    .form-header {
+        padding-top: 80px;
+        display: flex;
+        text-align: left;
+        align-items: center;
+        padding-bottom: 80px;
+
+        .mint {
+            width: 300px;
+            height: 200px;
+
+            @media only screen and (max-width: 870px) {
+                width: 250px;
+                height: 150px;
+            }
+
+            @media only screen and (max-width: $mobile-size) {
+                width: 130px;
+                height: 80px;
+            }
+        }
+
+        .form-title {
+            @include flex-column();
+            z-index: 0;
+            position: relative;
+            margin-top: 140px;
+            margin-left: -50px;
+
+            @media only screen and (max-width: $mobile-size) {
+                margin-top: 70px;
+                margin-left: -30px;
+            }
+
+            .form-header-title {
+                margin: 0;
+                font-size: 70px;
+                font-weight: 500;
+                font-family: $primary-font;
+
+                @media only screen and (max-width: 870px) {
+                    font-size: 40px;
+                }
+
+                @media only screen and (max-width: $mobile-size) {
+                    font-size: 20px;
+                }
+            }
+
+            .form-header-subtitle {
+                margin: 0;
+                font-size: 20px;
+                color: gray;
+                font-family: 'Lato';
+
+                @media only screen and (max-width: $mobile-size) {
+                    font-size: 10px;
+                }
+            }
+        }
+
+    }
+
+    .form-input {
+        @include flex-column();
+        @include center-items();
+        gap: 30px;
+        padding-bottom: 100px;
+        font-family: 'Lato';
+
+        .name {
+            @include flex-row();
+            justify-content: space-evenly;
+            gap: 30px;
+
+            .first-name {
+                @include namefield-css();
+
+                &::placeholder {
+                    color: black;
+                }
+
+                @media only screen and (max-width: 1020px) {
+                    width: 350px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 870px) {
+                    width: 250px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: $mobile-size) {
+                    width: 120px;
+                    height: 30px;
+                }
+            }
+
+            .last-name {
+                @include namefield-css();
+
+                &::placeholder {
+                    color: black;
+                }
+
+                @media only screen and (max-width: 1020px) {
+                    width: 350px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 870px) {
+                    width: 250px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: $mobile-size) {
+                    width: 120px;
+                    height: 30px;
+                }
+            }
+        }
+
+        .mail-and-phone {
+            @include flex-column();
+            @include center-items();
+            gap: 30px;
+
+            .mail {
+                @include mail-phone-css();
+
+                &::placeholder {
+                    color: black;
+                }
+
+                @media only screen and (max-width: 1020px) {
+                    width: 765px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 870px) {
+                    width: 565px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: $mobile-size) {
+                    width: 305px;
+                    height: 30px;
+                }
+            }
+
+            .phone {
+                @include mail-phone-css();
+
+                &::placeholder {
+                    color: black;
+                }
+
+                @media only screen and (max-width: 1020px) {
+                    width: 765px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 870px) {
+                    width: 565px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: $mobile-size) {
+                    width: 305px;
+                    height: 30px;
+                }
+            }
+        }
+
+        .schedule {
+            @include flex-row();
+            justify-content: space-evenly;
+            gap: 37px;
+
+            .select-date {
+                width: 468px;
+                height: 60px;
+                padding-left: 30px;
+                @include form-field-border();
+                font-family: 'Lato';
+
+                @media only screen and (max-width: 1020px) {
+                    width: 365px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 870px) {
+                    width: 265px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: $mobile-size) {
+                    width: 135px;
+                    height: 30px;
+                }
+            }
+
+            .time {
+                width: 465px;
+                height: 62px;
+                padding-left: 30px;
+                @include form-field-border();
+                font-family: 'Lato';
+
+                @media only screen and (max-width: 1020px) {
+                    width: 365px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: 870px) {
+                    width: 265px;
+                    height: 50px;
+                }
+
+                @media only screen and (max-width: $mobile-size) {
+                    width: 135px;
+                    height: 32px;
+                }
+            }
+        }
+
+        .no-of-persons {
+            width: 1005px;
+            height: 60px;
+            padding-left: 30px;
+            @include form-field-border();
+
+            @media only screen and (max-width: 1020px) {
+                width: 800px;
+                height: 55px;
+            }
+
+            @media only screen and (max-width: 870px) {
+                width: 595px;
+                height: 50px;
+            }
+
+            @media only screen and (max-width: $mobile-size) {
+                width: 340px;
+                height: 40px;
+            }
+        }
+
+        .book-now {
+            width: 200px;
+            height: 60px;
+            font-size: 20px;
+            @include form-field-border();
+            font-family: $primary-font;
+            color: white;
+            background-color: #5E6600;
+
+            @media only screen and (max-width: $mobile-size) {
+                width: 150px;
+                height: 50px;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                transition-duration: 0.05s;
+                box-shadow: 0 0 5px #323232;
+            }
+        }
+    }
+}

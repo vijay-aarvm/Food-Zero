@@ -1,0 +1,61 @@
+@import '../../styles.scss';
+
+.menupage-header {
+    width: auto;
+    height: auto;
+    padding-bottom: 200px;
+
+    @media (max-width:$mobile-size) {
+        padding-bottom: 200px;
+    }
+
+    .menu-header-bg {
+        background-image: url("../../assests/images/menu-bg.png");
+        width: 100%;
+        height: 650px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        z-index: 0;
+
+        @media (max-width:$mobile-size) {
+            height: 400px;
+        }
+    }
+
+    .menu-header-title {
+        @include flex-column();
+        color: white;
+        font-family: $primary-font;
+        margin: 100px 0 0 70px;
+
+        @media (max-width:$mobile-size) {
+            margin: 100px 0 0 70px;
+        }
+
+        .title {
+            width: 400px;
+            font-size: 70px;
+            position: relative;
+            z-index: 1;
+            margin: 0;
+
+            @media (max-width:$mobile-size) {
+                width: 200px;
+                font-size: 20px;
+            }
+        }
+
+        .title-desc {
+            margin-top: 20px;
+            font-size: 17px;
+            position: relative;
+            z-index: 1;
+
+            @media (max-width:$mobile-size) {
+                font-size: 10px;
+            }
+        }
+    }
+}

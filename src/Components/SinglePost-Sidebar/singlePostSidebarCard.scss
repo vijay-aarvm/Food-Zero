@@ -1,0 +1,633 @@
+@import '../../styles.scss';
+
+.single-post-sidebar {
+    @include flex-column();
+    overflow: hidden;
+
+    .single-post-sidebar-header {
+        width: auto;
+        height: auto;
+
+        .singlepost-sidebar-header-bg {
+            width: 100%;
+            height: 600px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            z-index: 0;
+
+            @media (max-width:920px) {
+                height: 500px;
+            }
+
+            @media (max-width:$mobile-size) {
+                height: 400px;
+            }
+        }
+
+        .blog-header-title {
+            @include flex-column();
+            color: white;
+            font-family: $primary-font;
+            width: 900px;
+            @include center-items();
+            margin: 100px 0 0 180px;
+
+            @media (max-width:$tablet-size) {
+                width: 700px;
+                margin: 100px 0 0 100px;
+            }
+
+            @media (max-width:920px) {
+                width: 600px;
+            }
+
+            @media (max-width: 670px) {
+                width: 480px;
+            }
+
+            @media (max-width:$mobile-size) {
+                width: 200px;
+            }
+
+            .blog-title {
+                font-size: 70px;
+                z-index: 1;
+                margin: 0;
+                text-align: center;
+
+                @media (max-width:$tablet-size) {
+                    font-size: 50px;
+                }
+
+                @media (max-width:670px) {
+                    font-size: 30px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    font-size: 15px;
+                }
+            }
+
+            .blog-author {
+                z-index: 1;
+                @include flex-row();
+
+                .author-pic {
+                    width: 100px;
+                    height: 100px;
+
+                    @media (max-width:$mobile-size) {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+
+                .author-name {
+                    font-family: $secondary-font;
+
+                    @media (max-width:$mobile-size) {
+                        font-size: 10px;
+                    }
+                }
+
+                .author-details {
+                    @include flex-row();
+                    gap: 30px;
+                    font-family: $secondary-font;
+
+                    @media (max-width:$mobile-size) {
+                        gap: 20px;
+                    }
+
+                    .posted-on,
+                    .posted-time,
+                    .no-of-comments {
+                        font-size: 16px;
+
+                        @media (max-width:670px) {
+                            font-size: 10px;
+                        }
+
+                        @media (max-width:$mobile-size) {
+                            font-size: 10px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .post {
+        @include flex-row();
+        justify-content: space-evenly;
+        align-content: flex-start;
+        margin: 50px 0 50px 0;
+
+        .post-content {
+            @include flex-column();
+
+            @media (max-width:$mobile-size) {
+                width: 230px;
+            }
+
+            .blog-content {
+                position: relative;
+                margin-top: 300px;
+                @include flex-column();
+                @include center-items();
+
+                @media (max-width:920px) {
+                    margin-top: 200px;
+                }
+
+                .blog-intro {
+                    font-family: $primary-font;
+                    color: #4D4D4D;
+                    font-size: 20px;
+                    width: 700px;
+
+                    @media (max-width:920px) {
+                        font-size: 13px;
+                        width: 570px;
+                    }
+
+                    @media (max-width:830px) {
+                        width: 500px;
+                    }
+
+                    @media (max-width:670px) {
+                        width: 400px;
+                        font-size: 12px;
+                    }
+
+                    @media (max-width:$mobile-size) {
+                        width: 220px;
+                        font-size: 8px;
+                    }
+                }
+
+                .blog-images {
+                    margin: 70px 0 70px 0;
+                    @include flex-row();
+                    justify-content: space-evenly;
+                    gap: 40px;
+
+                    @media (max-width:920px) {
+                        gap: 40px;
+                    }
+
+                    @media (max-width:670px) {
+                        gap: 20px;
+                    }
+
+                    .blog-image1 {
+                        width: 320px;
+                        height: 380px;
+
+                        @media (max-width:920px) {
+                            width: 240px;
+                            height: 300px;
+                        }
+
+                        @media (max-width:770px) {
+                            width: 200px;
+                            height: 250px;
+                        }
+
+                        @media (max-width:$mobile-size) {
+                            width: 100px;
+                            height: 140px;
+                        }
+                    }
+
+                    .blog-image2 {
+                        width: 320px;
+                        height: 380px;
+
+                        @media (max-width:920px) {
+                            width: 240px;
+                            height: 300px;
+                        }
+
+                        @media (max-width:770px) {
+                            width: 200px;
+                            height: 250px;
+                        }
+
+                        @media (max-width:$mobile-size) {
+                            width: 100px;
+                            height: 140px;
+                        }
+                    }
+                }
+
+                .blog-recipe {
+                    font-family: $secondary-font;
+                    font-size: 17px;
+                    color: #4D4D4D;
+                    width: 650px;
+                    text-align: left;
+
+                    @media (max-width:920px) {
+                        font-size: 13px;
+                        width: 570px;
+                    }
+
+                    @media (max-width:830px) {
+                        width: 500px;
+                    }
+
+                    @media (max-width:670px) {
+                        width: 400px;
+                        font-size: 12px;
+                    }
+
+                    @media (max-width:$mobile-size) {
+                        width: 220px;
+                        font-size: 8px;
+                    }
+                }
+            }
+
+            .blog-quote {
+                width: auto;
+                height: auto;
+                margin: 0px 0 200px 0;
+                position: relative;
+
+                @media (max-width:670px) {
+                    margin: 0 0 130px 0;
+                }
+
+                @media (max-width: $mobile-size) {
+                    margin: 0 0 100px 0;
+                }
+
+                .quote {
+                    font-size: 20px;
+                    z-index: 1;
+                    color: #5E6600;
+                    font-family: $secondary-font;
+                    font-style: italic;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, 50%);
+
+                    @media (max-width:920px) {
+                        font-size: 15px;
+                    }
+
+                    @media (max-width:670px) {
+                        font-size: 12px;
+                    }
+
+                    @media (max-width:$mobile-size) {
+                        font-size: 10px;
+                        width: 200px;
+                    }
+                }
+            }
+
+            .remaining-blog {
+                @include flex-column();
+                @include center-items();
+
+                .blog-conclusion {
+                    font-family: $secondary-font;
+                    font-size: 17px;
+                    color: #4D4D4D;
+                    width: 650px;
+                    text-align: left;
+
+                    @media (max-width:920px) {
+                        font-size: 15px;
+                        width: 570px;
+                    }
+
+                    @media (max-width:830px) {
+                        width: 500px;
+                    }
+
+                    @media (max-width:670px) {
+                        width: 400px;
+                        font-size: 12px;
+                    }
+
+                    @media (max-width:$mobile-size) {
+                        width: 220px;
+                        font-size: 8px;
+                    }
+                }
+
+                .author-about-section {
+                    @include flex-row();
+                    width: 600px;
+                    gap: 30px;
+                    margin: 100px 0 100px 0;
+
+                    @media (max-width:920px) {
+                        width: 500px;
+                    }
+
+                    @media (max-width:670px) {
+                        width: 400px;
+                    }
+
+                    @media (max-width:$mobile-size) {
+                        width: 200px;
+                        gap: 30px;
+                        margin: 40px 0 40px 0;
+                    }
+
+                    .author {
+                        width: 100px;
+                        height: 100px;
+
+                        @media (max-width:920px) {
+                            width: 80px;
+                            height: 80px;
+                        }
+
+                        @media (max-width:$mobile-size) {
+                            width: 60px;
+                            height: 60px;
+                        }
+                    }
+
+                    .about-author {
+                        @include flex-column();
+                        text-align: start;
+
+                        .author-name {
+                            font-family: $primary-font;
+                            font-size: 15px;
+                            margin: 0;
+
+                            @media (max-width:$mobile-size) {
+                                font-size: 10px;
+                            }
+                        }
+
+                        .about {
+                            font-family: $secondary-font;
+                            font-size: 12px;
+                            color: #4D4D4D;
+
+                            @media (max-width:$mobile-size) {
+                                font-size: 7px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .post-navigator {
+        @include flex-row();
+        justify-content: space-evenly;
+
+        .previous-post {
+            position: relative;
+            color: white;
+
+            .previous-post-img {
+                width: 620px;
+                height: 200px;
+
+                @media (max-width:920px) {
+                    width: 520px;
+                    height: 200px;
+                }
+
+                @media (max-width:770px) {
+                    width: 450px;
+                    height: 200px;
+                }
+
+                @media (max-width:670px) {
+                    width: 400px;
+                    height: 200px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 190px;
+                    height: 90px;
+                }
+            }
+
+            .btn {
+                font-family: $secondary-font;
+                font-size: 12px;
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                @media (max-width:770px) {
+                    font-size: 10px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    font-size: 7px;
+                    top: 20%;
+                }
+            }
+
+            .title {
+                font-family: $primary-font;
+                font-size: 16px;
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                @media (max-width:770px) {
+                    font-size: 14px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    font-size: 10px;
+                    top: 50%;
+                }
+            }
+        }
+
+        .next-post {
+            position: relative;
+            color: white;
+
+            .next-post-img {
+                width: 620px;
+                height: 200px;
+
+                @media (max-width:920px) {
+                    width: 520px;
+                    height: 200px;
+                }
+
+                @media (max-width:770px) {
+                    width: 450px;
+                    height: 200px;
+                }
+
+                @media (max-width:670px) {
+                    width: 400px;
+                    height: 200px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 190px;
+                    height: 90px;
+                }
+            }
+
+
+            .btn {
+                font-family: $secondary-font;
+                font-size: 12px;
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                @media (max-width:770px) {
+                    font-size: 10px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    font-size: 7px;
+                    top: 20%;
+                }
+            }
+
+            .title {
+                font-family: $primary-font;
+                font-size: 16px;
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                @media (max-width:770px) {
+                    font-size: 14px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    font-size: 10px;
+                    top: 50%;
+                }
+            }
+        }
+    }
+
+    .comment-section {
+        @include flex-column();
+        @include center-items();
+        width: auto;
+        margin-bottom: 130px;
+
+        .total-comments {
+            font-family: $primary-font;
+            font-size: 30px;
+        }
+
+        .dotted-line {
+            margin-top: 70px;
+            border-bottom: 2px dotted #000000;
+            width: 700px;
+        }
+    }
+
+    .comment-form {
+        @include flex-column();
+        @include center-items();
+        margin-bottom: 150px;
+
+        .form-title {
+            font-family: $primary-font;
+            font-size: 30px;
+        }
+
+        .write-comment {
+            font-family: $secondary-font;
+            font-size: 17px;
+            font-weight: 700;
+            text-align: start;
+            @include flex-column();
+            gap: 20px;
+
+            .comment {
+                border: 1.5px solid black;
+                width: 700px;
+                height: 250px;
+
+                @media (max-width:670px) {
+                    width: 400px;
+                    height: 200px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 300px;
+                    height: 100px;
+                }
+            }
+
+            .name,
+            .email,
+            .website {
+                width: 700px;
+                height: 50px;
+                border: 1.5px solid black;
+
+                .required {
+                    content: "*";
+                    color: #000000;
+                }
+
+                @media (max-width:670px) {
+                    width: 400px;
+                    height: 40px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 300px;
+                    height: 23px;
+                }
+            }
+
+            .post-comment {
+                border: 1.5px solid black;
+                background: none;
+                font-size: 20px;
+                font-family: $primary-font;
+                width: 180px;
+                height: 50px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &:active {
+                    transition-duration: 0.05s;
+                    box-shadow: 0 0 10px #ff9d72;
+                }
+
+                @media (max-width:670px) {
+                    width: 150px;
+                    height: 40px;
+                }
+
+                @media (max-width:$mobile-size) {
+                    width: 100px;
+                    height: 30px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

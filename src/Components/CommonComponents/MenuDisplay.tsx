@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles.scss";
+import "./menuDisplay.scss";
 
 export default function MenuDisplay({ obj }: any) {
     return (

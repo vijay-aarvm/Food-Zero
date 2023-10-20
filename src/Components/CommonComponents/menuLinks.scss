@@ -1,0 +1,18 @@
+@import "../../styles.scss";
+
+li {
+    list-style: disc;
+    font-family: $primary-font;
+
+    a {
+        color: white;
+    }
+
+    &:visited {
+        color: white;
+    }
+
+    li {
+        list-style: none;
+    }
+}

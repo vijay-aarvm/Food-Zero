@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from "./App"
 import reportWebVitals from './reportWebVitals';
-import store from './Components/BlogOneColumn/foodzeroStore';
+import store from './Store/foodzeroStore';
 import { Provider } from 'react-redux';
 
 const rootElement = document.getElementById('root');
